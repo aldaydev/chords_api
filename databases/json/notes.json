@@ -1,0 +1,140 @@
+
+[
+    {
+        "noteId": "ab",
+        "name": {
+            "eng": "Ab",
+            "spa": "Lab"
+        },
+        "type": "flat"
+    },
+    {
+        "noteId": "a",
+        "name": {
+            "eng": "A",
+            "spa": "La"
+        },
+        "type": "natural"
+    },
+    {
+        "noteId": "a#",
+        "name": {
+            "eng": "A#",
+            "spa": "La#"
+        },
+        "type": "sharp"
+    },
+    {
+        "noteId": "bb",
+        "name": {
+            "eng": "Bb",
+            "spa": "Sib"
+        },
+        "type": "flat"
+    },
+    {
+        "noteId": "b",
+        "name": {
+            "eng": "B",
+            "spa": "Si"
+        },
+        "type": "natural"
+    },
+    {
+        "noteId": "c",
+        "name": {
+            "eng": "C",
+            "spa": "Do"
+        },
+        "type": "natural"
+    },
+    {
+        "noteId": "c#",
+        "name": {
+            "eng": "C#",
+            "spa": "Do#"
+        },
+        "type": "sharp"
+    },
+    {
+        "noteId": "db",
+        "name": {
+            "eng": "Db",
+            "spa": "Reb"
+        },
+        "type": "flat"
+    },
+    {
+        "noteId": "d",
+        "name": {
+            "eng": "D",
+            "spa": "Re"
+        },
+        "type": "natural"
+    },
+    {
+        "noteId": "d#",
+        "name": {
+            "eng": "D#",
+            "spa": "Re#"
+        },
+        "type": "sharp"
+    },
+    {
+        "noteId": "eb",
+        "name": {
+            "eng": "Eb",
+            "spa": "Mib"
+        },
+        "type": "flat"
+    },
+    {
+        "noteId": "e",
+        "name": {
+            "eng": "E",
+            "spa": "Mi"
+        },
+        "type": "natural"
+    },
+    {
+        "noteId": "f",
+        "name": {
+            "eng": "F",
+            "spa": "Fa"
+        },
+        "type": "natural"
+    },
+    {
+        "noteId": "f#",
+        "name": {
+            "eng": "F#",
+            "spa": "Fa#"
+        },
+        "type": "sharp"
+    },
+    {
+        "noteId": "gb",
+        "name": {
+            "eng": "Gb",
+            "spa": "Solb"
+        },
+        "type": "flat"
+    },
+    {
+        "noteId": "g",
+        "name": {
+            "eng": "G",
+            "spa": "Sol"
+        },
+        "type": "natural"
+    },
+    {
+        "noteId": "g#",
+        "name": {
+            "eng": "G#",
+            "spa": "Sol#"
+        },
+        "type": "sharp"
+    }
+]
+

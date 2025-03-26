@@ -1,0 +1,719 @@
+
+[
+    {
+        "chordId": "ab_major",
+        "noteId": "ab",
+        "typeId": "major",
+        "notes": ["ab", "c", "eb"],
+        "name": {"eng": "Ab major", "spa": "La bemol mayor"},
+        "images": {
+            "pos1": "https://github.com/aldaydev/acordes_images/blob/main/guitar-chords/a-flat/chord-a-flat-major-pos1.png?raw=true"
+        }
+    },
+
+    {
+        "chordId": "ab_minor",
+        "noteId": "ab",
+        "typeId": "minor",
+        "notes": ["ab", "b", "eb"],
+        "name": {"eng": "Ab minor", "spa": "La bemol menor"},
+        "images": {
+            "pos1": "https://github.com/aldaydev/acordes_images/blob/main/guitar-chords/a-flat/chord-a-flat-minor-pos1.png?raw=true"
+        }
+    },
+
+    {
+        "chordId": "ab_dim",
+        "noteId": "ab",
+        "typeId": "dim",
+        "notes": ["ab", "b", "e"],
+        "name": {"eng": "Ab diminished", "spa": "La bemol disminuido"},
+        "images": {
+            "pos1": "https://github.com/aldaydev/acordes_images/blob/main/guitar-chords/a-flat/chord-a-flat-dim-pos1.png?raw=true"
+        }
+    },
+
+    {
+        "chordId": "ab_7",
+        "noteId": "ab",
+        "typeId": "7",
+        "notes": ["ab", "c", "eb", "gb"],
+        "name": {"eng": "Ab7", "spa": "La bemol 7"},
+        "images": {
+            "pos1": "https://github.com/aldaydev/acordes_images/blob/main/guitar-chords/a-flat/chord-a-flat-7-pos1.png?raw=true"
+        }
+    },
+    
+    {
+        "chordId": "a_major",
+        "noteId": "a",
+        "typeId": "major",
+        "notes": ["a", "c#", "e"],
+        "name": {"eng": "A major", "spa": "La mayor"},
+        "images": {
+            "pos1": "https://github.com/aldaydev/acordes_images/blob/main/guitar-chords/a/chord-a-major-pos1.png?raw=true"
+        }
+    },
+
+    {
+        "chordId": "a_minor",
+        "noteId": "a",
+        "typeId": "minor",
+        "notes": ["a", "c", "e"],
+        "name": {"eng": "A minor", "spa": "La menor"},
+        "images": {
+            "pos1": "https://github.com/aldaydev/acordes_images/blob/main/guitar-chords/a/chord-a-minor-pos1.png?raw=true"
+        }
+    },
+
+    {
+        "chordId": "a_dim",
+        "noteId": "a",
+        "typeId": "dim",
+        "notes": ["a", "c", "eb"],
+        "name": {"eng": "A diminished", "spa": "La disminuido"},
+        "images": {
+            "pos1": "https://github.com/aldaydev/acordes_images/blob/main/guitar-chords/a/chord-a-dim-pos1.png?raw=true"
+        }
+    },
+
+    {
+        "chordId": "a_7",
+        "noteId": "a",
+        "typeId": "7",
+        "notes": ["a", "c#", "e", "g"],
+        "name": {"eng": "A7", "spa": "La 7"},
+        "images": {
+            "pos1": "https://github.com/aldaydev/acordes_images/blob/main/guitar-chords/a/chord-a-7-pos1.png?raw=true"
+        }
+    },
+
+    {
+        "chordId": "a#_major",
+        "noteId": "a#",
+        "typeId": "major",
+        "notes": ["a#", "d", "e#"],
+        "name": {"eng": "A# major", "spa": "La sostenido mayor"},
+        "images": {
+            "pos1": "https://github.com/aldaydev/acordes_images/blob/main/guitar-chords/a-sharp/chord-a-sharp-major-pos1.png?raw=true"
+        }
+    },
+
+    {
+        "chordId": "a#_minor",
+        "noteId": "a#",
+        "typeId": "minor",
+        "notes": ["a#", "c#", "e#"],
+        "name": {"eng": "A# minor", "spa": "La sostenido menor"},
+        "images": {
+            "pos1": "https://github.com/aldaydev/acordes_images/blob/main/guitar-chords/a-sharp/chord-a-sharp-minor-pos1.png?raw=true"
+        }
+    },
+
+    {
+        "chordId": "a#_dim",
+        "noteId": "a#",
+        "typeId": "dim",
+        "notes": ["a#", "d", "e"],
+        "name": {"eng": "A# diminished", "spa": "La sostenido disminuido"},
+        "images": {
+            "pos1": "https://github.com/aldaydev/acordes_images/blob/main/guitar-chords/a-sharp/chord-a-sharp-dim-pos1.png?raw=true"
+        }
+    },
+
+    {
+        "chordId": "a#_7",
+        "noteId": "a#",
+        "typeId": "7",
+        "notes": ["a#", "d", "e#", "g#"],
+        "name": {"eng": "A#7", "spa": "La sostenido 7"},
+        "images": {
+            "pos1": "https://github.com/aldaydev/acordes_images/blob/main/guitar-chords/a-sharp/chord-a-sharp-7-pos1.png?raw=true"
+        }
+    },
+
+    {
+        "chordId": "bb_major",
+        "noteId": "bb",
+        "typeId": "major",
+        "notes": ["bb", "d", "f"],
+        "name": {"eng": "Bb major", "spa": "Si bemol mayor"},
+        "images": {
+            "pos1": "https://github.com/aldaydev/acordes_images/blob/main/guitar-chords/b-flat/chord-b-flat-major-pos1.png?raw=true"
+        }
+    },
+    {
+        "chordId": "bb_minor",
+        "noteId": "bb",
+        "typeId": "minor",
+        "notes": ["bb", "db", "f"],
+        "name": {"eng": "Bb minor", "spa": "Si bemol menor"},
+        "images": {
+            "pos1": "https://github.com/aldaydev/acordes_images/blob/main/guitar-chords/b-flat/chord-b-flat-minor-pos1.png?raw=true"
+        }
+    },
+    {
+        "chordId": "bb_dim",
+        "noteId": "bb",
+        "typeId": "dim",
+        "notes": ["bb", "db", "e"],
+        "name": {"eng": "Bb diminished", "spa": "Si bemol disminuido"},
+        "images": {
+            "pos1": "https://github.com/aldaydev/acordes_images/blob/main/guitar-chords/b-flat/chord-b-flat-dim-pos1.png?raw=true"
+        }
+    },
+    {
+        "chordId": "bb_7",
+        "noteId": "bb",
+        "typeId": "7",
+        "notes": ["bb", "d", "f", "ab"],
+        "name": {"eng": "Bb7", "spa": "Si bemol 7"},
+        "images": {
+            "pos1": "https://github.com/aldaydev/acordes_images/blob/main/guitar-chords/b-flat/chord-b-flat-7-pos1.png?raw=true"
+        }
+    },
+
+    {
+        "chordId": "b_major",
+        "noteId": "b",
+        "typeId": "major",
+        "notes": ["b", "d#", "f#"],
+        "name": {"eng": "B major", "spa": "Si mayor"},
+        "images": {
+            "pos1": "https://github.com/aldaydev/acordes_images/blob/main/guitar-chords/b/chord-b-major-pos1.png?raw=true"
+        }
+    },
+    {
+        "chordId": "b_minor",
+        "noteId": "b",
+        "typeId": "minor",
+        "notes": ["b", "d", "f#"],
+        "name": {"eng": "B minor", "spa": "Si menor"},
+        "images": {
+            "pos1": "https://github.com/aldaydev/acordes_images/blob/main/guitar-chords/b/chord-b-minor-pos1.png?raw=true"
+        }
+    },
+    {
+        "chordId": "b_dim",
+        "noteId": "b",
+        "typeId": "dim",
+        "notes": ["b", "d", "f"],
+        "name": {"eng": "B diminished", "spa": "Si disminuido"},
+        "images": {
+            "pos1": "https://github.com/aldaydev/acordes_images/blob/main/guitar-chords/b/chord-b-dim-pos1.png?raw=true"
+        }
+    },
+    {
+        "chordId": "b_7",
+        "noteId": "b",
+        "typeId": "7",
+        "notes": ["b", "d#", "f#", "a"],
+        "name": {"eng": "B7", "spa": "Si 7"},
+        "images": {
+            "pos1": "https://github.com/aldaydev/acordes_images/blob/main/guitar-chords/b/chord-b-7-pos1.png?raw=true"
+        }
+    },
+
+    {
+        "chordId": "c_major",
+        "noteId": "c",
+        "typeId": "major",
+        "notes": ["c", "e", "g"],
+        "name": {"eng": "C major", "spa": "Do mayor"},
+        "images": {
+            "pos1": "https://github.com/aldaydev/acordes_images/blob/main/guitar-chords/c/chord-c-major-pos1.png?raw=true"
+        }
+    },
+    {
+        "chordId": "c_minor",
+        "noteId": "c",
+        "typeId": "minor",
+        "notes": ["c", "eb", "g"],
+        "name": {"eng": "C minor", "spa": "Do menor"},
+        "images": {
+            "pos1": "https://github.com/aldaydev/acordes_images/blob/main/guitar-chords/c/chord-c-minor-pos1.png?raw=true"
+        }
+    },
+    {
+        "chordId": "c_dim",
+        "noteId": "c",
+        "typeId": "dim",
+        "notes": ["c", "eb", "gb"],
+        "name": {"eng": "C diminished", "spa": "Do disminuido"},
+        "images": {
+            "pos1": "https://github.com/aldaydev/acordes_images/blob/main/guitar-chords/c/chord-c-dim-pos1.png?raw=true"
+        }
+    },
+    {
+        "chordId": "c_7",
+        "noteId": "c",
+        "typeId": "7",
+        "notes": ["c", "e", "g", "bb"],
+        "name": {"eng": "C7", "spa": "Do 7"},
+        "images": {
+            "pos1": "https://github.com/aldaydev/acordes_images/blob/main/guitar-chords/c/chord-c-7-pos1.png?raw=true"
+        }
+    },
+
+    {
+        "chordId": "c#_major",
+        "noteId": "c#",
+        "typeId": "major",
+        "notes": ["c#", "e#", "g#"],
+        "name": {"eng": "C# major", "spa": "Do sostenido mayor"},
+        "images": {
+            "pos1": "https://github.com/aldaydev/acordes_images/blob/main/guitar-chords/c-sharp/chord-c-sharp-major-pos1.png?raw=true"
+        }
+    },
+    {
+        "chordId": "c#_minor",
+        "noteId": "c#",
+        "typeId": "minor",
+        "notes": ["c#", "e", "g#"],
+        "name": {"eng": "C# minor", "spa": "Do sostenido menor"},
+        "images": {
+            "pos1": "https://github.com/aldaydev/acordes_images/blob/main/guitar-chords/c-sharp/chord-c-sharp-minor-pos1.png?raw=true"
+        }
+    },
+    {
+        "chordId": "c#_dim",
+        "noteId": "c#",
+        "typeId": "dim",
+        "notes": ["c#", "e", "g"],
+        "name": {"eng": "C# diminished", "spa": "Do sostenido disminuido"},
+        "images": {
+            "pos1": "https://github.com/aldaydev/acordes_images/blob/main/guitar-chords/c-sharp/chord-c-sharp-dim-pos1.png?raw=true"
+        }
+    },
+    {
+        "chordId": "c#_7",
+        "noteId": "c#",
+        "typeId": "7",
+        "notes": ["c#", "e#", "g#", "b"],
+        "name": {"eng": "C#7", "spa": "Do sostenido 7"},
+        "images": {
+            "pos1": "https://github.com/aldaydev/acordes_images/blob/main/guitar-chords/c-sharp/chord-c-sharp-7-pos1.png?raw=true"
+        }
+    },
+
+    {
+        "chordId": "db_major",
+        "noteId": "db",
+        "typeId": "major",
+        "notes": ["db", "f", "ab"],
+        "name": {"eng": "Db major", "spa": "Re bemol mayor"},
+        "images": {
+            "pos1": "https://github.com/aldaydev/acordes_images/blob/main/guitar-chords/d-flat/chord-d-flat-major-pos1.png?raw=true"
+        }
+    },
+    {
+        "chordId": "db_minor",
+        "noteId": "db",
+        "typeId": "minor",
+        "notes": ["db", "em", "ab"],
+        "name": {"eng": "Db minor", "spa": "Re bemol menor"},
+        "images": {
+            "pos1": "https://github.com/aldaydev/acordes_images/blob/main/guitar-chords/d-flat/chord-d-flat-minor-pos1.png?raw=true"
+        }
+    },
+    {
+        "chordId": "db_dim",
+        "noteId": "db",
+        "typeId": "dim",
+        "notes": ["db", "em", "g"],
+        "name": {"eng": "Db diminished", "spa": "Re bemol disminuido"},
+        "images": {
+            "pos1": "https://github.com/aldaydev/acordes_images/blob/main/guitar-chords/d-flat/chord-d-flat-dim-pos1.png?raw=true"
+        }
+    },
+    {
+        "chordId": "db_7",
+        "noteId": "db",
+        "typeId": "7",
+        "notes": ["db", "f", "ab", "b"],
+        "name": {"eng": "Db7", "spa": "Re bemol 7"},
+        "images": {
+            "pos1": "https://github.com/aldaydev/acordes_images/blob/main/guitar-chords/d-flat/chord-d-flat-7-pos1.png?raw=true"
+        }
+    },
+
+    {
+        "chordId": "d_major",
+        "noteId": "d",
+        "typeId": "major",
+        "notes": ["d", "f#", "a"],
+        "name": {"eng": "D major", "spa": "Re mayor"},
+        "images": {
+            "pos1": "https://github.com/aldaydev/acordes_images/blob/main/guitar-chords/d/chord-d-major-pos1.png?raw=true"
+        }
+    },
+    {
+        "chordId": "d_minor",
+        "noteId": "d",
+        "typeId": "minor",
+        "notes": ["d", "f", "a"],
+        "name": {"eng": "D minor", "spa": "Re menor"},
+        "images": {
+            "pos1": "https://github.com/aldaydev/acordes_images/blob/main/guitar-chords/d/chord-d-minor-pos1.png?raw=true"
+        }
+    },
+    {
+        "chordId": "d_dim",
+        "noteId": "d",
+        "typeId": "dim",
+        "notes": ["d", "f", "ab"],
+        "name": {"eng": "D diminished", "spa": "Re disminuido"},
+        "images": {
+            "pos1": "https://github.com/aldaydev/acordes_images/blob/main/guitar-chords/d/chord-d-dim-pos1.png?raw=true"
+        }
+    },
+    {
+        "chordId": "d_7",
+        "noteId": "d",
+        "typeId": "7",
+        "notes": ["d", "f#", "a", "c"],
+        "name": {"eng": "D7", "spa": "Re 7"},
+        "images": {
+            "pos1": "https://github.com/aldaydev/acordes_images/blob/main/guitar-chords/d/chord-d-7-pos1.png?raw=true"
+        }
+    },
+
+    {
+        "chordId": "d#_major",
+        "noteId": "d#",
+        "typeId": "major",
+        "notes": ["d#", "g", "a#"],
+        "name": {"eng": "D# major", "spa": "Re sostenido mayor"},
+        "images": {
+            "pos1": "https://github.com/aldaydev/acordes_images/blob/main/guitar-chords/d-sharp/chord-d-sharp-major-pos1.png?raw=true"
+        }
+    },
+    {
+        "chordId": "d#_minor",
+        "noteId": "d#",
+        "typeId": "minor",
+        "notes": ["d#", "f#", "a#"],
+        "name": {"eng": "D# minor", "spa": "Re sostenido menor"},
+        "images": {
+            "pos1": "https://github.com/aldaydev/acordes_images/blob/main/guitar-chords/d-sharp/chord-d-sharp-minor-pos1.png?raw=true"
+        }
+    },
+    {
+        "chordId": "d#_dim",
+        "noteId": "d#",
+        "typeId": "dim",
+        "notes": ["d#", "f#", "a"],
+        "name": {"eng": "D# diminished", "spa": "Re sostenido disminuido"},
+        "images": {
+            "pos1": "https://github.com/aldaydev/acordes_images/blob/main/guitar-chords/d-sharp/chord-d-sharp-dim-pos1.png?raw=true"
+        }
+    },
+    {
+        "chordId": "d#_7",
+        "noteId": "d#",
+        "typeId": "7",
+        "notes": ["d#", "g", "a#", "c#"],
+        "name": {"eng": "D#7", "spa": "Re sostenido 7"},
+        "images": {
+            "pos1": "https://github.com/aldaydev/acordes_images/blob/main/guitar-chords/d-sharp/chord-d-sharp-7-pos1.png?raw=true"
+        }
+    },
+
+    {
+        "chordId": "eb_major",
+        "noteId": "eb",
+        "typeId": "major",
+        "notes": ["eb", "g", "bb"],
+        "name": {"eng": "Eb major", "spa": "Mi bemol mayor"},
+        "images": {
+            "pos1": "https://github.com/aldaydev/acordes_images/blob/main/guitar-chords/e-flat/chord-e-flat-major-pos1.png?raw=true"
+        }
+    },
+    {
+        "chordId": "eb_minor",
+        "noteId": "eb",
+        "typeId": "minor",
+        "notes": ["eb", "gb", "bb"],
+        "name": {"eng": "Eb minor", "spa": "Mi bemol menor"},
+        "images": {
+            "pos1": "https://github.com/aldaydev/acordes_images/blob/main/guitar-chords/e-flat/chord-e-flat-minor-pos1.png?raw=true"
+        }
+    },
+    {
+        "chordId": "eb_dim",
+        "noteId": "eb",
+        "typeId": "dim",
+        "notes": ["eb", "gb", "a"],
+        "name": {"eng": "Eb diminished", "spa": "Mi bemol disminuido"},
+        "images": {
+            "pos1": "https://github.com/aldaydev/acordes_images/blob/main/guitar-chords/e-flat/chord-e-flat-dim-pos1.png?raw=true"
+        }
+    },
+    {
+        "chordId": "eb_7",
+        "noteId": "eb",
+        "typeId": "7",
+        "notes": ["eb", "g", "bb", "db"],
+        "name": {"eng": "Eb7", "spa": "Mi bemol 7"},
+        "images": {
+            "pos1": "https://github.com/aldaydev/acordes_images/blob/main/guitar-chords/e-flat/chord-e-flat-7-pos1.png?raw=true"
+        }
+    },
+
+    {
+        "chordId": "e_major",
+        "noteId": "e",
+        "typeId": "major",
+        "notes": ["e", "g#", "b"],
+        "name": {"eng": "E major", "spa": "Mi mayor"},
+        "images": {
+            "pos1": "https://github.com/aldaydev/acordes_images/blob/main/guitar-chords/e/chord-e-major-pos1.png?raw=true"
+        }
+    },
+    {
+        "chordId": "e_minor",
+        "noteId": "e",
+        "typeId": "minor",
+        "notes": ["e", "g", "b"],
+        "name": {"eng": "E minor", "spa": "Mi menor"},
+        "images": {
+            "pos1": "https://github.com/aldaydev/acordes_images/blob/main/guitar-chords/e/chord-e-minor-pos1.png?raw=true"
+        }
+    },
+    {
+        "chordId": "e_dim",
+        "noteId": "e",
+        "typeId": "dim",
+        "notes": ["e", "g", "bb"],
+        "name": {"eng": "E diminished", "spa": "Mi disminuido"},
+        "images": {
+            "pos1": "https://github.com/aldaydev/acordes_images/blob/main/guitar-chords/e/chord-e-dim-pos1.png?raw=true"
+        }
+    },
+    {
+        "chordId": "e_7",
+        "noteId": "e",
+        "typeId": "7",
+        "notes": ["e", "g#", "b", "d"],
+        "name": {"eng": "E7", "spa": "Mi 7"},
+        "images": {
+            "pos1": "https://github.com/aldaydev/acordes_images/blob/main/guitar-chords/e/chord-e-7-pos1.png?raw=true"
+        }
+    },
+
+    {
+        "chordId": "f_major",
+        "noteId": "f",
+        "typeId": "major",
+        "notes": ["f", "a", "c"],
+        "name": {"eng": "F major", "spa": "Fa mayor"},
+        "images": {
+            "pos1": "https://github.com/aldaydev/acordes_images/blob/main/guitar-chords/f/chord-f-major-pos1.png?raw=true"
+        }
+    },
+    {
+        "chordId": "f_minor",
+        "noteId": "f",
+        "typeId": "minor",
+        "notes": ["f", "ab", "c"],
+        "name": {"eng": "F minor", "spa": "Fa menor"},
+        "images": {
+            "pos1": "https://github.com/aldaydev/acordes_images/blob/main/guitar-chords/f/chord-f-minor-pos1.png?raw=true"
+        }
+    },
+    {
+        "chordId": "f_dim",
+        "noteId": "f",
+        "typeId": "dim",
+        "notes": ["f", "ab", "cb"],
+        "name": {"eng": "F diminished", "spa": "Fa disminuido"},
+        "images": {
+            "pos1": "https://github.com/aldaydev/acordes_images/blob/main/guitar-chords/f/chord-f-dim-pos1.png?raw=true"
+        }
+    },
+    {
+        "chordId": "f_7",
+        "noteId": "f",
+        "typeId": "7",
+        "notes": ["f", "a", "c", "eb"],
+        "name": {"eng": "F7", "spa": "Fa 7"},
+        "images": {
+            "pos1": "https://github.com/aldaydev/acordes_images/blob/main/guitar-chords/f/chord-f-7-pos1.png?raw=true"
+        }
+    },
+
+    {
+        "chordId": "f#_major",
+        "noteId": "f#",
+        "typeId": "major",
+        "notes": ["f#", "a#", "c#"],
+        "name": {"eng": "F# major", "spa": "Fa sostenido mayor"},
+        "images": {
+            "pos1": "https://github.com/aldaydev/acordes_images/blob/main/guitar-chords/f-sharp/chord-f-sharp-major-pos1.png?raw=true"
+        }
+    },
+    {
+        "chordId": "f#_minor",
+        "noteId": "f#",
+        "typeId": "minor",
+        "notes": ["f#", "a", "c#"],
+        "name": {"eng": "F# minor", "spa": "Fa sostenido menor"},
+        "images": {
+            "pos1": "https://github.com/aldaydev/acordes_images/blob/main/guitar-chords/f-sharp/chord-f-sharp-minor-pos1.png?raw=true"
+        }
+    },
+    {
+        "chordId": "f#_dim",
+        "noteId": "f#",
+        "typeId": "dim",
+        "notes": ["f#", "a", "c"],
+        "name": {"eng": "F# diminished", "spa": "Fa sostenido disminuido"},
+        "images": {
+            "pos1": "https://github.com/aldaydev/acordes_images/blob/main/guitar-chords/f-sharp/chord-f-sharp-dim-pos1.png?raw=true"
+        }
+    },
+    {
+        "chordId": "f#_7",
+        "noteId": "f#",
+        "typeId": "7",
+        "notes": ["f#", "a#", "c#", "e"],
+        "name": {"eng": "F#7", "spa": "Fa sostenido 7"},
+        "images": {
+            "pos1": "https://github.com/aldaydev/acordes_images/blob/main/guitar-chords/f-sharp/chord-f-sharp-7-pos1.png?raw=true"
+        }
+    },
+
+    {
+        "chordId": "gb_major",
+        "noteId": "gb",
+        "typeId": "major",
+        "notes": ["gb", "bb", "db"],
+        "name": {"eng": "Gb major", "spa": "Sol bemol mayor"},
+        "images": {
+            "pos1": "https://github.com/aldaydev/acordes_images/blob/main/guitar-chords/g-flat/chord-g-flat-major-pos1.png?raw=true"
+        }
+    },
+    {
+        "chordId": "gb_minor",
+        "noteId": "gb",
+        "typeId": "minor",
+        "notes": ["gb", "bb", "db"],
+        "name": {"eng": "Gb minor", "spa": "Sol bemol menor"},
+        "images": {
+            "pos1": "https://github.com/aldaydev/acordes_images/blob/main/guitar-chords/g-flat/chord-g-flat-minor-pos1.png?raw=true"
+        }
+    },
+    {
+        "chordId": "gb_dim",
+        "noteId": "gb",
+        "typeId": "dim",
+        "notes": ["gb", "bb", "d"],
+        "name": {"eng": "Gb diminished", "spa": "Sol bemol disminuido"},
+        "images": {
+            "pos1": "https://github.com/aldaydev/acordes_images/blob/main/guitar-chords/g-flat/chord-g-flat-dim-pos1.png?raw=true"
+        }
+    },
+    {
+        "chordId": "gb_7",
+        "noteId": "gb",
+        "typeId": "7",
+        "notes": ["gb", "bb", "db", "fb"],
+        "name": {"eng": "Gb7", "spa": "Sol bemol 7"},
+        "images": {
+            "pos1": "https://github.com/aldaydev/acordes_images/blob/main/guitar-chords/g-flat/chord-g-flat-7-pos1.png?raw=true"
+        }
+    },
+
+    {
+        "chordId": "g_major",
+        "noteId": "g",
+        "typeId": "major",
+        "notes": ["g", "b", "d"],
+        "name": {"eng": "G major", "spa": "Sol mayor"},
+        "images": {
+            "pos1": "https://github.com/aldaydev/acordes_images/blob/main/guitar-chords/g/chord-g-major-pos1.png?raw=true"
+        }
+    },
+    {
+        "chordId": "g_minor",
+        "noteId": "g",
+        "typeId": "minor",
+        "notes": ["g", "bb", "d"],
+        "name": {"eng": "G minor", "spa": "Sol menor"},
+        "images": {
+            "pos1": "https://github.com/aldaydev/acordes_images/blob/main/guitar-chords/g/chord-g-minor-pos1.png?raw=true"
+        }
+    },
+    {
+        "chordId": "g_dim",
+        "noteId": "g",
+        "typeId": "dim",
+        "notes": ["g", "bb", "db"],
+        "name": {"eng": "G diminished", "spa": "Sol disminuido"},
+        "images": {
+            "pos1": "https://github.com/aldaydev/acordes_images/blob/main/guitar-chords/g/chord-g-dim-pos1.png?raw=true"
+        }
+    },
+    {
+        "chordId": "g_7",
+        "noteId": "g",
+        "typeId": "7",
+        "notes": ["g", "b", "d", "f"],
+        "name": {"eng": "G7", "spa": "Sol 7"},
+        "images": {
+            "pos1": "https://github.com/aldaydev/acordes_images/blob/main/guitar-chords/g/chord-g-7-pos1.png?raw=true"
+        }
+    },
+
+    {
+        "chordId": "g#_major",
+        "noteId": "g#",
+        "typeId": "major",
+        "notes": ["g#", "c", "d#"],
+        "name": {"eng": "G# major", "spa": "Sol sostenido mayor"},
+        "images": {
+            "pos1": "https://github.com/aldaydev/acordes_images/blob/main/guitar-chords/g-sharp/chord-g-sharp-major-pos1.png?raw=true"
+        }
+    },
+    {
+        "chordId": "g#_minor",
+        "noteId": "g#",
+        "typeId": "minor",
+        "notes": ["g#", "b", "d#"],
+        "name": {"eng": "G# minor", "spa": "Sol sostenido menor"},
+        "images": {
+            "pos1": "https://github.com/aldaydev/acordes_images/blob/main/guitar-chords/g-sharp/chord-g-sharp-minor-pos1.png?raw=true"
+        }
+    },
+    {
+        "chordId": "g#_dim",
+        "noteId": "g#",
+        "typeId": "dim",
+        "notes": ["g#", "b", "d"],
+        "name": {"eng": "G# diminished", "spa": "Sol sostenido disminuido"},
+        "images": {
+            "pos1": "https://github.com/aldaydev/acordes_images/blob/main/guitar-chords/g-sharp/chord-g-sharp-dim-pos1.png?raw=true"
+        }
+    },
+    {
+        "chordId": "g#_7",
+        "noteId": "g#",
+        "typeId": "7",
+        "notes": ["g#", "c", "d#", "f#"],
+        "name": {"eng": "G#7", "spa": "Sol sostenido 7"},
+        "images": {
+            "pos1": "https://github.com/aldaydev/acordes_images/blob/main/guitar-chords/g-sharp/chord-g-sharp-7-pos1.png?raw=true"
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+]
