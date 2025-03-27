@@ -1,52 +1,50 @@
-{
-    "list": [
-        {
-            "typeId": "7",
-            "name": {
-                "eng": "7",
-                "spa": "7"
-            },
-            "intervals": ["1", "3", "5", "7"],
-            "description": {
-                "eng": "Dominant seventh chord",
-                "spa": "Acorde séptima dominante"
-            }
+[
+    {
+        "_id": "7",
+        "name": {
+            "eng": "7",
+            "spa": "7"
         },
-        {
-            "typeId": "dim",
-            "name": {
-                "eng": "dim",
-                "spa": "disminuido"
-            },
-            "intervals": ["1", "3", "5", "♭5"],
-            "description": {
-                "eng": "Diminished chord",
-                "spa": "Acorde disminuido"
-            }
-        },
-        {
-            "typeId": "major",
-            "name": {
-                "eng": "major",
-                "spa": "mayor"
-            },
-            "intervals": ["1", "3", "5"],
-            "description": {
-                "eng": "Major chord",
-                "spa": "Acorde mayor"
-            }
-        },
-        {
-            "typeId": "minor",
-            "name": {
-                "eng": "minor",
-                "spa": "menor"
-            },
-            "intervals": ["1", "♭3", "5"],
-            "description": {
-                "eng": "Minor chord",
-                "spa": "Acorde menor"
-            }
+        "intervals": ["1", "3", "5", "7"],
+        "description": {
+            "eng": "Dominant seventh chord",
+            "spa": "Acorde séptima dominante"
         }
-    ]
-}
+    },
+    {
+        "_id": "dim",
+        "name": {
+            "eng": "dim",
+            "spa": "disminuido"
+        },
+        "intervals": ["1", "3", "5", "♭5"],
+        "description": {
+            "eng": "Diminished chord",
+            "spa": "Acorde disminuido"
+        }
+    },
+    {
+        "_id": "major",
+        "name": {
+            "eng": "major",
+            "spa": "mayor"
+        },
+        "intervals": ["1", "3", "5"],
+        "description": {
+            "eng": "Major chord",
+            "spa": "Acorde mayor"
+        }
+    },
+    {
+        "_id": "minor",
+        "name": {
+            "eng": "minor",
+            "spa": "menor"
+        },
+        "intervals": ["1", "♭3", "5"],
+        "description": {
+            "eng": "Minor chord",
+            "spa": "Acorde menor"
+        }
+    }
+]

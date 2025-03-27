@@ -1,19 +1,22 @@
 const logger = require('../config/logger.config.js');
-const notesService = require('../services/notes.service.js');
+const chordsController = require('../controllers/chords.controller.js');
+const chordTypesController = require('../controllers/chordTypes.controller.js');
+const notesController = require('../controllers/notes.controller.js');
 
 const router = require('express').Router();
 
-router.get('/notes', async (req, res) => {
+//---------- NOTES ROUTES ----------//
 
-    try {
-        const allNotes = await notesService.getAll();
-        const object = allNotes;
-        console.log(object);
-        res.send(allNotes);
-    } catch (error) {
-        res.status(500).json({message: 'Error: ', error: error});
-        logger.error('Error al finding note list', error);
-    }
-})
+router.get('/notes', notesController.getAll);
+
+//---------- CHORD TYPES ROUTES ----------//
+
+router.get('/chord-types', chordTypesController.getAll);
+
+//---------- CHORDS ROUTES ----------//
+
+router.get('/chords/all', chordsController.getAll);
+
+
 
 module.exports = router;

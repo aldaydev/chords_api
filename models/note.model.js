@@ -2,10 +2,7 @@ const mongoose = require('mongoose');
 
 const noteSchema = new mongoose.Schema({
 
-    noteId: {
-        type: String,
-        required: true
-    },
+    _id: {type: String, required: true},
 
     name: { 
         eng: { type: String, required: true },
@@ -17,7 +14,7 @@ const noteSchema = new mongoose.Schema({
         enum: ['flat', 'sharp', 'natural'], 
         required: true 
     }
-})
+}, { _id: false });
 
 const Note = mongoose.model('Note', noteSchema, 'notes');
 

@@ -1,7 +1,7 @@
 
 [
     {
-        "chordId": "ab_major",
+        "_id": "ab_major",
         "noteId": "ab",
         "typeId": "major",
         "notes": ["ab", "c", "eb"],
@@ -12,7 +12,7 @@
     },
 
     {
-        "chordId": "ab_minor",
+        "_id": "ab_minor",
         "noteId": "ab",
         "typeId": "minor",
         "notes": ["ab", "b", "eb"],
@@ -23,7 +23,7 @@
     },
 
     {
-        "chordId": "ab_dim",
+        "_id": "ab_dim",
         "noteId": "ab",
         "typeId": "dim",
         "notes": ["ab", "b", "e"],
@@ -34,7 +34,7 @@
     },
 
     {
-        "chordId": "ab_7",
+        "_id": "ab_7",
         "noteId": "ab",
         "typeId": "7",
         "notes": ["ab", "c", "eb", "gb"],
@@ -45,7 +45,7 @@
     },
     
     {
-        "chordId": "a_major",
+        "_id": "a_major",
         "noteId": "a",
         "typeId": "major",
         "notes": ["a", "c#", "e"],
@@ -56,7 +56,7 @@
     },
 
     {
-        "chordId": "a_minor",
+        "_id": "a_minor",
         "noteId": "a",
         "typeId": "minor",
         "notes": ["a", "c", "e"],
@@ -67,7 +67,7 @@
     },
 
     {
-        "chordId": "a_dim",
+        "_id": "a_dim",
         "noteId": "a",
         "typeId": "dim",
         "notes": ["a", "c", "eb"],
@@ -78,7 +78,7 @@
     },
 
     {
-        "chordId": "a_7",
+        "_id": "a_7",
         "noteId": "a",
         "typeId": "7",
         "notes": ["a", "c#", "e", "g"],
@@ -89,7 +89,7 @@
     },
 
     {
-        "chordId": "a#_major",
+        "_id": "a#_major",
         "noteId": "a#",
         "typeId": "major",
         "notes": ["a#", "d", "e#"],
@@ -100,7 +100,7 @@
     },
 
     {
-        "chordId": "a#_minor",
+        "_id": "a#_minor",
         "noteId": "a#",
         "typeId": "minor",
         "notes": ["a#", "c#", "e#"],
@@ -111,7 +111,7 @@
     },
 
     {
-        "chordId": "a#_dim",
+        "_id": "a#_dim",
         "noteId": "a#",
         "typeId": "dim",
         "notes": ["a#", "d", "e"],
@@ -122,7 +122,7 @@
     },
 
     {
-        "chordId": "a#_7",
+        "_id": "a#_7",
         "noteId": "a#",
         "typeId": "7",
         "notes": ["a#", "d", "e#", "g#"],
@@ -133,7 +133,7 @@
     },
 
     {
-        "chordId": "bb_major",
+        "_id": "bb_major",
         "noteId": "bb",
         "typeId": "major",
         "notes": ["bb", "d", "f"],
@@ -143,7 +143,7 @@
         }
     },
     {
-        "chordId": "bb_minor",
+        "_id": "bb_minor",
         "noteId": "bb",
         "typeId": "minor",
         "notes": ["bb", "db", "f"],
@@ -153,7 +153,7 @@
         }
     },
     {
-        "chordId": "bb_dim",
+        "_id": "bb_dim",
         "noteId": "bb",
         "typeId": "dim",
         "notes": ["bb", "db", "e"],
@@ -163,7 +163,7 @@
         }
     },
     {
-        "chordId": "bb_7",
+        "_id": "bb_7",
         "noteId": "bb",
         "typeId": "7",
         "notes": ["bb", "d", "f", "ab"],
@@ -174,7 +174,7 @@
     },
 
     {
-        "chordId": "b_major",
+        "_id": "b_major",
         "noteId": "b",
         "typeId": "major",
         "notes": ["b", "d#", "f#"],
@@ -184,7 +184,7 @@
         }
     },
     {
-        "chordId": "b_minor",
+        "_id": "b_minor",
         "noteId": "b",
         "typeId": "minor",
         "notes": ["b", "d", "f#"],
@@ -194,7 +194,7 @@
         }
     },
     {
-        "chordId": "b_dim",
+        "_id": "b_dim",
         "noteId": "b",
         "typeId": "dim",
         "notes": ["b", "d", "f"],
@@ -204,7 +204,7 @@
         }
     },
     {
-        "chordId": "b_7",
+        "_id": "b_7",
         "noteId": "b",
         "typeId": "7",
         "notes": ["b", "d#", "f#", "a"],
@@ -215,7 +215,7 @@
     },
 
     {
-        "chordId": "c_major",
+        "_id": "c_major",
         "noteId": "c",
         "typeId": "major",
         "notes": ["c", "e", "g"],
@@ -225,7 +225,7 @@
         }
     },
     {
-        "chordId": "c_minor",
+        "_id": "c_minor",
         "noteId": "c",
         "typeId": "minor",
         "notes": ["c", "eb", "g"],
@@ -235,7 +235,7 @@
         }
     },
     {
-        "chordId": "c_dim",
+        "_id": "c_dim",
         "noteId": "c",
         "typeId": "dim",
         "notes": ["c", "eb", "gb"],
@@ -245,7 +245,7 @@
         }
     },
     {
-        "chordId": "c_7",
+        "_id": "c_7",
         "noteId": "c",
         "typeId": "7",
         "notes": ["c", "e", "g", "bb"],
@@ -256,7 +256,7 @@
     },
 
     {
-        "chordId": "c#_major",
+        "_id": "c#_major",
         "noteId": "c#",
         "typeId": "major",
         "notes": ["c#", "e#", "g#"],
@@ -266,7 +266,7 @@
         }
     },
     {
-        "chordId": "c#_minor",
+        "_id": "c#_minor",
         "noteId": "c#",
         "typeId": "minor",
         "notes": ["c#", "e", "g#"],
@@ -276,7 +276,7 @@
         }
     },
     {
-        "chordId": "c#_dim",
+        "_id": "c#_dim",
         "noteId": "c#",
         "typeId": "dim",
         "notes": ["c#", "e", "g"],
@@ -286,7 +286,7 @@
         }
     },
     {
-        "chordId": "c#_7",
+        "_id": "c#_7",
         "noteId": "c#",
         "typeId": "7",
         "notes": ["c#", "e#", "g#", "b"],
@@ -297,7 +297,7 @@
     },
 
     {
-        "chordId": "db_major",
+        "_id": "db_major",
         "noteId": "db",
         "typeId": "major",
         "notes": ["db", "f", "ab"],
@@ -307,7 +307,7 @@
         }
     },
     {
-        "chordId": "db_minor",
+        "_id": "db_minor",
         "noteId": "db",
         "typeId": "minor",
         "notes": ["db", "em", "ab"],
@@ -317,7 +317,7 @@
         }
     },
     {
-        "chordId": "db_dim",
+        "_id": "db_dim",
         "noteId": "db",
         "typeId": "dim",
         "notes": ["db", "em", "g"],
@@ -327,7 +327,7 @@
         }
     },
     {
-        "chordId": "db_7",
+        "_id": "db_7",
         "noteId": "db",
         "typeId": "7",
         "notes": ["db", "f", "ab", "b"],
@@ -338,7 +338,7 @@
     },
 
     {
-        "chordId": "d_major",
+        "_id": "d_major",
         "noteId": "d",
         "typeId": "major",
         "notes": ["d", "f#", "a"],
@@ -348,7 +348,7 @@
         }
     },
     {
-        "chordId": "d_minor",
+        "_id": "d_minor",
         "noteId": "d",
         "typeId": "minor",
         "notes": ["d", "f", "a"],
@@ -358,7 +358,7 @@
         }
     },
     {
-        "chordId": "d_dim",
+        "_id": "d_dim",
         "noteId": "d",
         "typeId": "dim",
         "notes": ["d", "f", "ab"],
@@ -368,7 +368,7 @@
         }
     },
     {
-        "chordId": "d_7",
+        "_id": "d_7",
         "noteId": "d",
         "typeId": "7",
         "notes": ["d", "f#", "a", "c"],
@@ -379,7 +379,7 @@
     },
 
     {
-        "chordId": "d#_major",
+        "_id": "d#_major",
         "noteId": "d#",
         "typeId": "major",
         "notes": ["d#", "g", "a#"],
@@ -389,7 +389,7 @@
         }
     },
     {
-        "chordId": "d#_minor",
+        "_id": "d#_minor",
         "noteId": "d#",
         "typeId": "minor",
         "notes": ["d#", "f#", "a#"],
@@ -399,7 +399,7 @@
         }
     },
     {
-        "chordId": "d#_dim",
+        "_id": "d#_dim",
         "noteId": "d#",
         "typeId": "dim",
         "notes": ["d#", "f#", "a"],
@@ -409,7 +409,7 @@
         }
     },
     {
-        "chordId": "d#_7",
+        "_id": "d#_7",
         "noteId": "d#",
         "typeId": "7",
         "notes": ["d#", "g", "a#", "c#"],
@@ -420,7 +420,7 @@
     },
 
     {
-        "chordId": "eb_major",
+        "_id": "eb_major",
         "noteId": "eb",
         "typeId": "major",
         "notes": ["eb", "g", "bb"],
@@ -430,7 +430,7 @@
         }
     },
     {
-        "chordId": "eb_minor",
+        "_id": "eb_minor",
         "noteId": "eb",
         "typeId": "minor",
         "notes": ["eb", "gb", "bb"],
@@ -440,7 +440,7 @@
         }
     },
     {
-        "chordId": "eb_dim",
+        "_id": "eb_dim",
         "noteId": "eb",
         "typeId": "dim",
         "notes": ["eb", "gb", "a"],
@@ -450,7 +450,7 @@
         }
     },
     {
-        "chordId": "eb_7",
+        "_id": "eb_7",
         "noteId": "eb",
         "typeId": "7",
         "notes": ["eb", "g", "bb", "db"],
@@ -461,7 +461,7 @@
     },
 
     {
-        "chordId": "e_major",
+        "_id": "e_major",
         "noteId": "e",
         "typeId": "major",
         "notes": ["e", "g#", "b"],
@@ -471,7 +471,7 @@
         }
     },
     {
-        "chordId": "e_minor",
+        "_id": "e_minor",
         "noteId": "e",
         "typeId": "minor",
         "notes": ["e", "g", "b"],
@@ -481,7 +481,7 @@
         }
     },
     {
-        "chordId": "e_dim",
+        "_id": "e_dim",
         "noteId": "e",
         "typeId": "dim",
         "notes": ["e", "g", "bb"],
@@ -491,7 +491,7 @@
         }
     },
     {
-        "chordId": "e_7",
+        "_id": "e_7",
         "noteId": "e",
         "typeId": "7",
         "notes": ["e", "g#", "b", "d"],
@@ -502,7 +502,7 @@
     },
 
     {
-        "chordId": "f_major",
+        "_id": "f_major",
         "noteId": "f",
         "typeId": "major",
         "notes": ["f", "a", "c"],
@@ -512,7 +512,7 @@
         }
     },
     {
-        "chordId": "f_minor",
+        "_id": "f_minor",
         "noteId": "f",
         "typeId": "minor",
         "notes": ["f", "ab", "c"],
@@ -522,7 +522,7 @@
         }
     },
     {
-        "chordId": "f_dim",
+        "_id": "f_dim",
         "noteId": "f",
         "typeId": "dim",
         "notes": ["f", "ab", "cb"],
@@ -532,7 +532,7 @@
         }
     },
     {
-        "chordId": "f_7",
+        "_id": "f_7",
         "noteId": "f",
         "typeId": "7",
         "notes": ["f", "a", "c", "eb"],
@@ -543,7 +543,7 @@
     },
 
     {
-        "chordId": "f#_major",
+        "_id": "f#_major",
         "noteId": "f#",
         "typeId": "major",
         "notes": ["f#", "a#", "c#"],
@@ -553,7 +553,7 @@
         }
     },
     {
-        "chordId": "f#_minor",
+        "_id": "f#_minor",
         "noteId": "f#",
         "typeId": "minor",
         "notes": ["f#", "a", "c#"],
@@ -563,7 +563,7 @@
         }
     },
     {
-        "chordId": "f#_dim",
+        "_id": "f#_dim",
         "noteId": "f#",
         "typeId": "dim",
         "notes": ["f#", "a", "c"],
@@ -573,7 +573,7 @@
         }
     },
     {
-        "chordId": "f#_7",
+        "_id": "f#_7",
         "noteId": "f#",
         "typeId": "7",
         "notes": ["f#", "a#", "c#", "e"],
@@ -584,7 +584,7 @@
     },
 
     {
-        "chordId": "gb_major",
+        "_id": "gb_major",
         "noteId": "gb",
         "typeId": "major",
         "notes": ["gb", "bb", "db"],
@@ -594,7 +594,7 @@
         }
     },
     {
-        "chordId": "gb_minor",
+        "_id": "gb_minor",
         "noteId": "gb",
         "typeId": "minor",
         "notes": ["gb", "bb", "db"],
@@ -604,7 +604,7 @@
         }
     },
     {
-        "chordId": "gb_dim",
+        "_id": "gb_dim",
         "noteId": "gb",
         "typeId": "dim",
         "notes": ["gb", "bb", "d"],
@@ -614,7 +614,7 @@
         }
     },
     {
-        "chordId": "gb_7",
+        "_id": "gb_7",
         "noteId": "gb",
         "typeId": "7",
         "notes": ["gb", "bb", "db", "fb"],
@@ -625,7 +625,7 @@
     },
 
     {
-        "chordId": "g_major",
+        "_id": "g_major",
         "noteId": "g",
         "typeId": "major",
         "notes": ["g", "b", "d"],
@@ -635,7 +635,7 @@
         }
     },
     {
-        "chordId": "g_minor",
+        "_id": "g_minor",
         "noteId": "g",
         "typeId": "minor",
         "notes": ["g", "bb", "d"],
@@ -645,7 +645,7 @@
         }
     },
     {
-        "chordId": "g_dim",
+        "_id": "g_dim",
         "noteId": "g",
         "typeId": "dim",
         "notes": ["g", "bb", "db"],
@@ -655,7 +655,7 @@
         }
     },
     {
-        "chordId": "g_7",
+        "_id": "g_7",
         "noteId": "g",
         "typeId": "7",
         "notes": ["g", "b", "d", "f"],
@@ -666,7 +666,7 @@
     },
 
     {
-        "chordId": "g#_major",
+        "_id": "g#_major",
         "noteId": "g#",
         "typeId": "major",
         "notes": ["g#", "c", "d#"],
@@ -676,7 +676,7 @@
         }
     },
     {
-        "chordId": "g#_minor",
+        "_id": "g#_minor",
         "noteId": "g#",
         "typeId": "minor",
         "notes": ["g#", "b", "d#"],
@@ -686,7 +686,7 @@
         }
     },
     {
-        "chordId": "g#_dim",
+        "_id": "g#_dim",
         "noteId": "g#",
         "typeId": "dim",
         "notes": ["g#", "b", "d"],
@@ -696,7 +696,7 @@
         }
     },
     {
-        "chordId": "g#_7",
+        "_id": "g#_7",
         "noteId": "g#",
         "typeId": "7",
         "notes": ["g#", "c", "d#", "f#"],

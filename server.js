@@ -14,20 +14,23 @@ const router = require('./routes/router.js');
 //Import mongoConnection
 const mongoConnection = require('./databases/mongo.connection.js');
 
+//router configuration
 app.use('/api/v1', router);
 
 const PORT = process.env.PORT || 3001;
 
 const runServer = async () => {
     try{
-
+        //MondoDB connection
         await mongoConnection();
 
+        //Initializing server
         app.listen(PORT, () => {
-            logger.info(`Server running on http://localhost:${PORT}`);
+            logger.info(`Server - Running on http://localhost:${PORT}`);
         })
+
     }catch(error){
-        logger.error('Error initilizating server');
+        logger.error('Server - Error initializing');
     }
 }
 

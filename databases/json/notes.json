@@ -1,7 +1,7 @@
 
 [
     {
-        "noteId": "ab",
+        "_id": "ab",
         "name": {
             "eng": "Ab",
             "spa": "Lab"
@@ -9,7 +9,7 @@
         "type": "flat"
     },
     {
-        "noteId": "a",
+        "_id": "a",
         "name": {
             "eng": "A",
             "spa": "La"
@@ -17,7 +17,7 @@
         "type": "natural"
     },
     {
-        "noteId": "a#",
+        "_id": "a#",
         "name": {
             "eng": "A#",
             "spa": "La#"
@@ -25,7 +25,7 @@
         "type": "sharp"
     },
     {
-        "noteId": "bb",
+        "_id": "bb",
         "name": {
             "eng": "Bb",
             "spa": "Sib"
@@ -33,7 +33,7 @@
         "type": "flat"
     },
     {
-        "noteId": "b",
+        "_id": "b",
         "name": {
             "eng": "B",
             "spa": "Si"
@@ -41,7 +41,7 @@
         "type": "natural"
     },
     {
-        "noteId": "c",
+        "_id": "c",
         "name": {
             "eng": "C",
             "spa": "Do"
@@ -49,7 +49,7 @@
         "type": "natural"
     },
     {
-        "noteId": "c#",
+        "_id": "c#",
         "name": {
             "eng": "C#",
             "spa": "Do#"
@@ -57,7 +57,7 @@
         "type": "sharp"
     },
     {
-        "noteId": "db",
+        "_id": "db",
         "name": {
             "eng": "Db",
             "spa": "Reb"
@@ -65,7 +65,7 @@
         "type": "flat"
     },
     {
-        "noteId": "d",
+        "_id": "d",
         "name": {
             "eng": "D",
             "spa": "Re"
@@ -73,7 +73,7 @@
         "type": "natural"
     },
     {
-        "noteId": "d#",
+        "_id": "d#",
         "name": {
             "eng": "D#",
             "spa": "Re#"
@@ -81,7 +81,7 @@
         "type": "sharp"
     },
     {
-        "noteId": "eb",
+        "_id": "eb",
         "name": {
             "eng": "Eb",
             "spa": "Mib"
@@ -89,7 +89,7 @@
         "type": "flat"
     },
     {
-        "noteId": "e",
+        "_id": "e",
         "name": {
             "eng": "E",
             "spa": "Mi"
@@ -97,7 +97,7 @@
         "type": "natural"
     },
     {
-        "noteId": "f",
+        "_id": "f",
         "name": {
             "eng": "F",
             "spa": "Fa"
@@ -105,7 +105,7 @@
         "type": "natural"
     },
     {
-        "noteId": "f#",
+        "_id": "f#",
         "name": {
             "eng": "F#",
             "spa": "Fa#"
@@ -113,7 +113,7 @@
         "type": "sharp"
     },
     {
-        "noteId": "gb",
+        "_id": "gb",
         "name": {
             "eng": "Gb",
             "spa": "Solb"
@@ -121,7 +121,7 @@
         "type": "flat"
     },
     {
-        "noteId": "g",
+        "_id": "g",
         "name": {
             "eng": "G",
             "spa": "Sol"
@@ -129,7 +129,7 @@
         "type": "natural"
     },
     {
-        "noteId": "g#",
+        "_id": "g#",
         "name": {
             "eng": "G#",
             "spa": "Sol#"
