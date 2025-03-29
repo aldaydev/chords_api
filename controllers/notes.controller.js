@@ -1,16 +1,13 @@
-const logger = require("../config/logger.config.js");
 const notesService = require("../services/notes.service.js");
-
 
 const notesController = {
 
     getAll: async (req, res, next) => {
         try {
             const allNotes = await notesService.getAll();
-            res.send(allNotes);
+            res.status(200).json(allNotes);
         } catch (error) {
-            res.status(500).json({message: 'Error: ', error: error});
-            logger.error('Error al finding note list', error);
+            next(error);
         }
     }
 

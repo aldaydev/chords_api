@@ -1,6 +1,7 @@
 const logger = require('../config/logger.config.js')
 
 const Note = require('../models/note.model.js');
+const { LogError } = require('../utils/error.logs.js');
 
 const notesService = {
 
@@ -9,7 +10,11 @@ const notesService = {
             const notesList = await Note.find();
             return notesList;
         } catch (error) {
-            logger.error('MongoDB - Error at searching notes');
+            const dbNotesError = new LogError({
+                message: 'MongoDB - Error at getting notes',
+                error: error
+            }).add('dbNotesError');
+            throw({resCode: 'internalServerError', logCode: dbNotesError});
         }
     }
 

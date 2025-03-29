@@ -1,7 +1,15 @@
 # acordes_api
 
-sprint-1 / 27-03-2025 / Working on models
+sprint-1 / 29-03-2025 / Error middlewares
 
 ## SPRINT 1 (API)
 
-En este primer Sprint el objetivo es inicializar el proyecto, realizar configuraciones iniciales y crear los modelos.
+Objetivos:
+
+* Inicializar el proyecto
+* Configuraciones iniciales
+* Crear los modelos
+* Crear error middlewares (error y notFound)
+* Rutas iniciales
+* Controladores inciales
+* Servicios iniciales
