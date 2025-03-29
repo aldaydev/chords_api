@@ -1,4 +1,3 @@
-const logger = require('../config/logger.config.js');
 const ChordType = require('../models/chordType.model.js');
 
 const chordTypeService = {
@@ -7,7 +6,11 @@ const chordTypeService = {
         try {
             return await ChordType.find();
         } catch (error) {
-            logger.error('MongoDB - Error at searching notes');
+            const dbChordTypesError = new LogError({
+                message: 'MongoDB - Error at getting chord types',
+                error: error
+            }).add('dbChordTypesError');
+            throw({resCode: 'internalServerError', logCode: dbChordTypesError});
         }
     }
 

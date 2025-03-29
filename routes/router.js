@@ -15,7 +15,7 @@ router.get('/chord-types', chordTypesController.getAll);
 
 //---------- CHORDS ROUTES ----------//
 
-router.get('/chords/all', chordsController.getAll);
+router.get('/chords', chordsController.filter);
 
 
 

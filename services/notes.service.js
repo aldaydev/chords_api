@@ -1,5 +1,3 @@
-const logger = require('../config/logger.config.js')
-
 const Note = require('../models/note.model.js');
 const { LogError } = require('../utils/error.logs.js');
 

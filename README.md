@@ -1,6 +1,6 @@
 # acordes_api
 
-sprint-1 / 29-03-2025 / Error middlewares
+sprint-1 / 29-03-2025 / Finishing basic endpoint
 
 ## SPRINT 1 (API)
 
