@@ -1,0 +1,48 @@
+openapi: 3.0.0
+info:
+  title: Notes actions API
+  version: 1.0.0
+paths:
+  /v1/notes:
+      get:
+        tags:
+          - Notes
+        summary: Get all notes.
+        description: Returns a list of all notes.
+        responses:
+          '200':
+            description: Successful response.
+            content:
+              application/json:
+                schema:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      name:
+                        type: object
+                        properties:
+                          eng:
+                            type: string
+                            example: 'A'
+                          spa:
+                            type: string
+                            example: 'La'
+                      _id:
+                        type: string
+                        example: 'a'
+                      type:
+                        type: string
+                        example: 'natural'
+          '500':
+            description: Error a getting note list
+            content:
+              aplication/json:
+                schema:
+                    $ref: "#/components/schemas/Error"
+                example:
+                  message: 
+                    eng: "Error at getting note list. Please try again later."
+                    spa: "Error al obtener el listado de notas. Por favor, inténtalo más tarde."
+                  status: 500
+            

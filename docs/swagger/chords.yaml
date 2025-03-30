@@ -1,0 +1,150 @@
+openapi: 3.0.0
+info:
+  title: Chords actions API
+  version: 1.0.0
+paths:
+  /v1/chords:
+      get:
+        tags:
+          - Chords
+        summary: Get chords.
+        description: Returns a list of all chord types. You can use query params to filter them by 'note' or 'type' and apply pagination using 'limit' and 'page'.
+        parameters:
+        - name: limit
+          in: query
+          description: The number of chords to return. Limit can be: '0' or 'all' if you want no limit, or an entire number.
+          required: false
+          schema:
+            oneOf:
+              - type: integer
+                example: 10
+              - type: string
+                enum: ["all"]
+                example: "all"
+        - name: page
+          in: query
+          description: The number of page you want to show. Page must be an entire number.
+          required: false
+          schema:
+            type: integer
+            example: 1
+        - name: note
+          in: query
+          description: Filter the chord search by note (_id of the note)
+          required: false
+          schema:
+            type: string
+            example: "c"
+        - name: type
+          in: query
+          description: Filter the chord search by chord type (_id of the chord type)
+          required: false
+          schema:
+            type: string
+            example: "major"
+        responses:
+          '200':
+            description: Successful response.
+            content:
+              application/json:
+                schema:
+                  type: object
+                  properties:
+                    count: 
+                      type: integer
+                      example: 68
+                    currentPage: 
+                      type: integer
+                      example: 1
+                    totalPages: 
+                      type: integer
+                      example: 7
+                    limit:
+                      type: integer
+                      example: 10
+                    data:
+                      type: array
+                      items:
+                        type: object
+                        properties:
+                          name:
+                            type: object
+                            properties:
+                              eng:
+                                type: string
+                                example: "C major"
+                              spa:
+                                type: string
+                                example: "Do mayor"
+                          images: 
+                            type: object
+                            properties:
+                              pos1:
+                                type: string
+                                example: "https://github.com/aldaydev/acordes_images/blob/main/guitar-chords/c/chord-c-major-pos1.png?raw=true"
+                          _id:
+                            type: string
+                            example: "c_major"
+                          notes:
+                            type: array
+                            items:
+                              type: object
+                              properties: 
+                                eng: 
+                                  type: string
+                                  example: "C"
+                                spa:
+                                  type: string
+                                  example: "Do"
+                          note:
+                            type: object
+                            properties: 
+                              name:
+                                type: object
+                                properties:
+                                  eng: 
+                                    type: string
+                                    example: "C"
+                                  spa:
+                                    type: string
+                                    example: "Do"
+                              type:
+                                type: string
+                                example: "natural"
+                          type:
+                            type: object
+                            properties: 
+                              name:
+                                type: object
+                                properties:
+                                  eng: 
+                                    type: string
+                                    example: "major"
+                                  spa:
+                                    type: string
+                                    example: "Do"
+                              description:
+                                type: object
+                                properties:
+                                  eng: 
+                                    type: string
+                                    example: "Major chord"
+                                  spa:
+                                    type: string
+                                    example: "Acorde mayor"
+                              intervals:
+                                type: array
+                                items:
+                                  type: string
+                                example: ["1", "3", "5"]
+          '500':
+            description: Error a getting chords
+            content:
+              aplication/json:
+                schema:
+                    $ref: "#/components/schemas/Error"
+                example:
+                  message: 
+                    eng: "Error at getting chords. Please try again later."
+                    spa: "Error al obtener el listado de acordes. Por favor, inténtalo más tarde."
+                  status: 500

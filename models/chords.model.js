@@ -32,9 +32,10 @@ const chordSchema = new mongoose.Schema({
             ret.note = ret.noteId;
             //Renaming 'typeId' to 'type' for greater user clarity
             ret.type = ret.typeId;
-            //Deleting old original fields 'noteId' and 'typeId' 
+            //Deleting old original fields 'noteId', 'typeId' and 'id'
             delete ret.typeId;
-            delete ret.noteId; 
+            delete ret.noteId;
+            delete ret.id;
         }
     }
 });

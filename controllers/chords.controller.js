@@ -7,27 +7,32 @@ const chordsController = {
     filter: async (req, res, next) => {
         try {
 
-            const { note, chordtype, limit, page } = req.query;
+            //Getting query params from request
+            const { note, type, limit, page } = req.query;
 
-            // Construimos el filtro dinámicamente
+            //Building the filter dynamically
             const filter = {};
-            if (note) filter.note = note;
-            if (chordtype) filter.chordtype = chordtype;
+            if (note) filter.noteId = note;
+            if (type) filter.typeId = type;
 
-            // Si el usuario no envía `limit`, usamos el valor por defecto (10)
+            //If 'limit' doesn´t exist, we set default value (10)
             let limitNum = parseInt(limit) || 10;
 
-            // Si el usuario envía `limit=0` o `limit=all`, quitamos el límite
+            //If 'limit = 0' or 'limit = all', we remove the limit
             if (limit === "0" || limit === "all") {
-              limitNum = null; // Esto significa "sin límite" en Mongoose
+              limitNum = null; // That means 'nm limit' in mogoose
             }
 
-            // Manejo de paginación
-            const pageNum = parseInt(page) || 1;
-            const skip = limitNum ? (pageNum - 1) * limitNum : 0; // Si no hay límite, skip debe ser 0
+            //Pagination management
+            //If 'page' doesn´t exist, we set default value (1)
+            const pageNum = parseInt(page) || 1; 
+            //If there is 'limit', we calculate skip. If theres no 'limit', skip must be '0'
+            const skip = limitNum ? (pageNum - 1) * limitNum : 0;
 
+            //Call for service in database
             const result = await chordService.filter(filter, limitNum, skip, pageNum);
 
+            //Final response
             res.status(200).json(result);
             
         } catch (error) {

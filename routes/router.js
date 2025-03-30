@@ -1,4 +1,3 @@
-const logger = require('../config/logger.config.js');
 const chordsController = require('../controllers/chords.controller.js');
 const chordTypesController = require('../controllers/chordTypes.controller.js');
 const notesController = require('../controllers/notes.controller.js');

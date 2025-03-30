@@ -4,13 +4,27 @@ const chordTypeService = {
 
     getAll: async () => {
         try {
+            //Returning all chord types
             return await ChordType.find();
         } catch (error) {
-            const dbChordTypesError = new LogError({
+
+            //New log error
+            const chordTypesLogError = new LogError({
                 message: 'MongoDB - Error at getting chord types',
                 error: error
-            }).add('dbChordTypesError');
-            throw({resCode: 'internalServerError', logCode: dbChordTypesError});
+            }).add('chordTypesLogError');
+
+            //New response Error
+            const chordTypesResError = new ResError({
+                message: {
+                    eng: 'Error at getting chord types list. Please try again later.',
+                    spa: 'Error al obtener el listado de tipos de acordes. Por favor, inténtalo más tarde.'
+                },
+                status: 500
+            }).add('chordTypesResError');
+
+            //Throw an error -> resCode + logCode
+            throw({resCode: chordTypesResError, logCode: chordTypesLogError});
         }
     }
 

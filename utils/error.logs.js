@@ -1,3 +1,4 @@
+//Custom log error class
 class LogError {
     constructor({ message, error, status, endpoint }) {
 
@@ -6,7 +7,7 @@ class LogError {
         this.error = error || null;
         this.status = status || 500;
 
-        //Taken from req
+        //Taken from request
         this.endpoint = null;
     }
 
@@ -17,6 +18,7 @@ class LogError {
     }
 };
 
+//logErrors object that contains the 'logCode' of custom log errors
 const logErrors = {};
 
 module.exports = {LogError, logErrors};
