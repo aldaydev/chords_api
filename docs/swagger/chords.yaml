@@ -8,7 +8,7 @@ paths:
         tags:
           - Chords
         summary: Get chords.
-        description: Returns a list of all chord types. You can use query params to filter them by 'note' or 'type' and apply pagination using 'limit' and 'page'.
+        description: Returns a list of all chords. You can use query params to filter them by 'note' or 'type' and apply pagination using 'limit' and 'page'.
         parameters:
         - name: limit
           in: query
@@ -148,3 +148,93 @@ paths:
                     eng: "Error at getting chords. Please try again later."
                     spa: "Error al obtener el listado de acordes. Por favor, inténtalo más tarde."
                   status: 500
+  /v1/chords/{id}:
+      get:
+        tags:
+          - Chords
+        summary: Get a chord by its ID.
+        description: Returns a single chord selected by its ID from params.
+        parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+        responses:
+          '200':
+            description: Successful response.
+            content:
+              application/json:
+                schema:
+                  type: object
+                  properties:
+                    name:
+                      type: object
+                      properties:
+                        eng:
+                          type: string
+                          example: "C major"
+                        spa:
+                          type: string
+                          example: "Do mayor"
+                    images: 
+                      type: object
+                      properties:
+                        pos1:
+                          type: string
+                          example: "https://github.com/aldaydev/acordes_images/blob/main/guitar-chords/c/chord-c-major-pos1.png?raw=true"
+                    _id:
+                      type: string
+                      example: "c_major"
+                    notes:
+                      type: array
+                      items:
+                        type: object
+                        properties: 
+                          eng: 
+                            type: string
+                            example: "C"
+                          spa:
+                            type: string
+                            example: "Do"
+                    note:
+                      type: object
+                      properties: 
+                        name:
+                          type: object
+                          properties:
+                            eng: 
+                              type: string
+                              example: "C"
+                            spa:
+                              type: string
+                              example: "Do"
+                        type:
+                          type: string
+                          example: "natural"
+                    type:
+                      type: object
+                      properties: 
+                        name:
+                          type: object
+                          properties:
+                            eng: 
+                              type: string
+                              example: "major"
+                            spa:
+                              type: string
+                              example: "Do"
+                        description:
+                          type: object
+                          properties:
+                            eng: 
+                              type: string
+                              example: "Major chord"
+                            spa:
+                              type: string
+                              example: "Acorde mayor"
+                        intervals:
+                          type: array
+                          items:
+                            type: string
+                          example: ["1", "3", "5"]

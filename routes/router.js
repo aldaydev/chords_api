@@ -12,9 +12,13 @@ router.get('/notes', notesController.getAll);
 
 router.get('/chord-types', chordTypesController.getAll);
 
+router.get('/chord-types/:id', chordTypesController.getById);
+
 //---------- CHORDS ROUTES ----------//
 
 router.get('/chords', chordsController.filter);
+
+router.get('/chords/:id', chordsController.getById);
 
 
 

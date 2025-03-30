@@ -63,6 +63,51 @@ const chordService = {
             //Throw an error -> resCode + logCode
             throw({resCode: chordResError, logCode: chordsLogError});
         }
+    },
+
+    getById: async (_id) => {
+        try {
+            
+            //Getting chord by id
+            const chordById = await Chord.find({_id})
+                //Getting 'noteId' referenced data
+                .populate({
+                    path: "noteId",
+                    select: "-_id" //We get everything except id
+                })
+                //Getting 'notes' referenced data
+                .populate({
+                    path: "notes", 
+                    select: "name -_id" //We get just the name
+                })
+                //Getting 'typeId' referenced data
+                .populate({
+                    path: "typeId",
+                    select: "-_id" //We get everything except id
+                });
+            
+                //Returning selected element
+                return chordById[0];
+
+        } catch (error) {
+            //New log error
+            const chordByIdLogError = new LogError({
+                message: 'MongoDB - Error at getting a chord by id',
+                error: error
+            }).add('chordByIdLogError');
+
+            //New response Error
+            const chordByIdResError = new ResError({
+                message: {
+                    eng: 'Error at getting chord by id. Please try again later.',
+                    spa: 'Error al obtener el acorde por su id. Por favor, inténtalo más tarde.'
+                },
+                status: 500
+            }).add('chordByIdResError');
+
+            //Throw an error -> resCode + logCode
+            throw({resCode: chordByIdResError, logCode: chordByIdLogError});
+        }
     }
 }
 

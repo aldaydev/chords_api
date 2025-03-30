@@ -1,6 +1,6 @@
 # acordes_api
 
-sprint-2 / 30-03-2025 / Documenting with swagger
+sprint-2 / 31-03-2025 / Get by id endpoints
 
 ## SPRINT 2 (API)
 

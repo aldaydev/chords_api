@@ -38,6 +38,23 @@ const chordsController = {
         } catch (error) {
             next(error);
         }
+    },
+
+    getById: async (req, res, next) => {
+        try {
+            
+            //Getting chord id from params
+            const id = req.params.id;
+
+            //Call for service in database
+            const chordById = await chordService.getById(id);
+
+            //Final response
+            res.status(200).json(chordById);
+
+        } catch (error) {
+            next(error);
+        }
     }
 
 }
