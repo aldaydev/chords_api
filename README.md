@@ -7,7 +7,7 @@ sprint-1 / 29-03-2025 / Finishing basic endpoint
 Objetivos:
 
 * Inicializar el proyecto
-* Configuraciones iniciales
+* Configuraciones iniciales (BD, logger)
 * Crear los modelos
 * Crear error middlewares (error y notFound)
 * Rutas iniciales
