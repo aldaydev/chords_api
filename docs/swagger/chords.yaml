@@ -12,7 +12,7 @@ paths:
         parameters:
         - name: limit
           in: query
-          description: The number of chords to return. Limit can be: '0' or 'all' if you want no limit, or an entire number.
+          description: The number of chords to return. Limit can be: '0' or 'all' if you want no limit, or an entire number. If there is no 'limit', default value will be '10'.
           required: false
           schema:
             oneOf:
@@ -30,14 +30,14 @@ paths:
             example: 1
         - name: note
           in: query
-          description: Filter the chord search by note (_id of the note)
+          description: Filter the chord search by note ('_id' of the note)
           required: false
           schema:
             type: string
             example: "c"
         - name: type
           in: query
-          description: Filter the chord search by chord type (_id of the chord type)
+          description: Filter the chord search by chord type ('_id' of the chord type)
           required: false
           schema:
             type: string
@@ -238,3 +238,14 @@ paths:
                           items:
                             type: string
                           example: ["1", "3", "5"]
+          '500':
+            description: Error a getting chords
+            content:
+              aplication/json:
+                schema:
+                    $ref: "#/components/schemas/Error"
+                example:
+                  message: 
+                    eng: "Error at getting chord by id. Please try again later."
+                    spa: "Error al obtener el acorde por su id. Por favor, inténtalo más tarde."
+                  status: 500

@@ -56,3 +56,60 @@ paths:
                     eng: "Error at getting chord types list. Please try again later."
                     spa: "Error al obtener el listado de tipos de acorde. Por favor, inténtalo más tarde."
                   status: 500
+  /v1/chord-types/{id}:
+      get:
+        tags:
+          - Chord Types
+        summary: Get a chord type by its ID.
+        description: Returns a single chord selected by its ID from params.
+        parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+        responses:
+          '200':
+            description: Successful response.
+            content:
+              application/json:
+                schema:
+                  type: object
+                  properties:
+                    name:
+                      type: object
+                      properties:
+                        eng:
+                          type: string
+                          example: "major"
+                        spa:
+                          type: string
+                          example: "mayor"
+                    description:
+                      type: object
+                      properties:
+                        eng:
+                          type: string
+                          example: "Major chord"
+                        spa:
+                          type: string
+                          example: "Acorde mayor"
+                    _id:
+                      type: string
+                      example: "major"
+                    intervals:
+                      type: array
+                      items:
+                        type: string
+                      example: ["1", "3", "5"]
+          '500':
+            description: Error a getting chord types list
+            content:
+              aplication/json:
+                schema:
+                    $ref: "#/components/schemas/Error"
+                example:
+                  message: 
+                    eng: "Error at getting chord type by id. Please try again later."
+                    spa: "Error al obtener el tipo de acorde por su id. Por favor, inténtalo más tarde."
+                  status: 500

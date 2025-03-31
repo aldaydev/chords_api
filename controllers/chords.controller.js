@@ -1,5 +1,6 @@
 const logger = require("../config/logger.config.js");
 const chordService = require("../services/chords.service.js");
+const validations = require("../utils/validations.js");
 
 
 const chordsController = {
@@ -9,6 +10,14 @@ const chordsController = {
 
             //Getting query params from request
             const { note, type, limit, page } = req.query;
+
+            console.log(note);
+
+            //Validations
+
+            const validateNote = validations.note(note);
+
+            console.log(validateNote);
 
             //Building the filter dynamically
             const filter = {};
