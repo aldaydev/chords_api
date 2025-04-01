@@ -1,5 +1,6 @@
 const logger = require("../config/logger.config.js");
 const chordService = require("../services/chords.service.js");
+const { ResError } = require("../utils/error.responses.js");
 const validations = require("../utils/validations.js");
 
 
@@ -11,13 +12,23 @@ const chordsController = {
             //Getting query params from request
             const { note, type, limit, page } = req.query;
 
-            console.log(note);
+            //Query params Validations
+            const validateQueries = validations(note, type, limit, page);
 
-            //Validations
+            if(!validateQueries[0]){
 
-            const validateNote = validations.note(note);
-
-            console.log(validateNote);
+                //New response Error
+                const invalidQueryResError = new ResError({
+                    message: {
+                        eng: validateQueries[1].eng,
+                        spa: validateQueries[1].spa
+                    },
+                    status: 400
+                }).add('invalidQueryResError');
+            
+                //Throw an error -> only resCode
+                throw({resCode: invalidQueryResError});
+            };
 
             //Building the filter dynamically
             const filter = {};
