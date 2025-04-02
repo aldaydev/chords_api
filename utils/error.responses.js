@@ -18,36 +18,24 @@ const resErrors = {
     // ---------- PREDEFINED ERRORS - STATUS 500 ----------
 
     internalServerError: new ResError({
-        message: {
-            eng: 'Internal server error. Please try again later.',
-            spa: 'Error interno en el servidor. Por favor, inténtalo más tarde.'
-        },
+        message: 'Internal server error. Please try again later.',
         status: 500
     }),
 
     unexpected: new ResError ({
-        message: {
-            eng: 'An unexpected server error has occurred. Please try again later.',
-            spa: 'Error inesperado en el servidor. Por favor, inténtalo más tarde.'
-        },
+        message: 'An unexpected server error has occurred. Please try again later.',
         status: 500
     }),
 
     // ---------- PREDEFINED ERRORS - STATUS 400 ----------
 
     badRequest: new ResError({
-        message: {
-            eng: 'Incorrect request. Please check the submitted data.',
-            spa: 'Solicitud incorrecta. Por favor, verifica los datos enviados.'
-        },
+        message: 'Incorrect request. Please check the submitted data.',
         status: 400
     }),
 
     notFound: new ResError({
-        message: {
-            eng: 'The resource was not found. Please try again later.',
-            spa: 'El recurso no se encontró. Por favor, inténtalo más tarde.'
-        },
+        message: 'The resource was not found. Please try again later.',
         status: 400
     })
 }

@@ -16,10 +16,7 @@ const chordTypeService = {
 
             //New response Error
             const chordTypesResError = new ResError({
-                message: {
-                    eng: 'Error at getting chord types list. Please try again later.',
-                    spa: 'Error al obtener el listado de tipos de acordes. Por favor, inténtalo más tarde.'
-                },
+                message: 'Error at getting chord types list. Please try again later.',
                 status: 500
             }).add('chordTypesResError');
 
@@ -46,10 +43,7 @@ const chordTypeService = {
 
             //New response Error
             const chordTypeByIdResError = new ResError({
-                message: {
-                    eng: 'Error at getting chord type by id. Please try again later.',
-                    spa: 'Error al obtener el tipo de acorde por su id. Por favor, inténtalo más tarde.'
-                },
+                message: 'Error at getting chord type by id. Please try again later.',
                 status: 500
             }).add('chordTypeByIdResError');
 

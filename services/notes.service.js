@@ -16,10 +16,7 @@ const notesService = {
 
             //New response Error
             const notesResError = new ResError({
-                message: {
-                    eng: 'Error at getting note list. Please try again later.',
-                    spa: 'Error al obtener el listado de notas. Por favor, inténtalo más tarde.'
-                },
+                message: 'Error at getting note list. Please try again later.',
                 status: 500
             }).add('notesResError');
 

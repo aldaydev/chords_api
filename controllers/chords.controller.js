@@ -1,7 +1,7 @@
 const logger = require("../config/logger.config.js");
 const chordService = require("../services/chords.service.js");
 const { ResError } = require("../utils/error.responses.js");
-const validations = require("../utils/validations.js");
+const validateQueries = require("../utils/validations.js");
 
 
 const chordsController = {
@@ -12,17 +12,15 @@ const chordsController = {
             //Getting query params from request
             const { note, type, limit, page } = req.query;
 
+            console.log('TYPEOFLIMIT', typeof limit);
+
             //Query params Validations
-            const validateQueries = validations(note, type, limit, page);
+            const validate = validateQueries(note, type, limit, page);
 
-            if(!validateQueries[0]){
-
+            if(!validate[0]){
                 //New response Error
                 const invalidQueryResError = new ResError({
-                    message: {
-                        eng: validateQueries[1].eng,
-                        spa: validateQueries[1].spa
-                    },
+                    message: validate[1],
                     status: 400
                 }).add('invalidQueryResError');
             
@@ -45,7 +43,7 @@ const chordsController = {
 
             //Pagination management
             //If 'page' doesn´t exist, we set default value (1)
-            const pageNum = parseInt(page) || 1; 
+            const pageNum = parseInt(page) || 1;
             //If there is 'limit', we calculate skip. If theres no 'limit', skip must be '0'
             const skip = limitNum ? (pageNum - 1) * limitNum : 0;
 

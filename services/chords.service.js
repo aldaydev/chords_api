@@ -53,10 +53,7 @@ const chordService = {
 
             //New response Error
             const chordResError = new ResError({
-                message: {
-                    eng: 'Error at getting chords. Please try again later.',
-                    spa: 'Error al obtener el listado de acordes. Por favor, inténtalo más tarde.'
-                },
+                message: 'Error at getting chords. Please try again later.',
                 status: 500
             }).add('chordResError');
 
@@ -98,10 +95,7 @@ const chordService = {
 
             //New response Error
             const chordByIdResError = new ResError({
-                message: {
-                    eng: 'Error at getting chord by id. Please try again later.',
-                    spa: 'Error al obtener el acorde por su id. Por favor, inténtalo más tarde.'
-                },
+                message: 'Error at getting chord by id. Please try again later.',
                 status: 500
             }).add('chordByIdResError');
 
