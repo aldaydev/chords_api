@@ -1,7 +1,7 @@
 const logger = require("../config/logger.config.js");
 const chordService = require("../services/chords.service.js");
 const { ResError } = require("../utils/error.responses.js");
-const validateQueries = require("../utils/validations.js");
+const {validateQueries, validateChordParam} = require("../utils/validations.js");
 
 
 const chordsController = {
@@ -12,11 +12,10 @@ const chordsController = {
             //Getting query params from request
             const { note, type, limit, page } = req.query;
 
-            console.log('TYPEOFLIMIT', typeof limit);
-
             //Query params Validations
             const validate = validateQueries(note, type, limit, page);
 
+            //Throw an error if find any invalid query parameter
             if(!validate[0]){
                 //New response Error
                 const invalidQueryResError = new ResError({
@@ -63,6 +62,21 @@ const chordsController = {
             
             //Getting chord id from params
             const id = req.params.id;
+
+            //Path param validation
+            const validate = validateChordParam(id);
+
+            //Throw an error if find an invalid path parameter
+            if(!validate[0]){
+                //New response Error
+                const invalidParamResError = new ResError({
+                    message: validate[1],
+                    status: 400
+                }).add('invalidParamResError');
+            
+                //Throw an error -> only resCode
+                throw({resCode: invalidParamResError});
+            }
 
             //Call for service in database
             const chordById = await chordService.getById(id);

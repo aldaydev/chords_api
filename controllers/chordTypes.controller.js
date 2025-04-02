@@ -1,4 +1,6 @@
 const chordTypeService = require("../services/chordTypes.service.js");
+const { ResError } = require("../utils/error.responses.js");
+const { validateChordTypeParam } = require("../utils/validations.js");
 
 
 const chordTypesController = {
@@ -22,6 +24,21 @@ const chordTypesController = {
             //Getting chord type id from params
             const id = req.params.id;
 
+            //Path param validation
+            const validate = validateChordTypeParam(id);
+
+            //Throw an error if find an invalid path parameter
+            if(!validate[0]){
+                //New response Error
+                const invalidParamResError = new ResError({
+                    message: validate[1],
+                    status: 400
+                }).add('invalidParamResError');
+            
+                //Throw an error -> only resCode
+                throw({resCode: invalidParamResError});
+            }
+
             //Call for service in database
             const chordTypeById = await chordTypeService.getById(id);
 
@@ -29,6 +46,7 @@ const chordTypesController = {
             res.status(200).json(chordTypeById);
 
         } catch (error) {
+            console.log(error);
             next(error);
         }
     }

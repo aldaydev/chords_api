@@ -1,6 +1,6 @@
 # acordes_api
 
-sprint-2 / 01-04-2025 / Get by id endpoints
+sprint-2 / 03-04-2025 / params validations done
 
 ## SPRINT 2 (API)
 
@@ -10,6 +10,7 @@ Objetivos:
 * Comentarios de código actual
 * Endpoint para encontrar 'chord' por su '_id'
 * Endpoint para encotnrar 'chord type' por su '_id'
+* Validación y respuestas de error query y path params
 * Documentación con swagger (Configuración, endpoints actuales)
 
 ## SPRINT 1 (API)

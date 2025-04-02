@@ -1,7 +1,10 @@
-const validNotes = ['ab', 'a', 'a#', 'bb', 'b', 'c', 'c#', 'db', 'd', 'd#', 'eb', 'e', 'f', 'f#', 'gb', 'g', 'g#'];
+//Array of valid note Ids
+const validNotes = ['a_flat', 'a', 'a_sharp', 'b_flat', 'b', 'c', 'c_sharp', 'd_flat', 'd', 'd_sharp', 'e_flat', 'e', 'f', 'f_sharp', 'g_flat', 'g', 'g_sharp'];
+
+//Array of valid chord type Ids
 const validChordTypes = ['major', 'minor', 'dim', '7'];
 
-
+//Function to calculate valid chord Ids (note_type)
 const calculateValidChords = () => {
 
     let allValidChords = [];
@@ -13,27 +16,41 @@ const calculateValidChords = () => {
     }
 
     return allValidChords;
-
 }
 
+//Array of valid chord Ids (calling to the function)
 const validChords = calculateValidChords();
 
-const isValidNote = (note) => {
-    if(note && !validNotes.includes(note)){
+//---------- VALIDATE SINGLE VALUES ----------//
+
+//Validate chord id
+const isValidChordId = (chordId) => {
+    if(!chordId || !validChords.includes(chordId)){
         return false;
     }else{
         return true;
     }
 }
 
-const isValidChordType = (type) => {
-    if(type && !validChordTypes.includes(type)){
+//Validate note id
+const isValidNoteId = (noteId) => {
+    if(noteId && !validNotes.includes(noteId)){
         return false;
     }else{
         return true;
     }
 }
 
+//Validate chord type id
+const isValidChordTypeId = (typeId) => {
+    if(typeId && !validChordTypes.includes(typeId)){
+        return false;
+    }else{
+        return true;
+    }
+}
+
+//Validate limit or page (number)
 const isValidLimitOrPage = (value) => {
     if (value !== undefined && (!/^\d+$/.test(value) || parseInt(value) <= 0)) {
         return false;
@@ -42,14 +59,17 @@ const isValidLimitOrPage = (value) => {
     }
 }
 
+//---------- VALIDATION FUNCTIONS ----------//
+
+//Validate all query parameters
 const validateQueries = (note, type, limit, page) => {
 
-    if(!isValidNote(note)){
+    if(!isValidNoteId(note)){
         return [
             false, `Invalid format for 'note' query parameter ('${note}'). Expected values: 'c', 'a#', 'gb', etc.`];
     }
 
-    if(!isValidChordType(type)){
+    if(!isValidChordTypeId(type)){
         return [
             false, `Invalid format for 'type' query parameter ('${type}'). Expected values: 'major', 'minor', etc.`];
     }
@@ -70,5 +90,30 @@ const validateQueries = (note, type, limit, page) => {
 
 }
 
+//Validate chord id path parameter
+const validateChordParam = (chordId) => {
 
-module.exports = validateQueries;
+    if(!isValidChordId(chordId)){
+        return [
+            false, 
+            `Invalid format for 'chord Id' path parameter ('${chordId}'). Expected values: 'c_major', 'a#_minor', 'gb_dim', 'f_7' etc.`
+        ];
+    }
+
+    return [true];
+}
+
+//Validate chord type id path parameter
+const validateChordTypeParam = (chordTypeId) => {
+    
+    if(!isValidChordTypeId(chordTypeId)){
+        return [
+            false, 
+            `Invalid format for 'type Id' path parameter ('${chordTypeId}'). Expected values: 'major', 'minor', etc.`
+        ];
+    }
+    return [true];
+}
+
+
+module.exports = {validateQueries, validateChordParam, validateChordTypeParam};

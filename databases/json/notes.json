@@ -1,7 +1,7 @@
 
 [
     {
-        "_id": "ab",
+        "_id": "a_flat",
         "name": {
             "eng": "Ab",
             "spa": "Lab"
@@ -17,7 +17,7 @@
         "type": "natural"
     },
     {
-        "_id": "a#",
+        "_id": "a_sharp",
         "name": {
             "eng": "A#",
             "spa": "La#"
@@ -25,7 +25,7 @@
         "type": "sharp"
     },
     {
-        "_id": "bb",
+        "_id": "b_flat",
         "name": {
             "eng": "Bb",
             "spa": "Sib"
@@ -49,7 +49,7 @@
         "type": "natural"
     },
     {
-        "_id": "c#",
+        "_id": "c_sharp",
         "name": {
             "eng": "C#",
             "spa": "Do#"
@@ -57,7 +57,7 @@
         "type": "sharp"
     },
     {
-        "_id": "db",
+        "_id": "d_flat",
         "name": {
             "eng": "Db",
             "spa": "Reb"
@@ -73,7 +73,7 @@
         "type": "natural"
     },
     {
-        "_id": "d#",
+        "_id": "d_sharp",
         "name": {
             "eng": "D#",
             "spa": "Re#"
@@ -81,7 +81,7 @@
         "type": "sharp"
     },
     {
-        "_id": "eb",
+        "_id": "e_flat",
         "name": {
             "eng": "Eb",
             "spa": "Mib"
@@ -105,7 +105,7 @@
         "type": "natural"
     },
     {
-        "_id": "f#",
+        "_id": "f_sharp",
         "name": {
             "eng": "F#",
             "spa": "Fa#"
@@ -113,7 +113,7 @@
         "type": "sharp"
     },
     {
-        "_id": "gb",
+        "_id": "g_flat",
         "name": {
             "eng": "Gb",
             "spa": "Solb"
@@ -129,7 +129,7 @@
         "type": "natural"
     },
     {
-        "_id": "g#",
+        "_id": "g_sharp",
         "name": {
             "eng": "G#",
             "spa": "Sol#"
