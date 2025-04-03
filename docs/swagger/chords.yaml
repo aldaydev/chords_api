@@ -138,16 +138,23 @@ paths:
                                   type: string
                                 example: ["1", "3", "5"]
           '500':
-            description: Error a getting chords
+            description: Error getting chords
             content:
               aplication/json:
                 schema:
                     $ref: "#/components/schemas/Error"
                 example:
-                  message: 
-                    eng: "Error at getting chords. Please try again later."
-                    spa: "Error al obtener el listado de acordes. Por favor, inténtalo más tarde."
+                  message: "Error at getting chords. Please try again later."
                   status: 500
+          '400':
+            description: Incorrect format of any query parameter
+            content:
+              aplication/json:
+                schema:
+                    $ref: "#/components/schemas/Error"
+                example:
+                  message: "Invalid format for 'note' query parameter ('wrong note introduced'). Expected values: 'c', 'a#', 'gb', etc."
+                  status: 400
   /v1/chords/{id}:
       get:
         tags:
@@ -245,7 +252,14 @@ paths:
                 schema:
                     $ref: "#/components/schemas/Error"
                 example:
-                  message: 
-                    eng: "Error at getting chord by id. Please try again later."
-                    spa: "Error al obtener el acorde por su id. Por favor, inténtalo más tarde."
+                  message: "Error at getting chord by id. Please try again later."
                   status: 500
+          '400':
+            description: Incorrect format of 'chord Id' path parameter
+            content:
+              aplication/json:
+                schema:
+                    $ref: "#/components/schemas/Error"
+                example:
+                  message: "Invalid format for 'chord Id' path parameter ('wrong chord Id introduced'). Expected values: 'c_major', 'a#_minor', 'gb_dim', 'f_7' etc."
+                  status: 400

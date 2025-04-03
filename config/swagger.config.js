@@ -36,17 +36,8 @@ const swaggerOptions = {
                     type: "object",
                     properties: {
                         message: {
-                            type: "object",
-                            properties: {
-                                eng: {
-                                    type: "string",
-                                    example: "Internal server error. Please try again later."
-                                },
-                                spa: {
-                                    type: "string",
-                                    example: "Error interno en el servidor. Por favor, inténtalo más tarde."
-                                }
-                            }
+                            type: "string",
+                            example: "Internal server error. Please try again later."
                         },
                         status: {
                             type: "integer",
