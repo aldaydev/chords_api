@@ -66,7 +66,7 @@ const validateQueries = (note, type, limit, page) => {
 
     if(!isValidNoteId(note)){
         return [
-            false, `Invalid format for 'note' query parameter ('${note}'). Expected values: 'c', 'a#', 'gb', etc.`];
+            false, `Invalid format for 'note' query parameter ('${note}'). Expected values: 'c', 'a_sharp', 'g_flat', etc.`];
     }
 
     if(!isValidChordTypeId(type)){
@@ -96,7 +96,7 @@ const validateChordParam = (chordId) => {
     if(!isValidChordId(chordId)){
         return [
             false, 
-            `Invalid format for 'chord Id' path parameter ('${chordId}'). Expected values: 'c_major', 'a#_minor', 'gb_dim', 'f_7' etc.`
+            `Invalid format for 'chord Id' path parameter ('${chordId}'). Expected values: 'c_major', 'a_sharp_minor', 'g_flat_dim', 'f_7' etc.`
         ];
     }
 

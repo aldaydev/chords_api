@@ -261,5 +261,5 @@ paths:
                 schema:
                     $ref: "#/components/schemas/Error"
                 example:
-                  message: "Invalid format for 'chord Id' path parameter ('wrong chord Id introduced'). Expected values: 'c_major', 'a#_minor', 'gb_dim', 'f_7' etc."
+                  message: "Invalid format for 'chord Id' path parameter ('wrong chord Id introduced'). Expected values: 'c_major', 'a_sharp_minor', 'g_flat_dim', 'f_7' etc."
                   status: 400
