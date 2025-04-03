@@ -50,9 +50,18 @@ const isValidChordTypeId = (typeId) => {
     }
 }
 
-//Validate limit or page (number)
-const isValidLimitOrPage = (value) => {
-    if (value !== undefined && (!/^\d+$/.test(value) || parseInt(value) <= 0)) {
+//Validate limit (number)
+const isValidLimit = (limit) => {
+    if (limit !== undefined && limit !== 'all' && (!/^\d+$/.test(limit) || parseInt(limit) < 0)) {
+        return false;
+    }else{
+        return true;
+    }
+}
+
+//Validate page (number)
+const isValidPage = (page) => {
+    if (page !== undefined && (!/^\d+$/.test(page) || parseInt(page) <= 0)) {
         return false;
     }else{
         return true;
@@ -74,13 +83,13 @@ const validateQueries = (note, type, limit, page) => {
             false, `Invalid format for 'type' query parameter ('${type}'). Expected values: 'major', 'minor', etc.`];
     }
 
-    if(!isValidLimitOrPage(limit)){
+    if(!isValidLimit(limit)){
         return [
             false, `Invalid format for 'limit' query parameter ('${limit}'). Expected values: 'all', '2', '3', etc.`
         ]
     }
 
-    if(!isValidLimitOrPage(page)){
+    if(!isValidPage(page)){
         return [
             false, `Invalid format for 'page' query parameter ('${page}'). Expected values: '1', '2', '3', etc.`
         ]

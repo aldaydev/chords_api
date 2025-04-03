@@ -46,7 +46,6 @@ const chordTypesController = {
             res.status(200).json(chordTypeById);
 
         } catch (error) {
-            console.log(error);
             next(error);
         }
     }

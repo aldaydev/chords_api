@@ -33,8 +33,6 @@ const chordService = {
                 //Calculating total number of pages. If no 'limitNum', is just 1 page
                 const totalPages = limitNum ? Math.ceil(chordsCount / limitNum) : 1;
 
-                console.log(chords);
-
                 //Final return to controller
                 return {
                     count: chordsCount,

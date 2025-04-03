@@ -39,7 +39,7 @@ paths:
                             example: 'Acorde mayor'
                       _id:
                         type: string
-                        example: 'a'
+                        example: 'major'
                       intervals:
                         type: array
                         items:
@@ -109,3 +109,12 @@ paths:
                 example:
                   message: "Error at getting chord type by id. Please try again later."
                   status: 500
+          '400':
+            description: Incorrect format of 'chord type Id' path parameter
+            content:
+              aplication/json:
+                schema:
+                    $ref: "#/components/schemas/Error"
+                example:
+                  message: "Invalid format for 'type Id' path parameter ('wrong chord Id introduced'). Expected values: 'major', 'minor', etc."
+                  status: 400

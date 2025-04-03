@@ -1,6 +1,6 @@
 # acordes_api
 
-sprint-2 / 03-04-2025 / working on swagger yaml
+sprint-2 / 03-04-2025 / testing with swagger
 
 ## SPRINT 2 (API)
 
