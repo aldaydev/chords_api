@@ -32,6 +32,8 @@ const chordService = {
                 const chordsCount = await Chord.countDocuments(filter);
                 //Calculating total number of pages. If no 'limitNum', is just 1 page
                 const totalPages = limitNum ? Math.ceil(chordsCount / limitNum) : 1;
+                //Checking pageNum
+                if(totalPages === 1) pageNum = 1;
 
                 //Final return to controller
                 return {
