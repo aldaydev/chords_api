@@ -13,7 +13,8 @@ const app = express();
 const cors = require('cors');
 
 //router import
-const router = require('./routes/router.js');
+const apiRoutes = require('./routes/api.routes.js');
+const docRoutes = require('./routes/doc.routes.js');
 
 //Import mongoConnection
 const mongoConnection = require('./databases/mongo.connection.js');
@@ -26,6 +27,9 @@ const notFoundMiddleware = require('./middlewares/notFound.middleware.js');
 const swaggerUi = require('swagger-ui-express');
 const swaggerDocs = require('./config/swagger.config.js');
 
+//Path imports
+const path = require('path');
+
 
 //Global middlewares
 app.use(json());
@@ -35,15 +39,27 @@ app.use(cors({
     mehtods: ['GET']
 }));
 
-//Router redirection
-app.use('/v1', router);
+//EJS configuration
+app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, 'views'));
+
+//Static files
+app.use(express.static('public'));
+
+//Routes
+app.use('/v1', apiRoutes);
+app.use('/', docRoutes);
+
 
 //Swagger configuration
 app.use("/swagger", swaggerUi.serve, swaggerUi.setup(swaggerDocs));
 
 //Error middlewares
 app.use(errorMiddleware);
-app.use(notFoundMiddleware);
+app.use('/v1', notFoundMiddleware);
+app.use((req, res) => {
+    res.status(404).render('pages/404', { url: req.url} );
+});
 
 //Port config
 const PORT = process.env.PORT || 3001;

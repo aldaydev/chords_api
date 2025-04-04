@@ -1,0 +1,28 @@
+<nav class="navbar navbar-expand-lg justify-content-between" data-bs-theme="dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="/">Chords API</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <!-- <span class="navbar-toggler-icon"></span> -->
+            <img src="/icons/menu-dots.svg"/>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav align-items-center">
+                <li class="nav-item">
+                    <a class="nav-link <%= currentPage === 'home' ? 'active' : '' %>" 
+                    aria-current="<%= currentPage === 'home' ? 'page' : false %>" 
+                    href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Swagger</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">JSDoc</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

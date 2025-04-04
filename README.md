@@ -1,6 +1,16 @@
-# acordes_api
+# chords_api
 
-sprint-2 / 03-04-2025 / testing with swagger
+sprint-3 / 04-04-2025 / working on header ejs
+
+## SPRINT 3 (API)
+
+Objetivos:
+
+* Reorganizar directorios (src y public) y checkear todo
+* Instalación y configuración EJS
+* Instalación y configuración bootstrap
+* Creación de "partials" (navbar, footer)
+
 
 ## SPRINT 2 (API)
 
