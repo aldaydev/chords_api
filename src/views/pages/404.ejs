@@ -2,14 +2,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.4/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-DQvkBjpPgn7RC31MCQoOeC9TI2kdqa4+BSgNMNj8v77fdC77Kj5zpWFTJaaAoMbC" crossorigin="anonymous">
+    <link href="/css/appHeader.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.4/dist/js/bootstrap.bundle.min.js" integrity="sha384-YUe2LzesAfftltw+PEaao2tjU/QATaW/rOitAq67e0CT0Zi2VVRL0oC4+gAaeBKu" crossorigin="anonymous"></script>
+
     <title>Page not found</title>
 </head>
 <body>
-    <div class="notFound__container">
-        <h1 class="notFound__title">Page not found (404)</h1>
-        <h3 class="notFound__subtitle"> Sorry, the page you are looking for (chords-api.com<%= url %>) does not exist.</h3>
-        <a href="/">Go to Home</a>
-
-    </div>
+    <header class="app__header">
+        <%- include('../partials/header'); %>
+    </header>
 </body>
 </html>

@@ -1,6 +1,4 @@
-.header{
-    background-color: #2b53a8;
-}
+
 
 .navbar{
     width: 80%;
@@ -18,7 +16,7 @@
 
 .navbar-toggler{
     border: none;
-    padding: 2px 12px;
+    padding: 2px 0 2px 12px;
     transition: transform 0.3s ease-in-out;
 }
 
@@ -35,12 +33,19 @@
     padding: 5px 0;
 }
 
+.navbar-nav{
+    gap: 7px;
+}
+
 .nav-link{
     color: white;
     position: relative;
+    transition: transform .3s ease-in-out;
 }
 
-.nav-link::after{
+
+
+/* .nav-link::after{
     content: '';
     position: absolute;
     bottom: 10%;
@@ -51,11 +56,12 @@
     transition: width 0.3s ease-in-out;
 }
 
-.nav-link:hover::after{
+.nav-link:hover::after,
+.nav-link.active::after{
     width: 80%;
-}
+} */
 
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 991.20px) {
     .navbar{
         width: 90%;
     }

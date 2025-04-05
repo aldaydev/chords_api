@@ -12,7 +12,7 @@ const logger = winston.createLogger({
         }), 
         //Save logs in a file
         new winston.transports.File({
-            filename: 'src/logs/acordes.log',
+            filename: 'src/logs/chords_api.log',
             level: 'error',
             format: winston.format.combine(
                 winston.format.timestamp({ format: 'YYYY-MM-DD HH:mm:ss' }),

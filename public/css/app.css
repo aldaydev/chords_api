@@ -1,0 +1,32 @@
+body{
+    font-family: 'Montserrat';
+    font-weight: 400;
+    font-size: 62.5%;
+}
+
+.app{
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
+.app__main{
+    width: 80%;
+    background-color: bisque;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.app__header{
+    background-color: #2b53a8;
+}
+
+.app__footer{
+    background-color: #2b53a8;
+    color: white;
+}
+
+@media screen and (max-width: 991.20px) {
+    .app__main{
+        width: 90%;
+    }
+}
