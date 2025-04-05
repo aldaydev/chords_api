@@ -1,7 +1,14 @@
+:root {
+    --primary-color: #1f1f1f;
+    --secondary-color: #f0f0f0;
+    --text-color: #333;
+}
+
 body{
     font-family: 'Montserrat';
     font-weight: 400;
     font-size: 62.5%;
+    background-color: var(--secondary-color);
 }
 
 .app{
@@ -11,17 +18,16 @@ body{
 
 .app__main{
     width: 80%;
-    background-color: bisque;
     margin: 0 auto;
-    padding: 20px 0;
+    padding: 30px 0;
 }
 
 .app__header{
-    background-color: #2b53a8;
+    background-color: var(--primary-color);
 }
 
 .app__footer{
-    background-color: #2b53a8;
+    background-color: var(--primary-color);
     color: white;
 }
 

@@ -1,6 +1,6 @@
 # chords_api
 
-sprint-3 / 04-04-2025 / working on header ejs
+sprint-3 / 05-04-2025 / working on main ejs with bootstrap
 
 ## SPRINT 3 (API)
 

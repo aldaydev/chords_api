@@ -52,7 +52,7 @@ app.use('/', docRoutes);
 
 
 //Swagger configuration
-app.use("/swagger", swaggerUi.serve, swaggerUi.setup(swaggerDocs));
+app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocs));
 
 //Error middlewares
 app.use(errorMiddleware);
