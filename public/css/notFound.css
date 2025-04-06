@@ -1,0 +1,48 @@
+.notFound__container{
+    border: 2px solid var(--primary-color);
+    padding: 40px;
+}
+
+.notFound__text{
+    font-size: 1.5rem;
+    text-align: center;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.notFound__subtext{
+    font-size: 1.3rem;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.notFound__text code{
+    font-family: 'Montserrat';
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-wrap: nowrap;
+}
+
+.returnHome{
+    display: flex;
+    justify-content: center;
+}
+
+@media screen and (max-width: 550px){
+
+    .notFound__container{
+        padding: 40px 20px;
+    }
+
+    .notFound__text{
+        font-size: 1.3rem;
+    }
+
+    .notFound__text code{
+        font-size: 1.3rem;
+    }
+    
+    .notFound__subtext{
+        font-size: 1.2rem;
+    }
+}

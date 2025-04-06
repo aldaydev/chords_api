@@ -1,22 +1,28 @@
-.main__title{
+.home__title{
     font-size: 2.2rem;
     font-weight: 600;
     text-align: center;
     margin-bottom: 30px;
+    text-wrap: balance;
 }
 
-.main__presentation{
+.home__presentation{
     margin: 0 auto;
-    width: 80%;
-    margin-bottom: 30px;
+    width: 90%;
+    margin-bottom: 40px;
 }
 
 .presentation__text{
     text-align: justify;
 }
 
+.features__container{
+    margin-bottom: 50px;
+}
+
 .accordion{
-    
+    width: 90%;
+    margin: 0 auto;
 }
 
 .accordion-button{
@@ -33,17 +39,95 @@
 }
 
 .accordion-button:not(.collapsed){
-    background-color: var(--secondary-color);
-    color: var(--primary-color);
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
     border: 2px solid var(--primary-color);
     outline: none;
 }
 
-.accordion-button:not(.collapsed)::after {
-    filter: invert(0);
+.accordion-body{
+    font-size: 1rem;
 }
 
-.main__exampleImages{
+.accordion-body code{
+    font-family: "Montserrat";
+    font-size: 1rem;
+}
+
+.home__exampleResponses{
+    margin-bottom: 50px;
+}
+
+.exampleResponses__container{
+    width: 90%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    align-items: self-start;
+    gap: 10px;
+    grid-template-areas: 
+    "note chord"
+    "chordType chord"
+    "image chord"
+    "none chord";
+}
+
+.exampleResponses__article{
+    font-size: 1.1rem;
+    font-weight: 600;
+    border: 2px solid var(--primary-color);
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: white;
+}
+
+.exampleResponses__article h5{
+    font-weight: bold;
+}
+
+.exampleResponses__article pre{
+    margin-bottom: 0;
+}
+
+.exampleResponses__article--note{
+    grid-area: note;
+}
+
+.exampleResponses__article--chordType{
+    grid-area: chordType;
+}
+
+.exampleResponses__article--chord{
+    grid-area: chord;
+}
+
+.exampleResponses__article--image{
+    grid-area: image;
+}
+
+.home__documentation{
+    margin-bottom: 50px;
+}
+
+.btn{
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding-left: 35px;
+    padding-right: 35px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.documentation__buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 0 25px;
+}
+
+.home__exampleImages{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     justify-items: center;
@@ -56,21 +140,46 @@
 
 .exampleImages__image{
     width: 100%;
-    height: 100%;
-    max-width: 300px;
+    max-width: 280px;
     min-width: 100px;
 }
 
 @media screen and (max-width: 991.2px) {
-    .main__exampleImages{
+    .home__exampleImages{
         width: 90%;
         margin: 30px auto;
+    }
+
+    .home__presentation{
+        width: 90%;
+    }
+
+    .exampleResponses__container{
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 1fr;
+        align-items: self-start;
+        justify-content: center;
+        gap: 10px;
+        grid-template-areas: 
+        "chord"
+        "chordType"
+        "note"
+        "image";
+    }
+
+    .exampleResponses__article h5{
+        text-align: center;
+    }
+    
+    .exampleResponses__article pre{
+        margin-left: 15%;
     }
 }
 
 @media screen and (max-width: 778px) {
     
-    .main__exampleImages{
+    .home__exampleImages{
         width: 100%;
         grid-template-columns: repeat(2, 1fr);
     }
@@ -80,7 +189,45 @@
         min-width: 100px;
     }
 
-    .main__presentation{
+    /* .home__presentation{
         width: 100%;
+    } */
+
+    .home__title{
+        font-size: 1.8rem;
+    }
+
+}
+
+@media screen and (max-width: 420px){
+    .exampleResponses__article pre{
+        margin-left: 0;
+    }
+
+    
+}
+
+
+@media screen and (max-width: 370px){
+
+    .home__title{
+        font-size: 1.7rem;
+    }
+
+    .accordion{
+        width: 95%;
+    }
+
+    .presentation__text {
+        font-size: 1rem;
+        padding: 0 7px;
+    }
+    
+    .exampleResponses__article {
+        padding: 10px;
+    }
+
+    .exampleResponses__container{
+        width: 95%;
     }
 }

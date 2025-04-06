@@ -19,7 +19,7 @@ body{
 .app__main{
     width: 80%;
     margin: 0 auto;
-    padding: 30px 0;
+    padding: 40px 0;
 }
 
 .app__header{
@@ -34,5 +34,12 @@ body{
 @media screen and (max-width: 991.20px) {
     .app__main{
         width: 90%;
+    }
+}
+
+@media screen and (max-width: 370px){
+
+    .app__main{
+        width: 95%;
     }
 }

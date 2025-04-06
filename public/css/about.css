@@ -1,0 +1,159 @@
+.about__flexContainer{
+    width: 75%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: auto auto;
+    grid-template-areas: 
+    "img text1"
+    "img text2";
+    column-gap: 30px;
+    margin-bottom: 20px;
+}
+
+.about__image{
+    grid-area: img;
+    width: 100%;
+    height: 100%;
+    max-height: fit-content;
+    min-width: 200px;
+    max-width: 360px;
+    border-radius: 15px;
+}
+
+.about__text{
+    font-size: 1.1rem;
+    text-align: justify;
+}
+
+.about__text--1{
+    grid-area: text1;
+    margin-bottom: 0;
+}
+
+.about__text--2{
+    grid-area: text2;
+}
+
+.about__description2{
+    width: 75%;
+    margin: 0 auto;
+    font-size: 1.2rem;
+    text-align: center;
+    text-wrap: pretty;
+    margin-bottom: 30px;
+}
+
+.about__links{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+@media screen and (max-width: 1425px){
+    .about__flexContainer{
+        width: 80%;
+    }
+
+    .about__description2{
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 1330px){
+    .about__flexContainer{
+        width: 95%;
+    }
+
+    .about__description2{
+        width: 95%;
+    }
+}
+
+@media screen and (max-width: 1140px){
+    .about__flexContainer{
+        width: 75%;
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: auto auto;
+        grid-template-areas: 
+        "img text1"
+        "text2 text2";
+        row-gap: 30px;
+        column-gap: 30px;
+    }
+
+    .about__description2 {
+        width: 75%;
+    }
+
+    .about__text{
+        font-size: 1.2rem;
+        text-align: justify;
+    }
+}
+
+@media screen and (max-width: 991.20px){
+    .about__flexContainer{
+        width: 85%;
+    }
+    
+    .about__description2 {
+        width: 85%;
+    }
+    
+}
+
+@media screen and (max-width: 802px){
+    .about__flexContainer{
+        width: 95%;
+    }
+    
+    .about__description2 {
+        width: 95%;
+    }
+    
+}
+
+@media screen and (max-width: 715px){
+    .about__flexContainer{
+        width: 85%;
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-items: center;
+        grid-template-areas: 
+        "img"
+        "text1" 
+        "text2";
+    }
+
+    .about__image{
+        grid-area: img;
+        width: 100%;
+        height: 100%;
+        max-height: fit-content;
+        min-width: 200px;
+        max-width: 450px;
+        border-radius: 15px;
+    }
+    
+    .about__description2 {
+        width: 85%;
+    }
+    
+}
+
+@media screen and (max-width: 611px){
+    .about__flexContainer{
+        width: 100%;
+    }
+
+    .about__image{
+        max-width: 420px;
+    }
+    
+    .about__description2 {
+        width: 100%;
+    }
+    
+}

@@ -8,7 +8,14 @@
 .navbar-brand{
     font-size: 1.3rem;
     font-weight: bold;
+    display: flex;
+    align-items: center;
 }
+
+.navbar-brand img{
+    margin-right: 5px !important;
+}
+
 
 .navbar-collapse{
     font-size: 1.2rem;
@@ -42,24 +49,6 @@
     position: relative;
     transition: transform .3s ease-in-out;
 }
-
-
-
-/* .nav-link::after{
-    content: '';
-    position: absolute;
-    bottom: 10%;
-    left: 10%;
-    width: 0;
-    height: 2px;
-    background-color: #ffffffbf;
-    transition: width 0.3s ease-in-out;
-}
-
-.nav-link:hover::after,
-.nav-link.active::after{
-    width: 80%;
-} */
 
 @media screen and (max-width: 991.20px) {
     .navbar{

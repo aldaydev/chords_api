@@ -1,0 +1,340 @@
+
+<hgroup class="home__presentation">
+    <h1 class="home__title">The Free Chord API for Developers</h1>
+    <h5 class="presentation__text">
+        Chords API is a free and developer-focused REST API that provides easy access to a wide range of musical chords. Designed for simplicity and flexibility, it allows you to integrate chord data into your apps, websites, or music-related projects with ease via simple HTTP requests. No authentication required, just plug and play.
+    </h5>
+</hgroup>
+
+<section class="home__features">
+    <h3 class="home__title">Main Information</h3>
+    <article class="features__container">
+        <div class="accordion accordion-flush" id="accordionFlushExample">
+
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                        API Overview
+                    </button>
+                </h2>
+                <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                        <p>
+                            This API provides access to a structured collection of musical data, including chords, notes, and chord types.
+                            It is designed to be both educational and practical, allowing developers to retrieve musical information
+                            that can be used in web applications, learning tools, or creative projects.
+                        </p>
+
+                        <p>The API has been designed to serve data in both English and Spanish, so you can use the relevant keys to get the data in the language you want.</p>
+                        
+                        <p>The API includes the following main resources:</p>
+                        <ul>
+                            <li><strong>Chords:</strong> 48 different chords combining various root notes and chord types.</li>
+                            <li><strong>Notes:</strong> 17 musical notes including natural, sharp, and flat notes.</li>
+                            <li><strong>Chord Types:</strong> 4 chord types, such as major and minor.</li>
+                        </ul>
+                        
+                        <p>All endpoints return data in <strong>JSON format</strong>, and follow a clear, RESTful structure. For example:</p>
+                        <ul>
+                            <li><code>GET /chords</code> – returns all available chords.</li>
+                            <li><code>GET /notes</code> – returns the list of supported musical notes.</li>
+                            <li><code>GET /chord-types</code> – returns all chord type definitions.</li>
+                        </ul>
+                        <p>*Additional endpoints and query options are available for more advanced usage, which are explained in the final section.</p>
+                        
+                        <p>
+                            The API is lightweight, fast, and ideal for quick integration into projects with musical features
+                            or for practicing API consumption techniques.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                        Who Is This API For?
+                    </button>
+                </h2>
+                <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                        <p>
+                            This API is designed for two main audiences:
+                        </p>
+                        
+                        <ul>
+                            <li>
+                                <strong>Web development beginners</strong> – If you're learning how to work with APIs, this is a perfect
+                                starting point. The API is simple, well-structured, and clearly documented. It allows you to practice making HTTP requests, handling JSON responses, and integrating external data into your projects. </br>
+                                Additionally, the API is documented with Swagger and JSDoc, and the full source code is available on GitHub —
+                                great resources for learning and exploring real-world examples.
+                            </li>
+                        </br>
+                            <li>
+                                <strong>Music lovers and creative coders</strong> – Whether you're building a music theory tool, an educational
+                                app, or just experimenting with creative web ideas, this API provides musical data that can enrich your project
+                                in a meaningful way.
+                            </li>
+                        </ul>
+                        
+                        <p>
+                            Whether you're writing your first <code>fetch()</code> call or adding interactive musical elements to a blog or
+                            portfolio, this API aims to be useful, inspiring, and easy to use.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                        How to use the API
+                    </button>
+                </h2>
+                <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                        <p>
+                            Using this API is simple and flexible. All endpoints return data in JSON format and can be accessed with any HTTP client or tool (such as <code>fetch</code>, <code>axios</code>, Postman, or <code>curl</code>).
+                        </p>
+                        
+                        <p>Here are some of the most useful endpoints:</p>
+                        
+                        <ul>
+                            <li>
+                                <code>GET /chords</code> – Returns a list of all available chords. You can optionally filter results using query
+                                parameters:
+                                <ul>
+                                    <li><code>/chords?note=c</code> – Returns only chords based on note C.</li>
+                                    <li><code>/chords?type=major</code> – Returns only major chords.</li>
+                                    <li>Combined: <code>?note=a_flat&type=7</code> - Returns "Ab 7" chord</li>
+                                    <li>Pagination: <code>/chords?limit=4&page=2</code> – Returns four chords (from item 5 to 8, based on pagination).
+                                    </li>
+                                </ul>
+                            </li>
+                            
+                            <li><code>GET /chords/:id</code> – Returns a single chord by its unique ID.</li>
+                            <li><code>GET /notes</code> – Returns all available musical notes.</li>
+                            <li><code>GET /chord-types</code> – Returns all chord type definitions.</li>
+                            <li><code>GET /chord-types/:id</code> – Returns a single chord type by its unique ID.</li>
+                        </ul>
+                        <br>
+                        <p>Example using <code>fetch</code> in JavaScript:</p>
+                        
+                        <code>fetch('https://your-api-url.com/chords?note=c&type=7') 
+                            <br>
+                            .then(res => res.json())
+                            <br>
+                            .then(data => console.log(data))
+                            <br>
+                            .catch(err => console.error(err));
+                        </code>
+                        <br><br>
+                        <p>For more details and testing, check the interactive documentation available via <a href="/api-docs" target="_blank">Swagger</a> where you can alse see object response examples.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+                        Tech Stack
+                    </button>
+                </h2>
+                <div id="flush-collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                        <p>This API is built with a set of powerful and well-known technologies. Here's a breakdown of the stack:</p>
+                        
+                        <ul>
+                            <li><strong>Node.js</strong> – A JavaScript runtime built used to run the backend of the application and handle HTTP requests.</li>
+                            <li><strong>Express</strong> – A minimalist web framework for Node.js, used to handle HTTP requests and define API routes.</li>
+                            <li><strong>Mongoose</strong> – An Object Data Modeling (ODM) library for MongoDB, providing a straightforward way to interact with the database.</li>
+                            <li><strong>Swagger UI & YAML</strong> – Swagger UI is used to provide an interactive, user-friendly interface for exploring the API. The API documentation is defined using a YAML file, which is processed to generate the documentation.</li>
+                            <li><strong>Winston</strong> – A logging library for Node.js, used for logging important events and errors within the application.</li>
+                            <li><strong>EJS (Embedded JavaScript)</strong> – A templating engine for rendering views and dynamic content on the server-side.</li>
+                            <li><strong>CORS</strong> – Middleware to enable Cross-Origin Resource Sharing (CORS), allowing your API to be accessed from different domains.</li>
+                            <li><strong>dotenv</strong> – A zero-dependency module to load environment variables from a `.env` file into the application, keeping sensitive data like API keys secure.</li>
+                            <li><strong>YAML.js</strong> – A library to parse and serialize YAML data. It's used to load and manage configuration files in the YAML format.</li>
+                        </ul>
+                        
+                        <p>These technologies work together to provide a fast, flexible, and scalable API that’s easy to develop, document, and
+                            maintain.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+                        Documentation & Developer Resources
+                    </button>
+                </h2>
+                <div id="flush-collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                        <p>
+                            This API is designed to be easy to use, with comprehensive documentation and resources to help developers get started quickly.
+                        </p>
+
+                        <p>
+                            If you are a junior developer or just starting out, you will find the following resources helpful:
+                        </p>
+                        
+                        <ul>
+                            <li><strong>Swagger UI</strong> – Interactive API documentation for exploring all available endpoints. You can test requests directly from the UI. Access it via <a href="/api-docs" target="_blank">Swagger Documentation</a>.</li>
+                            <li><strong>JSDoc</strong> – The code is fully documented using JSDoc comments. The documentation is automatically generated into a web-based UI, which you can explore for detailed information about each function, endpoint, and the overall API structure. Access the documentation at <a href="/jsdoc" target="_blank">JSDoc Documentation</a>.</li>
+                            <li><strong>GitHub Repository</strong> – The full source code of the API is available on GitHub. You can contribute, fork, or simply explore the codebase. <a href="https://github.com/aldaydev/chords_api" target="_blank">View the Repository</a>.</li>
+                            <li><strong>Community</strong> – Feel free to reach out via GitHub Issues or the project's discussion board for help, feedback, or questions. We are happy to support developers at all levels.</li>
+                        </ul>
+                        
+                        <p>
+                            Whether you're just learning how to work with APIs or you're a seasoned developer, these resources should help you
+                            get the most out of the API.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+</section>
+
+<section class="home__documentation">
+    <h3 class="home__title">Detailed Documentation</h3>
+    <article class="documentation__buttons">
+        <a href="/api-docs" target="_blank">
+            <button type="button" class="btn btn-success">Swagger</button>
+        </a>
+        <a href="/jsdoc" target="_blank">
+            <button type="button" class="btn btn-danger">JSDoc</button>
+        </a>
+        <a href="https://github.com/aldaydev/chords_api" target="_blank">
+            <button type="button" class="btn btn-warning">GitHub</button>
+        </a>
+        
+    </article>
+</section>
+
+<section class="home__exampleResponses">
+    <h3 class="home__title">Example responses</h3>
+    <div class="exampleResponses__container">
+    <article class="exampleResponses__article exampleResponses__article--note">
+        <h5>Note</h5>
+        <pre>
+            <code>
+{
+    "_id": "a_flat",
+    "name": {
+        "eng": "Ab",
+        "spa": "Lab"
+    },
+    "type": "flat"
+}
+            </code>
+        </pre>
+    </article>
+    <article class="exampleResponses__article exampleResponses__article--chordType">
+        <h5>Chord Type</h5>
+        <pre>
+            <code>
+{
+    "name": {
+        "eng": "major",
+        "spa": "mayor"
+    },
+    "description": {
+        "eng": "Major chord",
+        "spa": "Acorde mayor"
+    },
+    "_id": "major",
+    "intervals": [
+        "1",
+        "3",
+        "5"
+    ]
+}
+            </code>
+        </pre>
+    </article>
+    <article class="exampleResponses__article exampleResponses__article--chord">
+        <h5>Chord</h5>
+        <pre>
+            <code>
+{
+    "name": {
+        "eng": "A major",
+        "spa": "La mayor"
+    },
+    "images": {
+        "pos1": "image_url..."
+    },
+    "_id": "a_major",
+    "notes": [
+        {
+            "name": {
+                "eng": "A",
+                "spa": "La"
+            }
+        },
+        {
+            "name": {
+                "eng": "C#",
+                "spa": "Do#"
+            }
+        },
+        {
+            "name": {
+                "eng": "E",
+                "spa": "Mi"
+            }
+        }
+    ],
+    "note": {
+        "name": {
+            "eng": "A",
+            "spa": "La"
+        },
+        "type": "natural"
+    },
+    "type": {
+        "name": {
+            "eng": "major",
+            "spa": "mayor"
+        },
+        "description": {
+            "eng": "Major chord",
+            "spa": "Acorde mayor"
+        },
+        "intervals": [
+            "1",
+            "3",
+            "5"
+        ]
+    }
+}
+            </code>
+        </pre>
+    </article>
+
+    <article class="exampleResponses__article exampleResponses__article--image">
+        <h5>Chord Image</h5>
+        <img class="exampleImages__image" src="https://github.com/aldaydev/chords_images/blob/main/guitar-chords/c/chord-c-7-pos1.png?raw=true" alt="Chords API example image" />
+    </article>
+    </div>
+</section>
+
+<h3 class="home__title">Example of chord image grid</h3>
+
+<section class="home__exampleImages">
+
+    <img class="exampleImages__image" src="https://github.com/aldaydev/chords_images/blob/main/guitar-chords/c/chord-c-7-pos1.png?raw=true" alt="Chords API example image" />
+
+    <img class="exampleImages__image" src="https://github.com/aldaydev/chords_images/blob/main/guitar-chords/b/chord-b-major-pos1.png?raw=true" alt="Chords API example image" />
+
+    <img class="exampleImages__image" src="https://github.com/aldaydev/chords_images/blob/main/guitar-chords/a/chord-a-minor-pos1.png?raw=true" alt="Chords API example image" />
+
+    <img class="exampleImages__image" src="https://github.com/aldaydev/chords_images/blob/main/guitar-chords/d-sharp/chord-d-sharp-dim-pos1.png?raw=true" alt="Chords API example image" />
+
+</section>

@@ -1,12 +1,29 @@
 <html lang="en">
 <head>
     <%- include('../partials/head'); %>
+    <link href="/css/notFound.css" rel="stylesheet">
 
     <title>Page not found</title>
 </head>
-<body>
+<body class="app">
     <header class="app__header">
         <%- include('../partials/header'); %>
     </header>
+
+    <main class="app__main">
+        <section class="notFound__container">
+            <h1 class="home__title">404 - Page not found</h1>
+            <h5 class="notFound__text">Oops! We couldn’t find <code>chords-api.com<%= url %></code>.</h5>
+            <h6 class="notFound__subtext">Please check the URL and try again.</h6>
+            <a href="/" class="returnHome">
+                <button type="button" class="btn btn-success">Go to Home</button>
+            </a>
+        </section>
+        
+    </main>
+
+    <footer class="app__footer">
+        <%- include('../partials/footer'); %>
+    </footer>
 </body>
 </html>

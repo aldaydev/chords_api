@@ -1,6 +1,6 @@
 # chords_api
 
-sprint-3 / 05-04-2025 / working on main ejs with bootstrap
+sprint-3 / 06-04-2025 / working on ejs views with bootstrap
 
 ## SPRINT 3 (API)
 
@@ -9,7 +9,8 @@ Objetivos:
 * Reorganizar directorios (src y public) y checkear todo
 * Instalación y configuración EJS
 * Instalación y configuración bootstrap
-* Creación de "partials" (navbar, footer)
+* Creación de "partials" (navbar, footer, head, contents)
+* Creación de "pages" (index, about, notFound)
 
 
 ## SPRINT 2 (API)
