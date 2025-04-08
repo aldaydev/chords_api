@@ -13,11 +13,7 @@ const swaggerOptions = {
         info: {
             title: "Chords API - Documentation",
             version: "1.0.0",
-            description: "Chords API Documentation with Swagger",
-            contact: {
-                name: "Rafa Alday",
-                email: 'aldaydev@gmail.com'
-            },
+            description: "Chords API Documentation with Swagger. \n \n [Return to documentation page](https://miportafolio.dev/docs) \n \n Autor: Rafa Alday \n \n [Contact](mailto:aldaydev@gmail.com) | [Visit alday.dev](https://alday.dev)  "
         },
         tags: [
             { name: 'Notes', description: 'Operations related to notes.' },

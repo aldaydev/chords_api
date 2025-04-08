@@ -1,6 +1,6 @@
 # chords_api
 
-sprint-3 / 06-04-2025 / working on ejs views with bootstrap
+sprint-3 / 09-04-2025 / reviewing swagger
 
 ## SPRINT 3 (API)
 
