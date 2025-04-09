@@ -1,6 +1,6 @@
 # chords_api
 
-sprint-3 / 09-04-2025 / reviewing swagger
+sprint-3 / 09-04-2025 / reviewing sprint-3
 
 ## SPRINT 3 (API)
 
