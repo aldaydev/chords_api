@@ -33,6 +33,7 @@
 
 .about__text--2{
     grid-area: text2;
+    margin-bottom: 0;
 }
 
 .about__description2{
