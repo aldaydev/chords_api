@@ -1,0 +1,39 @@
+{
+    "source": {
+        "include": [
+            "src"
+        ],
+        "exclude": [
+            "node_modules"
+        ]
+    },
+    "opts": {
+        "destination": "./docs/jsdoc",
+        "recurse": true,
+        "template": "node_modules/docdash"
+    },
+    "templates": {
+        "cleverLinks": true,
+        "monospaceLinks": false,
+        "default": {
+            "outputSourceFiles": true
+        },
+        "docdash": {
+            "static": true,
+            "sort": true,
+            "sectionOrder": [
+                "Functions",
+                "Modules",
+                "Classes",
+                "Externals",
+                "Events",
+                "Namespaces",
+                "Mixins",
+                "Tutorials",
+                "Interfaces"
+            ],
+            "collapse": false,
+            "typedefs": true
+        }
+    }
+}

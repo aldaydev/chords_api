@@ -3,9 +3,9 @@ const YAML = require('yamljs');
 const path = require('path');
 
 //Loading YAML files
-const notesSwagger = YAML.load(path.resolve(__dirname, '../docs/swagger/notes.yaml'));
-const chordTypesSwagger = YAML.load(path.resolve(__dirname, '../docs/swagger/chordTypes.yaml'));
-const chordsSwagger = YAML.load(path.resolve(__dirname, '../docs/swagger/chords.yaml'));
+const notesSwagger = YAML.load(path.resolve(__dirname, '../../docs/swagger/notes.yaml'));
+const chordTypesSwagger = YAML.load(path.resolve(__dirname, '../../docs/swagger/chordTypes.yaml'));
+const chordsSwagger = YAML.load(path.resolve(__dirname, '../../docs/swagger/chords.yaml'));
 
 const swaggerOptions = {
     definition: {

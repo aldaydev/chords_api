@@ -1,6 +1,12 @@
 # chords_api
 
-sprint-3 / 09-04-2025 / reviewing sprint-3
+sprint-4 / 09-04-2025 / testing jsdoc
+
+## SPRINT 4 (API)
+
+Objetivos:
+
+* Configuración inicial de JSDoc (npx jsdoc -c jsdoc.json).
 
 ## SPRINT 3 (API)
 

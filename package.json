@@ -12,6 +12,8 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "docdash": "^2.0.2",
+    "jsdoc": "^4.0.4",
     "nodemon": "^3.1.9"
   },
   "dependencies": {
