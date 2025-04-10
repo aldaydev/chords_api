@@ -1,3 +1,12 @@
+/**
+ * Chord Types Controller file
+ * Contains an object with each controller related to the ChordType model
+ * @module controllers/chordTypes
+ * @requires module:services/chordTypesService
+ * @requires module:utils/errorResponses
+ * @requires module:utils/validations
+ */
+
 const chordTypeService = require("../services/chordTypes.service.js");
 const { ResError } = require("../utils/error.responses.js");
 const { validateChordTypeParam } = require("../utils/validations.js");
@@ -5,6 +14,20 @@ const { validateChordTypeParam } = require("../utils/validations.js");
 
 const chordTypesController = {
 
+
+    /**
+     * Retrieves all chord types list throw an object.
+     * 
+     * This function calls the service to get all chord types from the database and sends the result as a response.
+     * 
+     * @memberof module:controllers/chordTypes
+     * @function
+     * @async
+     * @param {Object} res - The response object to send the result.
+     * @param {Function} next - The next middleware to pass control in case of an error.
+     * @returns {void}
+     * @throws {Error} Throws an error if there is an issue with the database.
+     */
     getAll: async (req, res, next) => {
         try {
             //Call to the service to get all chord types
@@ -18,6 +41,20 @@ const chordTypesController = {
         }
     },
 
+    /**
+     * Retrieves a chord types object.
+     * 
+     * This function calls the service to get all chord types from the database and sends the result as a response.
+     * 
+     * @memberof module:controllers/chordTypes
+     * @function
+     * @async
+     * @param {Object} req - The request object containing the chord type ID in the URL parameters.
+     * @param {Object} res - The response object to send the result.
+     * @param {Function} next - The next middleware to pass control in case of an error.
+     * @returns {void}
+     * @throws {Error} Throws an error if there is an issue with the database.
+     */
     getById: async (req, res ,next) => {
         try {
 

@@ -3,7 +3,7 @@
 <head>
     
     <meta charset="utf-8">
-    <title>Home - Documentation</title>
+    <title>middlewares/notFound.middleware.js - Documentation</title>
     
     
     <script src="scripts/prettify/prettify.js"></script>
@@ -35,31 +35,46 @@
 
 <div id="main">
     
+    <h1 class="page-title">middlewares/notFound.middleware.js</h1>
+    
 
     
 
 
 
     
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * Not found middleware.
+ * It handles 404 errors when the requested resource of the API is not found (not for views)
+ * @module notFoundMiddleware
+ */
 
+/**
+ * "Not Found" middleware function.
+ * 
+ * This function retrieves a json error response if there is a wrong request to an endpoint at the API.
+ * 
+ * @function notFoundMiddleware
+ * 
+ * @param {Object} req - The request object.
+ * @param {Object} res - The response object.
+ * 
+ * @memberof module:notFoundMiddleware
+ * 
+ * @returns {void} - Returns nothing. It sends a response to the client.
+ */
+const notFoundMiddleware = (req, res, next) => {
+    res.status(404).json({
+        message: 'Resource not found. Please check the URL.',
+        status: 404
+    })
+}
 
-    <section class="package">
-        <h3> </h3>		
+module.exports = notFoundMiddleware;</code></pre>
+        </article>
     </section>
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
 
 
 

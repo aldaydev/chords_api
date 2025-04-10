@@ -3,7 +3,7 @@
 <head>
     
     <meta charset="utf-8">
-    <title>server.js - Documentation</title>
+    <title>controllers/chordTypes.controller.js - Documentation</title>
     
     
     <script src="scripts/prettify/prettify.js"></script>
@@ -35,7 +35,7 @@
 
 <div id="main">
     
-    <h1 class="page-title">server.js</h1>
+    <h1 class="page-title">controllers/chordTypes.controller.js</h1>
     
 
     
@@ -46,104 +46,97 @@
     <section>
         <article>
             <pre class="prettyprint source linenums"><code>/**
- * This file initializes the server, sets up middleware, and connects to the MongoDB database.
- * @module server
+ * Chord Types Controller file
+ * Contains an object with each controller related to the ChordType model
+ * @module controllers/chordTypes
+ * @requires module:services/chordTypesService
+ * @requires module:utils/errorResponses
+ * @requires module:utils/validations
  */
 
-//Initializing env variables
-require('dotenv').config();
-
-//Initializing logger
-const logger = require('./config/logger.config.js');
-
-//Initializing express
-const express = require('express');
-const {json, urlencoded} = require('express');
-const app = express();
-
-//CORS configuration
-const cors = require('cors');
-
-//router import
-const apiRoutes = require('./routes/api.routes.js');
-const docRoutes = require('./routes/doc.routes.js');
-
-//Import mongoConnection
-const mongoConnection = require('./databases/mongo.connection.js');
-
-//Import error middlewares
-const errorMiddleware = require('./middlewares/error.middleware.js');
-const notFoundMiddleware = require('./middlewares/notFound.middleware.js');
-
-//Swagger imports
-const swaggerUi = require('swagger-ui-express');
-const swaggerDocs = require('./config/swagger.config.js');
-
-//Path imports
-const path = require('path');
+const chordTypeService = require("../services/chordTypes.service.js");
+const { ResError } = require("../utils/error.responses.js");
+const { validateChordTypeParam } = require("../utils/validations.js");
 
 
-//Global middlewares
-app.use(json());
-app.use(urlencoded({extended: true}));
-
-app.use(cors({
-    origin: `*`,
-    mehtods: ['GET']
-}));
-
-//EJS configuration
-app.set('view engine', 'ejs');
-app.set('views', path.join(__dirname, 'views'));
-
-//Static files
-app.use(express.static('public'));
-
-//Routes
-app.use('/v1', apiRoutes);
-app.use('/', docRoutes);
+const chordTypesController = {
 
 
-//Swagger configuration
-app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocs));
+    /**
+     * Retrieves all chord types list throw an object.
+     * 
+     * This function calls the service to get all chord types from the database and sends the result as a response.
+     * 
+     * @memberof module:controllers/chordTypes
+     * @function
+     * @async
+     * @param {Object} res - The response object to send the result.
+     * @param {Function} next - The next middleware to pass control in case of an error.
+     * @returns {void}
+     * @throws {Error} Throws an error if there is an issue with the database.
+     */
+    getAll: async (req, res, next) => {
+        try {
+            //Call to the service to get all chord types
+            const allChordTypes = await chordTypeService.getAll();
 
-//Error middlewares
-app.use(errorMiddleware);
-app.use('/v1', notFoundMiddleware);
-app.use((req, res) => {
-    res.status(404).render('pages/404', { url: req.url} );
-});
+            //Final response
+            res.send(allChordTypes);
 
-//Port config
-const PORT = process.env.PORT || 3001;
+        } catch (error) {
+            next(error);
+        }
+    },
 
+    /**
+     * Retrieves a chord types object.
+     * 
+     * This function calls the service to get all chord types from the database and sends the result as a response.
+     * 
+     * @memberof module:controllers/chordTypes
+     * @function
+     * @async
+     * @param {Object} req - The request object containing the chord type ID in the URL parameters.
+     * @param {Object} res - The response object to send the result.
+     * @param {Function} next - The next middleware to pass control in case of an error.
+     * @returns {void}
+     * @throws {Error} Throws an error if there is an issue with the database.
+     */
+    getById: async (req, res ,next) => {
+        try {
 
-/**
- * Function to run the server and connect to MongoDB.
- * It shows a successful log message or catches an error if it fails to connect.
- * 
- * @async
- * @function runServer
- * @returns {Promise&lt;void>} - A promise that resolves when the server is running.
- * @throws {Error} - Throws an error if the server fails to initialize.
- * @memberof module:server
- */
-const runServer = async () => {
-    try{
-        //MondoDB connection
-        await mongoConnection();
+            //Getting chord type id from params
+            const id = req.params.id;
 
-        //Initializing server
-        app.listen(PORT, () => {
-            logger.info(`Server - Running on http://localhost:${PORT}`);
-        })
+            //Path param validation
+            const validate = validateChordTypeParam(id);
 
-    }catch(error){
-        logger.error('Server - Error initializing');
+            //Throw an error if find an invalid path parameter
+            if(!validate[0]){
+                //New response Error
+                const invalidParamResError = new ResError({
+                    message: validate[1],
+                    status: 400
+                }).add('invalidParamResError');
+            
+                //Throw an error -> only resCode
+                throw({resCode: invalidParamResError});
+            }
+
+            //Call for service in database
+            const chordTypeById = await chordTypeService.getById(id);
+
+            //Final response
+            res.status(200).json(chordTypeById);
+
+        } catch (error) {
+            next(error);
+        }
     }
+
 }
 
-runServer();</code></pre>
+module.exports = chordTypesController;</code></pre>
         </article>
     </section>
 

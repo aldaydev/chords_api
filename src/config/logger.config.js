@@ -1,4 +1,20 @@
+/**
+ * Logger configuration module for the API.
+ * Uses Winston to log messages to both console and file.
+ * @module config/logger
+ */
+
 const winston = require('winston');
+
+/**
+ * Logger configured with two transports:
+ * - Console: 'http' level, simple format.
+ * - File: 'error' level, JSON format with timestamp.
+ *
+ * @constant
+ * @type {winston.Logger}
+ * @memberof module:config/logger
+ */
 
 //Set up logger: levels, transports, formats
 const logger = winston.createLogger({

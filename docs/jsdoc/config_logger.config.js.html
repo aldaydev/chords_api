@@ -3,7 +3,7 @@
 <head>
     
     <meta charset="utf-8">
-    <title>Home - Documentation</title>
+    <title>config/logger.config.js - Documentation</title>
     
     
     <script src="scripts/prettify/prettify.js"></script>
@@ -35,31 +35,59 @@
 
 <div id="main">
     
+    <h1 class="page-title">config/logger.config.js</h1>
+    
 
     
 
 
 
     
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * Logger configuration module for the API.
+ * Uses Winston to log messages to both console and file.
+ * @module config/logger
+ */
 
+const winston = require('winston');
 
-    <section class="package">
-        <h3> </h3>		
+/**
+ * Logger configured with two transports:
+ * - Console: 'http' level, simple format.
+ * - File: 'error' level, JSON format with timestamp.
+ *
+ * @constant
+ * @type {winston.Logger}
+ * @memberof module:config/logger
+ */
+
+//Set up logger: levels, transports, formats
+const logger = winston.createLogger({
+    // Can be: 'error', 'warn', 'info', 'http', 'verbose', 'debug', 'silly'
+    level: 'http', 
+    //Transports = destinations / Can be: console, file...
+    transports: [
+        // Show logs in console
+        new winston.transports.Console({
+            format: winston.format.simple()
+        }), 
+        //Save logs in a file
+        new winston.transports.File({
+            filename: 'src/logs/chords_api.log',
+            level: 'error',
+            format: winston.format.combine(
+                winston.format.timestamp({ format: 'YYYY-MM-DD HH:mm:ss' }),
+                winston.format.json()
+            )
+        })
+    ]
+});
+
+module.exports = logger;</code></pre>
+        </article>
     </section>
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
 
 
 

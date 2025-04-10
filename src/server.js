@@ -1,3 +1,8 @@
+/**
+ * This file initializes the server, sets up middleware, and connects to the MongoDB database.
+ * @module server
+ */
+
 //Initializing env variables
 require('dotenv').config();
 
@@ -34,6 +39,7 @@ const path = require('path');
 //Global middlewares
 app.use(json());
 app.use(urlencoded({extended: true}));
+
 app.use(cors({
     origin: `*`,
     mehtods: ['GET']
@@ -54,6 +60,8 @@ app.use('/', docRoutes);
 //Swagger configuration
 app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocs));
 
+app.use('/jsdoc', express.static(path.join(__dirname, '../docs/jsdoc')));
+
 //Error middlewares
 app.use(errorMiddleware);
 app.use('/v1', notFoundMiddleware);
@@ -68,10 +76,12 @@ const PORT = process.env.PORT || 3001;
 /**
  * Function to run the server and connect to MongoDB.
  * It shows a successful log message or catches an error if it fails to connect.
+ * 
  * @async
- * @function
+ * @function runServer
  * @returns {Promise<void>} - A promise that resolves when the server is running.
  * @throws {Error} - Throws an error if the server fails to initialize.
+ * @memberof module:server
  */
 const runServer = async () => {
     try{
