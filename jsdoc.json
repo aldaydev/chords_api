@@ -3,6 +3,7 @@
         "include": [
             "src"
         ],
+        "includePattern": ".+\\.js(doc)?$",
         "exclude": [
             "node_modules"
         ]

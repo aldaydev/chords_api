@@ -1,4 +1,30 @@
+/**
+ * Chords model for MongoDB using Mongoose.
+ * Defines the schema and virtual references for chords.
+ * 
+ * @module models/chords
+ */
+
+
 const mongoose = require('mongoose');
+
+/**
+ * chordSchema - Mongoose schema for chords.
+ * @function chordSchema
+ * @param {Object} fields - Options for the schema.
+ * @property {String} fields._id - Custom ID for the chord.
+ * @property {String} fields.noteId - Reference to the Note schema.
+ * @property {String} fields.typeId - Reference to the ChordType schema.
+ * @property {Array<Object>} fields.notes - Array of references to the Note schema.
+ * @property {Object} fields.name - Name of the chord in different languages.
+ * @property {Object} fields.images - Links to images of the chord.
+ * 
+ * @param {Object} options - Options for the schema.
+ * @property {boolean} options._id - Cancel automatic generation of "_id" field.
+ * @property {Object} options.toJSON - Options for JSON output.
+ * 
+ * @memberof module:models/chords
+ */
 
 const chordSchema = new mongoose.Schema({
     //Custom _id
@@ -40,7 +66,19 @@ const chordSchema = new mongoose.Schema({
     }
 });
 
-//Virtual reference of 'noteId'
+/**
+ * Virtual reference of 'noteId'
+ * 
+ * @function setupNoteVirtual
+ * @param {string} note - Name of the field to be referenced.
+ * @param {object} options - Options fot the virtual reference.
+ * @param {string} options.ref - Name of the referenced model.
+ * @param {string} options.localField - Field in the current schema that includes the reference.
+ * @param {string} options.foreignField - Field of the referenced model that matches.
+ * @param {boolean} options.justOne - Indicates if only one field is referenced.
+ * 
+ * @memberof module:models/chords
+ */
 chordSchema.virtual('note', {
     ref: 'Note', //Referenced model
     localField: 'noteId', //Filed in current schema that includes the reference
@@ -48,7 +86,19 @@ chordSchema.virtual('note', {
     justOne: true //Only one field to reference
 });
 
-//Virtual reference of 'typeId'
+/**
+ * Virtual reference of 'noteId'
+ * 
+ * @function setupTypeVirtual
+ * @param {string} note - Name of the field to be referenced.
+ * @param {object} options - Options fot the virtual reference.
+ * @param {string} options.ref - Name of the referenced model.
+ * @param {string} options.localField - Field in the current schema that includes the reference.
+ * @param {string} options.foreignField - Field of the referenced model that matches.
+ * @param {boolean} options.justOne - Indicates if only one field is referenced.
+ * 
+ * @memberof module:models/chords
+ */
 chordSchema.virtual('type', {
     ref: 'ChordType', //Referenced model
     localField: 'typeId', //Filed in current schema that includes the reference

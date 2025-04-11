@@ -13,6 +13,9 @@ const winston = require('winston');
  *
  * @constant
  * @type {winston.Logger}
+ * @param {Object} options - Options for the logger.
+ * @param {string} options.level - The minimum log level.
+ * @param {Array} options.transports - The transports for the logger.
  * @memberof module:config/logger
  */
 

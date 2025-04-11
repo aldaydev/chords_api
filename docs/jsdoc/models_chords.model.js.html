@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="utf-8">
+    <title>models/chords.model.js - Documentation</title>
+    
+    
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc.css">
+    <script src="scripts/nav.js" defer></script>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav >
+    
+    
+    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="module-config_logger.html">config/logger</a></li><li><a href="module-config_mongo.html">config/mongo</a></li><li><a href="module-config_swagger.html">config/swagger</a></li><li><a href="module-controllers_chordTypes.html">controllers/chordTypes</a><ul class='methods'><li data-type='method'><a href="module-controllers_chordTypes.html#.getAll">getAll</a></li><li data-type='method'><a href="module-controllers_chordTypes.html#.getById">getById</a></li></ul></li><li><a href="module-controllers_chords.html">controllers/chords</a><ul class='methods'><li data-type='method'><a href="module-controllers_chords.html#.filter">filter</a></li><li data-type='method'><a href="module-controllers_chords.html#.getById">getById</a></li></ul></li><li><a href="module-controllers_notes.html">controllers/notes</a><ul class='methods'><li data-type='method'><a href="module-controllers_notes.html#.getAll">getAll</a></li></ul></li><li><a href="module-errorMiddleware.html">errorMiddleware</a><ul class='methods'><li data-type='method'><a href="module-errorMiddleware.html#.errorMiddleware">errorMiddleware</a></li></ul></li><li><a href="module-models_chordType.html">models/chordType</a><ul class='methods'><li data-type='method'><a href="module-models_chordType.html#.chordTypeSchema">chordTypeSchema</a></li></ul></li><li><a href="module-models_chords.html">models/chords</a><ul class='methods'><li data-type='method'><a href="module-models_chords.html#.chordSchema">chordSchema</a></li><li data-type='method'><a href="module-models_chords.html#.setupNoteVirtual">setupNoteVirtual</a></li><li data-type='method'><a href="module-models_chords.html#.setupTypeVirtual">setupTypeVirtual</a></li></ul></li><li><a href="module-models_note.html">models/note</a><ul class='methods'><li data-type='method'><a href="module-models_note.html#.noteSchema">noteSchema</a></li></ul></li><li><a href="module-mongoConnection.html">mongoConnection</a><ul class='methods'><li data-type='method'><a href="module-mongoConnection.html#.mongoConnection">mongoConnection</a></li></ul></li><li><a href="module-notFoundMiddleware.html">notFoundMiddleware</a><ul class='methods'><li data-type='method'><a href="module-notFoundMiddleware.html#.notFoundMiddleware">notFoundMiddleware</a></li></ul></li><li><a href="module-server.html">server</a><ul class='methods'><li data-type='method'><a href="module-server.html#.runServer">runServer</a></li></ul></li></ul>
+    
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">models/chords.model.js</h1>
+    
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * Chords model for MongoDB using Mongoose.
+ * Defines the schema and virtual references for chords.
+ * 
+ * @module models/chords
+ */
+
+
+const mongoose = require('mongoose');
+
+/**
+ * chordSchema - Mongoose schema for chords.
+ * @function chordSchema
+ * @param {Object} fields - Options for the schema.
+ * @property {String} fields._id - Custom ID for the chord.
+ * @property {String} fields.noteId - Reference to the Note schema.
+ * @property {String} fields.typeId - Reference to the ChordType schema.
+ * @property {Array&lt;Object>} fields.notes - Array of references to the Note schema.
+ * @property {Object} fields.name - Name of the chord in different languages.
+ * @property {Object} fields.images - Links to images of the chord.
+ * 
+ * @param {Object} options - Options for the schema.
+ * @property {boolean} options._id - Cancel automatic generation of "_id" field.
+ * @property {Object} options.toJSON - Options for JSON output.
+ * 
+ * @memberof module:models/chords
+ */
+
+const chordSchema = new mongoose.Schema({
+    //Custom _id
+    _id: { type: String, required: true },
+    //Reference to _id field of Note Schema
+    noteId: { type: String, ref: 'Note', required: true },
+    //Reference to _id field of ChordType Schema
+    typeId: { type: String, ref: 'ChordType', required: true },
+    //Included notes (reference to _id field of Note Schema)
+    notes: [{ type: String, ref: 'Note', required: true }],
+    //Name field
+    name: {
+        eng: { type: String, required: true },
+        spa: { type: String, required: true }
+    },
+    //Images links
+    images: {
+        //Foreseeing multiple images in the future
+        pos1: { type: String }
+    }
+}, {
+    //Canceling of the automatic generation of "_id" field
+    _id: false ,
+    //Modifing the json response of the model
+    toJSON: {
+        //Enables a virtual json output
+        virtuals: true,
+        //Changes we want in the virtualization
+        transform: (doc, ret) => {
+            //Renaming 'noteId' to 'note' for greater user clarity
+            ret.note = ret.noteId;
+            //Renaming 'typeId' to 'type' for greater user clarity
+            ret.type = ret.typeId;
+            //Deleting old original fields 'noteId', 'typeId' and 'id'
+            delete ret.typeId;
+            delete ret.noteId;
+            delete ret.id;
+        }
+    }
+});
+
+/**
+ * Virtual reference of 'noteId'
+ * 
+ * @function setupNoteVirtual
+ * @param {string} note - Name of the field to be referenced.
+ * @param {object} options - Options fot the virtual reference.
+ * @param {string} options.ref - Name of the referenced model.
+ * @param {string} options.localField - Field in the current schema that includes the reference.
+ * @param {string} options.foreignField - Field of the referenced model that matches.
+ * @param {boolean} options.justOne - Indicates if only one field is referenced.
+ * 
+ * @memberof module:models/chords
+ */
+chordSchema.virtual('note', {
+    ref: 'Note', //Referenced model
+    localField: 'noteId', //Filed in current schema that includes the reference
+    foreignField: '_id', //Field of the referenced model that matches
+    justOne: true //Only one field to reference
+});
+
+/**
+ * Virtual reference of 'noteId'
+ * 
+ * @function setupTypeVirtual
+ * @param {string} note - Name of the field to be referenced.
+ * @param {object} options - Options fot the virtual reference.
+ * @param {string} options.ref - Name of the referenced model.
+ * @param {string} options.localField - Field in the current schema that includes the reference.
+ * @param {string} options.foreignField - Field of the referenced model that matches.
+ * @param {boolean} options.justOne - Indicates if only one field is referenced.
+ * 
+ * @memberof module:models/chords
+ */
+chordSchema.virtual('type', {
+    ref: 'ChordType', //Referenced model
+    localField: 'typeId', //Filed in current schema that includes the reference
+    foreignField: '_id',  //Field of the referenced model that matches
+    justOne: true  //Only one field to reference
+});
+
+const Chord = mongoose.model('Chord', chordSchema, 'chords');
+
+module.exports = Chord;</code></pre>
+        </article>
+    </section>
+
+
+
+
+    
+    
+</div>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 4.0.4</a> on Fri Apr 11 2025 12:35:17 GMT+0200 (hora de verano de Europa central) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/polyfill.js"></script>
+<script src="scripts/linenumber.js"></script>
+
+
+
+</body>
+</html>
