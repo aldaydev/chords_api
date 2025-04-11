@@ -1,7 +1,29 @@
+/**
+ * ChordType service using MongoDB.
+ * Performs operations related to the "ChordTypes" Model in MongoDB (Mongoose)
+ * 
+ * @module services/chordTypes
+ * 
+ * @requires models/chordType
+ * @requires utils/errorResponses
+ * @requires utils/errorLogs
+ */
+
 const ChordType = require('../models/chordType.model.js');
+const { ResError } = require('../utils/error.responses.js');
+const { LogError } = require('../utils/error.logs.js');
 
 const chordTypeService = {
 
+    /**
+     * Uses mongoose to get all chord types from MongoDB.
+     * 
+     * @memberof module:services/chordTypes
+     * @function
+     * @async
+     * @returns {Object} - An object containing all chord types data.
+     * @throws {Error} Throws an error if there is an issue with the database.
+     */
     getAll: async () => {
         try {
             //Returning all chord types
@@ -25,6 +47,17 @@ const chordTypeService = {
         }
     },
 
+
+    /**
+     * Uses mongoose to get a unique chordType by its "_id".
+     * 
+     * @memberof module:services/chordTypes
+     * @function
+     * @async
+     * @param {String} _id - The id of the chord type to retrieve.
+     * @returns {Object} - An object containing the selected chord type data.
+     * @throws {Error} Throws an error if there is an issue with the database.
+     */
     getById: async (_id) => {
         try {
             

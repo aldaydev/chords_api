@@ -1,11 +1,31 @@
-//Custom log error class
+/**
+ * ResError class to create custom error responses.
+ * 
+ * @module utils/resErrors
+ */
+
 class ResError {
+
+    /**
+     * Constructor for ResError class.
+     * 
+     * @constructor
+     * @param {Object} properties - Properties for the response error.
+     * @property {String} properties.message - Error message.
+     * @property {Number} properties.status - HTTP status code (defaults to 500).
+     */
     constructor({message, status = '500'}){
         this.message = message;
         this.status = status;
     }
 
-    //Method to add a ResError instance to resErrors object
+    /**
+     * Method to add a ResError instance to resErrors object.
+     * 
+     * @method
+     * @param {String} key - The key to identify the response error.
+     * @returns {String} - The key used to identify the response error. We will use it to identify the response error in the error middlewere.
+     */
     add (key){
         resErrors[key] = this;
         return key;

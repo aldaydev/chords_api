@@ -3,7 +3,7 @@
 <head>
     
     <meta charset="utf-8">
-    <title>models/note.model.js - Documentation</title>
+    <title>utils/resErrors - Documentation</title>
     
     
     <script src="scripts/prettify/prettify.js"></script>
@@ -35,66 +35,145 @@
 
 <div id="main">
     
-    <h1 class="page-title">models/note.model.js</h1>
+    <h1 class="page-title">utils/resErrors</h1>
     
 
     
 
 
 
+
+<section>
+
+<header>
     
-    <section>
-        <article>
-            <pre class="prettyprint source linenums"><code>/**
- * Note model for MongoDB using Mongoose.
- * Defines the schema and virtual references for notes.
- * 
- * @module models/note
- */
+        
+            
+        
+    
+</header>
 
-const mongoose = require('mongoose');
+<article>
+    
+        <div class="container-overview">
+        
+            
+                <div class="description usertext">ResError class to create custom error responses.</div>
+            
+
+            
+                
 
 
-/**
- * chordSchema - Mongoose schema for notes.
- * @function noteSchema
- * @param {Object} fields - Options for the schema.
- * @property {String} fields._id - Custom ID for the note.
- * @property {Object} fields.name - Name of the note in different languages.
- * @property {String} fields.type - Type of the note.
- * 
- * @param {Object} options - Options for the schema.
- * @property {boolean} options._id - Cancel automatic generation of "_id" field.
- * 
- * @memberof module:models/note
- */
-const noteSchema = new mongoose.Schema({
 
-    //Custom _id
-    _id: {type: String, required: true},
 
-    //Name field
-    name: { 
-        eng: { type: String, required: true },
-        spa: { type: String, required: true }
-    },
+<dl class="details">
+    
+    <dt class="tag-description">Description:</dt>
+    <dd class="tag-description"><ul class="dummy"><li>ResError class to create custom error responses.</li></ul></dd>
+    
 
-    //Note type field
-    type: { 
-        type: String, 
-        enum: ['flat', 'sharp', 'natural'], 
-        required: true 
-    }
-}, 
-//Canceling of the automatic generation of "_id" field
-{ _id: false }
-);
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="utils_error.responses.js.html">utils/error.responses.js</a>, <a href="utils_error.responses.js.html#line1">line 1</a>
+    </li></ul></dd>
+    
 
-const Note = mongoose.model('Note', noteSchema, 'notes');
+    
 
-module.exports = Note;</code></pre>
-        </article>
-    </section>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
+        
+        </div>
+    
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Classes</h3>
+
+        <dl>
+            <dt><a href="module-utils_resErrors-ResError.html">ResError</a></dt>
+            <dd></dd>
+        </dl>
+    
+    
+    
+
+     
+
+    
+
+    
+
+    
+
+    
+
+    
+</article>
+
+</section>
 
 
 

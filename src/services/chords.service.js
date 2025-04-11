@@ -1,10 +1,10 @@
 /**
- * Chords model for MongoDB using Mongoose.
- * Defines the schema and virtual references for chords.
+ * Chords service using MongoDB.
+ * Performs operations related to the "Chord" Model in MongoDB (Mongoose)
  * 
  * @module services/chords
  * 
- * @requires models/chords
+ * @requires models/chord
  * @requires utils/errorResponses
  * @requires utils/errorLogs
  */
@@ -25,7 +25,7 @@ const chordService = {
      * @memberof module:services/chords
      * @function
      * @async
-     * @param {String} filter - The filter object to aplly on the query.
+     * @param {Object} filter - The filter object to aplly on the query.
      * @param {Number} limitNum - The number of results to limit the query to.
      * @param {Number} skip - The number of results to skip for pagination.
      * @param {Number} pageNum - The current page number for pagination.
@@ -103,7 +103,7 @@ const chordService = {
      * @function
      * @async
      * @param {String} _id - The id of the chord to retrieve.
-     * @returns {Object} - An object containing all the chord data.
+     * @returns {Object} - An object containing the selected chord data.
      * @throws {Error} Throws an error if there is an issue with the database.
      */
     getById: async (_id) => {

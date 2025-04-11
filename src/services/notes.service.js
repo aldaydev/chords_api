@@ -1,8 +1,29 @@
+/**
+ * Notes service using MongoDB.
+ * Performs operations related to the "Note" Model in MongoDB (Mongooge)
+ * 
+ * @module services/notes
+ * 
+ * @requires models/note
+ * @requires utils/errorResponses
+ * @requires utils/errorLogs
+ */
+
 const Note = require('../models/note.model.js');
 const { LogError } = require('../utils/error.logs.js');
+const { ResError } = require('../utils/error.responses.js');
 
 const notesService = {
 
+    /**
+     * Uses mongoose to get all notes from MongoDB.
+     * 
+     * @memberof module:services/notes
+     * @function
+     * @async
+     * @returns {Object} - An object containing all notes data.
+     * @throws {Error} Throws an error if there is an issue with the database.
+     */
     getAll: async () => {
         try {
             //Returning all chord types

@@ -3,7 +3,7 @@
 <head>
     
     <meta charset="utf-8">
-    <title>models/note.model.js - Documentation</title>
+    <title>services/notes.service.js - Documentation</title>
     
     
     <script src="scripts/prettify/prettify.js"></script>
@@ -35,7 +35,7 @@
 
 <div id="main">
     
-    <h1 class="page-title">models/note.model.js</h1>
+    <h1 class="page-title">services/notes.service.js</h1>
     
 
     
@@ -46,53 +46,56 @@
     <section>
         <article>
             <pre class="prettyprint source linenums"><code>/**
- * Note model for MongoDB using Mongoose.
- * Defines the schema and virtual references for notes.
+ * Notes service using MongoDB.
+ * Performs operations related to the "Note" Model in MongoDB (Mongooge)
  * 
- * @module models/note
+ * @module services/notes
+ * 
+ * @requires models/note
+ * @requires utils/errorResponses
+ * @requires utils/errorLogs
  */
 
-const mongoose = require('mongoose');
+const Note = require('../models/note.model.js');
+const { LogError } = require('../utils/error.logs.js');
+const { ResError } = require('../utils/error.responses.js');
 
+const notesService = {
 
-/**
- * chordSchema - Mongoose schema for notes.
- * @function noteSchema
- * @param {Object} fields - Options for the schema.
- * @property {String} fields._id - Custom ID for the note.
- * @property {Object} fields.name - Name of the note in different languages.
- * @property {String} fields.type - Type of the note.
- * 
- * @param {Object} options - Options for the schema.
- * @property {boolean} options._id - Cancel automatic generation of "_id" field.
- * 
- * @memberof module:models/note
- */
-const noteSchema = new mongoose.Schema({
+    /**
+     * Uses mongoose to get all notes from MongoDB.
+     * 
+     * @memberof module:services/notes
+     * @function
+     * @async
+     * @returns {Object} - An object containing all notes data.
+     * @throws {Error} Throws an error if there is an issue with the database.
+     */
+    getAll: async () => {
+        try {
+            //Returning all chord types
+            return await Note.find();
+        } catch (error) {
+            //New log error
+            const notesLogError = new LogError({
+                message: 'MongoDB - Error at getting notes',
+                error: error
+            }).add('notesLogError');
 
-    //Custom _id
-    _id: {type: String, required: true},
+            //New response Error
+            const notesResError = new ResError({
+                message: 'Error at getting note list. Please try again later.',
+                status: 500
+            }).add('notesResError');
 
-    //Name field
-    name: { 
-        eng: { type: String, required: true },
-        spa: { type: String, required: true }
-    },
-
-    //Note type field
-    type: { 
-        type: String, 
-        enum: ['flat', 'sharp', 'natural'], 
-        required: true 
+            //Throw an error -> resCode + logCode
+            throw({resCode: notesResError, logCode: notesLogError});
+        }
     }
-}, 
-//Canceling of the automatic generation of "_id" field
-{ _id: false }
-);
 
-const Note = mongoose.model('Note', noteSchema, 'notes');
+}
 
-module.exports = Note;</code></pre>
+module.exports = notesService;</code></pre>
         </article>
     </section>
 

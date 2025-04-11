@@ -3,7 +3,7 @@
 <head>
     
     <meta charset="utf-8">
-    <title>models/note.model.js - Documentation</title>
+    <title>services/chordTypes - Documentation</title>
     
     
     <script src="scripts/prettify/prettify.js"></script>
@@ -35,66 +35,478 @@
 
 <div id="main">
     
-    <h1 class="page-title">models/note.model.js</h1>
+    <h1 class="page-title">services/chordTypes</h1>
     
 
     
 
 
 
+
+<section>
+
+<header>
     
-    <section>
-        <article>
-            <pre class="prettyprint source linenums"><code>/**
- * Note model for MongoDB using Mongoose.
- * Defines the schema and virtual references for notes.
- * 
- * @module models/note
- */
+        
+            
+        
+    
+</header>
 
-const mongoose = require('mongoose');
+<article>
+    
+        <div class="container-overview">
+        
+            
+                <div class="description usertext">ChordType service using MongoDB.Performs operations related to the "ChordTypes" Model in MongoDB (Mongoose)</div>
+            
+
+            
+                
 
 
-/**
- * chordSchema - Mongoose schema for notes.
- * @function noteSchema
- * @param {Object} fields - Options for the schema.
- * @property {String} fields._id - Custom ID for the note.
- * @property {Object} fields.name - Name of the note in different languages.
- * @property {String} fields.type - Type of the note.
- * 
- * @param {Object} options - Options for the schema.
- * @property {boolean} options._id - Cancel automatic generation of "_id" field.
- * 
- * @memberof module:models/note
- */
-const noteSchema = new mongoose.Schema({
 
-    //Custom _id
-    _id: {type: String, required: true},
 
-    //Name field
-    name: { 
-        eng: { type: String, required: true },
-        spa: { type: String, required: true }
-    },
+<dl class="details">
+    
+    <dt class="tag-description">Description:</dt>
+    <dd class="tag-description"><ul class="dummy"><li>ChordType service using MongoDB.Performs operations related to the "ChordTypes" Model in MongoDB (Mongoose)</li></ul></dd>
+    
 
-    //Note type field
-    type: { 
-        type: String, 
-        enum: ['flat', 'sharp', 'natural'], 
-        required: true 
-    }
-}, 
-//Canceling of the automatic generation of "_id" field
-{ _id: false }
-);
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="services_chordTypes.service.js.html">services/chordTypes.service.js</a>, <a href="services_chordTypes.service.js.html#line1">line 1</a>
+    </li></ul></dd>
+    
 
-const Note = mongoose.model('Note', noteSchema, 'notes');
+    
 
-module.exports = Note;</code></pre>
-        </article>
-    </section>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
+        
+        </div>
+    
+
+    
+
+    
+        <h3 class="subsection-title">Requires</h3>
+
+        <ul>
+            <li><a href="module-models_chordType.html">module:models/chordType</a></li>
+        
+            <li>module:utils/errorResponses</li>
+        
+            <li>module:utils/errorLogs</li>
+        </ul>
+    
+
+    
+    
+    
+
+     
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Methods</h3>
+
+        
+            
+
+    
+
+    <h4 class="name" id=".getAll"><span class="type-signature type-signature-async, static">(async, static) </span>getAll<span class="signature">()</span><span class="type-signature"> &rarr; {Object}</span></h4>
+
+    
+
+
+
+
+<dl class="details">
+    
+    <dt class="tag-description">Description:</dt>
+    <dd class="tag-description"><ul class="dummy"><li>Uses mongoose to get all chord types from MongoDB.</li></ul></dd>
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="services_chordTypes.service.js.html">services/chordTypes.service.js</a>, <a href="services_chordTypes.service.js.html#line27">line 27</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5 class="h5-throws">Throws:</h5>
+
+        
+
+<dl>
+    <dt>
+        <div class="param-desc usertext">
+        Throws an error if there is an issue with the database.
+        </div>
+    </dt>
+    <dd></dd>
+    <dt>
+        <dl class="param-type">
+            <dt>
+                Type
+            </dt>
+            <dd>
+                
+<span class="param-type">Error</span>
+
+
+
+            </dd>
+        </dl>
+    </dt>
+    <dd></dd>
+</dl>
+
+
+    
+
+
+<h5 class="h5-returns">Returns:</h5>
+
+        
+<div class="param-desc">
+    - An object containing all chord types data.
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Object</span>
+
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id=".getById"><span class="type-signature type-signature-async, static">(async, static) </span>getById<span class="signature">(_id)</span><span class="type-signature"> &rarr; {Object}</span></h4>
+
+    
+
+
+
+
+<dl class="details">
+    
+    <dt class="tag-description">Description:</dt>
+    <dd class="tag-description"><ul class="dummy"><li>Uses mongoose to get a unique chordType by its "_id".</li></ul></dd>
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="services_chordTypes.service.js.html">services/chordTypes.service.js</a>, <a href="services_chordTypes.service.js.html#line61">line 61</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h5 class="h5-parameters">Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>_id</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The id of the chord type to retrieve.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5 class="h5-throws">Throws:</h5>
+
+        
+
+<dl>
+    <dt>
+        <div class="param-desc usertext">
+        Throws an error if there is an issue with the database.
+        </div>
+    </dt>
+    <dd></dd>
+    <dt>
+        <dl class="param-type">
+            <dt>
+                Type
+            </dt>
+            <dd>
+                
+<span class="param-type">Error</span>
+
+
+
+            </dd>
+        </dl>
+    </dt>
+    <dd></dd>
+</dl>
+
+
+    
+
+
+<h5 class="h5-returns">Returns:</h5>
+
+        
+<div class="param-desc">
+    - An object containing the selected chord type data.
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Object</span>
+
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+    
+
+    
+
+    
+</article>
+
+</section>
 
 
 

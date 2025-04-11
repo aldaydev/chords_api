@@ -3,7 +3,7 @@
 <head>
     
     <meta charset="utf-8">
-    <title>models/note.model.js - Documentation</title>
+    <title>utils/error.logs.js - Documentation</title>
     
     
     <script src="scripts/prettify/prettify.js"></script>
@@ -35,7 +35,7 @@
 
 <div id="main">
     
-    <h1 class="page-title">models/note.model.js</h1>
+    <h1 class="page-title">utils/error.logs.js</h1>
     
 
     
@@ -46,53 +46,52 @@
     <section>
         <article>
             <pre class="prettyprint source linenums"><code>/**
- * Note model for MongoDB using Mongoose.
- * Defines the schema and virtual references for notes.
+ * LogError class to create custom error logs.
  * 
- * @module models/note
+ * @module utils/logErrors
  */
 
-const mongoose = require('mongoose');
+class LogError {
 
+    /**
+     * Constructor for LogError class.
+     * 
+     * @constructor
+     * @param {Object} properties - Properties for the log error.
+     * @property {Date} properties.timestamp - Timestamp of the error (generated automatically).
+     * @property {String} properties.message - Error message.
+     * @property {String} properties.error - Error details (optional).
+     * @property {Number} properties.status - HTTP status code (defaults to 500).
+     * @property {String} endpoint - Endpoint where the error occurred (optional, It will be taken from request in the error middlewere).
+     */
+    constructor({ message, error, status, endpoint }) {
 
-/**
- * chordSchema - Mongoose schema for notes.
- * @function noteSchema
- * @param {Object} fields - Options for the schema.
- * @property {String} fields._id - Custom ID for the note.
- * @property {Object} fields.name - Name of the note in different languages.
- * @property {String} fields.type - Type of the note.
- * 
- * @param {Object} options - Options for the schema.
- * @property {boolean} options._id - Cancel automatic generation of "_id" field.
- * 
- * @memberof module:models/note
- */
-const noteSchema = new mongoose.Schema({
+        this.timestamp = new Date().toISOString();
+        this.message = message;
+        this.error = error || null;
+        this.status = status || 500;
 
-    //Custom _id
-    _id: {type: String, required: true},
-
-    //Name field
-    name: { 
-        eng: { type: String, required: true },
-        spa: { type: String, required: true }
-    },
-
-    //Note type field
-    type: { 
-        type: String, 
-        enum: ['flat', 'sharp', 'natural'], 
-        required: true 
+        //Taken from request
+        this.endpoint = null;
     }
-}, 
-//Canceling of the automatic generation of "_id" field
-{ _id: false }
-);
 
-const Note = mongoose.model('Note', noteSchema, 'notes');
+    /**
+     * Method to add a LogError instance to logErrors object.
+     * 
+     * @method
+     * @param {String} key - The key to identify the log error.
+     * @returns {String} - The key used to identify the log error. We will use it to identify the log error in the error middlewere.
+     */
+    add (key){
+        logErrors[key] = this;
+        return key;
+    }
+};
 
-module.exports = Note;</code></pre>
+//logErrors object that contains the 'logCode' of custom log errors
+const logErrors = {};
+
+module.exports = {LogError, logErrors};</code></pre>
         </article>
     </section>
 

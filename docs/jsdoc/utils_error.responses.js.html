@@ -3,7 +3,7 @@
 <head>
     
     <meta charset="utf-8">
-    <title>models/note.model.js - Documentation</title>
+    <title>utils/error.responses.js - Documentation</title>
     
     
     <script src="scripts/prettify/prettify.js"></script>
@@ -35,7 +35,7 @@
 
 <div id="main">
     
-    <h1 class="page-title">models/note.model.js</h1>
+    <h1 class="page-title">utils/error.responses.js</h1>
     
 
     
@@ -46,53 +46,68 @@
     <section>
         <article>
             <pre class="prettyprint source linenums"><code>/**
- * Note model for MongoDB using Mongoose.
- * Defines the schema and virtual references for notes.
+ * ResError class to create custom error responses.
  * 
- * @module models/note
+ * @module utils/resErrors
  */
 
-const mongoose = require('mongoose');
+class ResError {
 
-
-/**
- * chordSchema - Mongoose schema for notes.
- * @function noteSchema
- * @param {Object} fields - Options for the schema.
- * @property {String} fields._id - Custom ID for the note.
- * @property {Object} fields.name - Name of the note in different languages.
- * @property {String} fields.type - Type of the note.
- * 
- * @param {Object} options - Options for the schema.
- * @property {boolean} options._id - Cancel automatic generation of "_id" field.
- * 
- * @memberof module:models/note
- */
-const noteSchema = new mongoose.Schema({
-
-    //Custom _id
-    _id: {type: String, required: true},
-
-    //Name field
-    name: { 
-        eng: { type: String, required: true },
-        spa: { type: String, required: true }
-    },
-
-    //Note type field
-    type: { 
-        type: String, 
-        enum: ['flat', 'sharp', 'natural'], 
-        required: true 
+    /**
+     * Constructor for ResError class.
+     * 
+     * @constructor
+     * @param {Object} properties - Properties for the response error.
+     * @property {String} properties.message - Error message.
+     * @property {Number} properties.status - HTTP status code (defaults to 500).
+     */
+    constructor({message, status = '500'}){
+        this.message = message;
+        this.status = status;
     }
-}, 
-//Canceling of the automatic generation of "_id" field
-{ _id: false }
-);
 
-const Note = mongoose.model('Note', noteSchema, 'notes');
+    /**
+     * Method to add a ResError instance to resErrors object.
+     * 
+     * @method
+     * @param {String} key - The key to identify the response error.
+     * @returns {String} - The key used to identify the response error. We will use it to identify the response error in the error middlewere.
+     */
+    add (key){
+        resErrors[key] = this;
+        return key;
+    }
+}
 
-module.exports = Note;</code></pre>
+//logErrors object that contains the 'resCode' of custom and predefined log errors
+const resErrors = {
+
+    // ---------- PREDEFINED ERRORS - STATUS 500 ----------
+
+    internalServerError: new ResError({
+        message: 'Internal server error. Please try again later.',
+        status: 500
+    }),
+
+    unexpected: new ResError ({
+        message: 'An unexpected server error has occurred. Please try again later.',
+        status: 500
+    }),
+
+    // ---------- PREDEFINED ERRORS - STATUS 400 ----------
+
+    badRequest: new ResError({
+        message: 'Incorrect request. Please check the submitted data.',
+        status: 400
+    }),
+
+    notFound: new ResError({
+        message: 'The resource was not found. Please try again later.',
+        status: 400
+    })
+}
+
+module.exports = {ResError, resErrors};</code></pre>
         </article>
     </section>
 
