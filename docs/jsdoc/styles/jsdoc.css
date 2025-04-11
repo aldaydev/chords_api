@@ -280,6 +280,10 @@ nav > ul {
   padding: 0 10px;
 }
 
+nav > ul:last-child {
+  padding-bottom: 30px;
+}
+
 nav > ul > li > a {
   color: #606;
   margin-top: 10px;
@@ -778,7 +782,7 @@ html[data-search-mode] .level-hide {
 /* EXTRA CLASSES */
 
 .package-content{
-  min-height: 90dvh;;
+  min-height: 85dvh;;
 }
 
 .package-buttons-container{

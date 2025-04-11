@@ -1,6 +1,6 @@
 # chords_api
 
-sprint-4 / 11-04-2025 / finishing documentation views
+sprint-4 / 11-04-2025 / finishing and reviewing documentation
 
 ## SPRINT 4 (API)
 
