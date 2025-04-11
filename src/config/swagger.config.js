@@ -31,7 +31,10 @@ const swaggerOptions = {
         info: {
             title: "Chords API - Documentation",
             version: "1.0.0",
-            description: "Chords API Documentation with Swagger. \n \n [Return to documentation page](/) \n \n Author: Rafael Alday (AldayDev) \n \n [Contact](mailto:aldaydev@gmail.com) | [Visit alday.dev](https://alday.dev)"
+            description: `Chords API Documentation with Swagger.<br><br>
+                <a href="/">Return to web</a><br><br>
+                Author: Rafael Alday (AldayDev)<br><br>
+                <a href="mailto:aldaydev@gmail.com">Contact</a> | <a href="https://alday.dev">Visit alday.dev</a>`
         },
         tags: [
             { name: 'Notes', description: 'Operations related to notes.' },

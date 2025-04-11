@@ -1,6 +1,6 @@
 # chords_api
 
-sprint-4 / 11-04-2025 / documenting utils
+sprint-4 / 11-04-2025 / finishing documentation views
 
 ## SPRINT 4 (API)
 
@@ -9,7 +9,8 @@ Objetivos:
 * Configuración inicial de JSDoc (npx jsdoc -c jsdoc.json).
 * Documentación de todas las funciones y controladores clave de la API.
 * Correciones de estilo en documentación con JSDoc.
-* Agregar información a la páginainicia lde JSDoc.
+* Agregar información a la página iniciall de JSDoc.
+* Repaso y finalización de la documentación (swagger y jsdoc).
 
 ## SPRINT 3 (API)
 

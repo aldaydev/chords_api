@@ -88,7 +88,7 @@ h4 {
 
 h4.name {
   color: #fff;
-  background: #6d426d;
+  background: #1F1F1F;
   box-shadow: 0 .25em .5em #d3d3d3;
   border-top: 1px solid #d3d3d3;
   border-bottom: 1px solid #d3d3d3;
@@ -337,7 +337,7 @@ footer {
 }
 
 .type-signature {
-  color: #CA79CA
+  color: #ffbf83;
 }
 
 .type-signature:last-child {
@@ -349,7 +349,7 @@ footer {
 }
 
 .signature {
-    color: #fc83ff;
+    color: #ffbf83;
 }
 
 .details {
@@ -773,4 +773,38 @@ html[data-search-mode] .level-hide {
     font-weight: 300;
     font-style: normal;
 
+}
+
+/* EXTRA CLASSES */
+
+.package-content{
+  min-height: 90dvh;;
+}
+
+.package-buttons-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  padding: 40px 0;
+  gap: 20px;
+}
+
+.package-buttons{
+  background-color: #1F1F1F;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.1rem;
+  padding: 15px 30px;
+  border: none;
+  cursor: pointer;
+  transition: border-radius 0.3s ease;
+}
+
+.package-buttons:hover{
+  border-radius: 15px;
+}
+
+a.returnLink{
+  margin-bottom: 10px;
 }
