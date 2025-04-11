@@ -2,8 +2,8 @@
  * Chords Controller file
  * Contains an object with each controller related to the Chord model
  * @module controllers/chords
- * @requires module:services/chordsService
- * @requires module:utils/errorResponses
+ * @requires module:services/chords
+ * @requires module:utils/resErrors
  * @requires module:utils/validations
  */
 

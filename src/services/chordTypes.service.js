@@ -5,8 +5,8 @@
  * @module services/chordTypes
  * 
  * @requires models/chordType
- * @requires utils/errorResponses
- * @requires utils/errorLogs
+ * @requires utils/resErrors
+ * @requires utils/logErrors
  */
 
 const ChordType = require('../models/chordType.model.js');

@@ -3,7 +3,7 @@
 <head>
     
     <meta charset="utf-8">
-    <title>services/chordTypes.service.js - Documentation</title>
+    <title>middleware/notFound - Documentation</title>
     
     
     <script src="scripts/prettify/prettify.js"></script>
@@ -35,108 +35,324 @@
 
 <div id="main">
     
-    <h1 class="page-title">services/chordTypes.service.js</h1>
+    <h1 class="page-title">middleware/notFound</h1>
     
 
     
 
 
 
+
+<section>
+
+<header>
     
-    <section>
-        <article>
-            <pre class="prettyprint source linenums"><code>/**
- * ChordType service using MongoDB.
- * Performs operations related to the "ChordTypes" Model in MongoDB (Mongoose)
- * 
- * @module services/chordTypes
- * 
- * @requires models/chordType
- * @requires utils/resErrors
- * @requires utils/logErrors
- */
-
-const ChordType = require('../models/chordType.model.js');
-const { ResError } = require('../utils/error.responses.js');
-const { LogError } = require('../utils/error.logs.js');
-
-const chordTypeService = {
-
-    /**
-     * Uses mongoose to get all chord types from MongoDB.
-     * 
-     * @memberof module:services/chordTypes
-     * @function
-     * @async
-     * @returns {Object} - An object containing all chord types data.
-     * @throws {Error} Throws an error if there is an issue with the database.
-     */
-    getAll: async () => {
-        try {
-            //Returning all chord types
-            return await ChordType.find();
-        } catch (error) {
-
-            //New log error
-            const chordTypesLogError = new LogError({
-                message: 'MongoDB - Error at getting chord types',
-                error: error
-            }).add('chordTypesLogError');
-
-            //New response Error
-            const chordTypesResError = new ResError({
-                message: 'Error at getting chord types list. Please try again later.',
-                status: 500
-            }).add('chordTypesResError');
-
-            //Throw an error -> resCode + logCode
-            throw({resCode: chordTypesResError, logCode: chordTypesLogError});
-        }
-    },
-
-
-    /**
-     * Uses mongoose to get a unique chordType by its "_id".
-     * 
-     * @memberof module:services/chordTypes
-     * @function
-     * @async
-     * @param {String} _id - The id of the chord type to retrieve.
-     * @returns {Object} - An object containing the selected chord type data.
-     * @throws {Error} Throws an error if there is an issue with the database.
-     */
-    getById: async (_id) => {
-        try {
+        
             
-            //Getting chord types by id
-            const chordTypeById = await ChordType.find({_id});
+        
+    
+</header>
 
-            //Returning selected chord type
-            return chordTypeById[0];
+<article>
+    
+        <div class="container-overview">
+        
+            
+                <div class="description usertext">Not found middleware.It handles 404 errors when the requested resource of the API is not found (not for views)</div>
+            
 
-        } catch (error) {
-            //New log error
-            const chordTypeByIdLogError = new LogError({
-                message: 'MongoDB - Error at getting a chord type by id',
-                error: error
-            }).add('chordTypeByIdLogError');
+            
+                
 
-            //New response Error
-            const chordTypeByIdResError = new ResError({
-                message: 'Error at getting chord type by id. Please try again later.',
-                status: 500
-            }).add('chordTypeByIdResError');
 
-            //Throw an error -> resCode + logCode
-            throw({resCode: chordTypeByIdResError, logCode: chordTypeByIdLogError});
-        }
-    }
 
-}
 
-module.exports = chordTypeService;</code></pre>
-        </article>
-    </section>
+<dl class="details">
+    
+    <dt class="tag-description">Description:</dt>
+    <dd class="tag-description"><ul class="dummy"><li>Not found middleware.It handles 404 errors when the requested resource of the API is not found (not for views)</li></ul></dd>
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="middlewares_notFound.middleware.js.html">middlewares/notFound.middleware.js</a>, <a href="middlewares_notFound.middleware.js.html#line1">line 1</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
+        
+        </div>
+    
+
+    
+
+    
+
+    
+    
+    
+
+     
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Methods</h3>
+
+        
+            
+
+    
+
+    <h4 class="name" id=".notFoundMiddleware"><span class="type-signature type-signature-static">(static) </span>notFoundMiddleware<span class="signature">(req, res)</span><span class="type-signature"> &rarr; {void}</span></h4>
+
+    
+
+
+
+
+<dl class="details">
+    
+    <dt class="tag-description">Description:</dt>
+    <dd class="tag-description"><ul class="dummy"><li>"Not Found" middleware function.This function retrieves a json error response if there is a wrong request to an endpoint at the API.</li></ul></dd>
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="middlewares_notFound.middleware.js.html">middlewares/notFound.middleware.js</a>, <a href="middlewares_notFound.middleware.js.html#line7">line 7</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h5 class="h5-parameters">Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>req</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The request object.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>res</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The response object.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5 class="h5-returns">Returns:</h5>
+
+        
+<div class="param-desc">
+    - Returns nothing. It sends a response to the client.
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">void</span>
+
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+    
+
+    
+
+    
+</article>
+
+</section>
 
 
 

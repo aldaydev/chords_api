@@ -8,6 +8,8 @@ Objetivos:
 
 * Configuración inicial de JSDoc (npx jsdoc -c jsdoc.json).
 * Documentación de todas las funciones y controladores clave de la API.
+* Correciones de estilo en documentación con JSDoc.
+* Agregar información a la páginainicia lde JSDoc.
 
 ## SPRINT 3 (API)
 

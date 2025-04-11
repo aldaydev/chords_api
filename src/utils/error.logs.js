@@ -2,6 +2,7 @@
  * LogError class to create custom error logs.
  * 
  * @module utils/logErrors
+ * 
  */
 
 class LogError {

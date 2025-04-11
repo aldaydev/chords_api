@@ -5,8 +5,8 @@
  * @module services/chords
  * 
  * @requires models/chord
- * @requires utils/errorResponses
- * @requires utils/errorLogs
+ * @requires utils/resErrors
+ * @requires utils/logErrors
  */
 
 const Chord = require('../models/chords.model.js');

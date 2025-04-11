@@ -2,7 +2,7 @@
  * Chords model for MongoDB using Mongoose.
  * Defines the schema and virtual references for chords.
  * 
- * @module models/chords
+ * @module models/chord
  */
 
 
@@ -23,7 +23,7 @@ const mongoose = require('mongoose');
  * @property {boolean} options._id - Cancel automatic generation of "_id" field.
  * @property {Object} options.toJSON - Options for JSON output.
  * 
- * @memberof module:models/chords
+ * @memberof module:models/chord
  */
 
 const chordSchema = new mongoose.Schema({
@@ -77,7 +77,7 @@ const chordSchema = new mongoose.Schema({
  * @param {string} options.foreignField - Field of the referenced model that matches.
  * @param {boolean} options.justOne - Indicates if only one field is referenced.
  * 
- * @memberof module:models/chords
+ * @memberof module:models/chord
  */
 chordSchema.virtual('note', {
     ref: 'Note', //Referenced model
@@ -97,7 +97,7 @@ chordSchema.virtual('note', {
  * @param {string} options.foreignField - Field of the referenced model that matches.
  * @param {boolean} options.justOne - Indicates if only one field is referenced.
  * 
- * @memberof module:models/chords
+ * @memberof module:models/chord
  */
 chordSchema.virtual('type', {
     ref: 'ChordType', //Referenced model

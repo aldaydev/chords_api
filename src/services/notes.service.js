@@ -5,8 +5,8 @@
  * @module services/notes
  * 
  * @requires models/note
- * @requires utils/errorResponses
- * @requires utils/errorLogs
+ * @requires utils/resErrors
+ * @requires utils/logErrors
  */
 
 const Note = require('../models/note.model.js');

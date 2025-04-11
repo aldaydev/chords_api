@@ -1,9 +1,9 @@
 /**
  * Error middleware.
  * It logs the error and sends an appropriate response to the client.
- * @module errorMiddleware
- * @requires module:utils/error.logs
- * @requires module:utils/error.responses
+ * @module middleware/error
+ * @requires module:utils/logErrors
+ * @requires module:utils/resErrors
  * @requires module:config/logger
  */
 
@@ -25,7 +25,7 @@ const { resErrors } = require("../utils/error.responses");
  * @param {Object} req - The request object.
  * @param {Object} res - The response object.
  * 
- * @memberof module:errorMiddleware
+ * @memberof module:middleware/error
  * 
  * @returns {void} - Returns nothing. It sends a response to the client.
  */

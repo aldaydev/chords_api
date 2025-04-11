@@ -1,7 +1,7 @@
 /**
  * Not found middleware.
  * It handles 404 errors when the requested resource of the API is not found (not for views)
- * @module notFoundMiddleware
+ * @module middleware/notFound
  */
 
 /**
@@ -14,7 +14,7 @@
  * @param {Object} req - The request object.
  * @param {Object} res - The response object.
  * 
- * @memberof module:notFoundMiddleware
+ * @memberof module:middleware/notFound
  * 
  * @returns {void} - Returns nothing. It sends a response to the client.
  */

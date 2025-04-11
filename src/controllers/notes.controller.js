@@ -2,7 +2,7 @@
  * Notes Controller file
  * Contains an object with each controller related to the Note model
  * @module controllers/notes
- * @requires module:services/notesService
+ * @requires module:services/notes
  */
 
 const notesService = require("../services/notes.service.js");

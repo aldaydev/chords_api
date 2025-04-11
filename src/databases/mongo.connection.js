@@ -1,7 +1,7 @@
 /**
  * MongoDB connection
  * This module connects to the MongoDB database using Mongoose.
- * @module mongoConnection
+ * @module databases/mongoConnection
  * @requires module:config/mongo
  * @requires module:config/logger
  */
@@ -17,7 +17,7 @@ const mongoConfig = require('../config/mongo.config.js');
  * This function connects to the MongoDB database using Mongoose and logs the connection status. It is called when server starts.
  * @async
  * @function mongoConnection
- * @memberof module:mongoConnection
+ * @memberof module:databases/mongoConnection
  * @returns {Promise<void>} A promise that resolves when the connection is established or rejects if there is an error.
  */
 const mongoConnection = async () => {

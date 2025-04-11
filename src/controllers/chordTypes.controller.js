@@ -2,8 +2,8 @@
  * Chord Types Controller file
  * Contains an object with each controller related to the ChordType model
  * @module controllers/chordTypes
- * @requires module:services/chordTypesService
- * @requires module:utils/errorResponses
+ * @requires module:services/chordTypes
+ * @requires module:utils/resErrors
  * @requires module:utils/validations
  */
 
