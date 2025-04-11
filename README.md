@@ -1,6 +1,13 @@
 # chords_api
 
-sprint-4 / 11-04-2025 / finishing and reviewing documentation
+sprint-5 / 11-04-2025 / jest config
+
+## SPRINT 5 (API)
+
+Objetivos:
+
+* Configuración inicial de jest apra pruebas unitarias.
+* tests/validations.test.js -> npm run test tests/validations.test.js
 
 ## SPRINT 4 (API)
 
