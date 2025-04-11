@@ -203,4 +203,4 @@ const validateChordTypeParam = (chordTypeId) => {
 }
 
 
-module.exports = {validateQueries, validateChordParam, validateChordTypeParam, calculateValidChords, isValidChordId, isValidNoteId, isValidChordTypeId, isValidLimit, isValidPage};
+module.exports = {validateQueries, validateChordParam, validateChordTypeParam, calculateValidChords, isValidChordId, isValidNoteId, isValidChordTypeId, isValidLimit, isValidPage, validNotes, validChordTypes};

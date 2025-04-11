@@ -1,6 +1,87 @@
-const {validateQueries, validateChordParam, validateChordTypeParam, calculateValidChords, isValidChordId, isValidNoteId, isValidChordTypeId, isValidLimit, isValidPage} = require('../src/utils/validations.js');
+const {validateQueries, validateChordParam, validateChordTypeParam, calculateValidChords, isValidChordId, isValidNoteId, isValidChordTypeId, isValidLimit, isValidPage, validNotes, validChordTypes} = require('../src/utils/validations.js');
+
+describe('validateTypeParam', () => {
+
+    it('Should return true for valid type values', () => {
+        
+    });
+});
+
+describe('isValidPage', () => {
+
+    it('Should return true for valid page values', () => {
+        
+        const validPageValues = [1, 2, undefined];
+        validPageValues.forEach(pageValue => {
+            expect(isValidPage(pageValue)).toBe(true);
+        });
+    });
+
+    it('Should return false for invalid page values', () => {
+        const invalidPageValues = [-2, 0, 'abc'];
+        invalidPageValues.forEach(pageValue => {
+            expect(isValidPage(pageValue)).toBe(false);
+        });
+    });
+});
+
+describe('isValidLimit', () => {
+
+    it('Should return true for valid limit values', () => {
+        const validLimits = ['all', 0, 1, 2, undefined];
+        validLimits.forEach(limit => {
+            expect(isValidLimit(limit)).toBe(true);
+        });
+    });
+
+    it('Should return false for invalid limit values', () => {
+        const invalidLimits = [-2, 'abc'];
+        invalidLimits.forEach(limit => {
+            expect(isValidLimit(limit)).toBe(false);
+        });
+    });
+});
+
+describe('isValidChordTypeId', () => {
+
+    it('Should return true for valid chord type IDs', () => {
+
+        validChordTypes.forEach(chordTypeId => {
+            expect(isValidChordTypeId(chordTypeId)).toBe(true);
+        });
+    });
+
+    it('Should return false for invalid chord type IDs', () => {
+
+        const invalidChordTypeIds = ['disminuido', 'Mayor', 'diminished', 'seventh', 'min', 'maj', 'Menor'];
+
+        invalidChordTypeIds.forEach(chordTypeId => {
+            expect(isValidNoteId(chordTypeId)).toBe(false);
+        });
+    });
+});
+
+describe('isValidNoteId', () => {
+
+    it('Should return true for valid note IDs', () => {
+
+        validNotes.forEach(noteId => {
+            expect(isValidNoteId(noteId)).toBe(true);
+        });
+    });
+
+    it('Should return false for invalid note IDs', () => {
+
+        const invalidNoteIds = ['C#', 'Do', 'G#', 'A_b', 'Fa', 'Gb'];
+
+        invalidNoteIds.forEach(noteId => {
+            expect(isValidNoteId(noteId)).toBe(false);
+        });
+    });
+});
 
 describe('isValidChordId', () => {
+
     it('Should return true for valid chord IDs', () => {
         const validChordIds = calculateValidChords();
 
@@ -21,6 +102,7 @@ describe('isValidChordId', () => {
 });
 
 describe('calculateValidChords', () => {
+
     it('Should return an array of valid chords with the correct length (68 elements)', () => {
         const validChords = calculateValidChords();
         expect(Array.isArray(validChords)).toBe(true);
