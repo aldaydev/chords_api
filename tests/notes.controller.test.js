@@ -1,14 +1,14 @@
 const notesController = require('../src/controllers/notes.controller.js');
 
-test('should return 400 if ID is missing', () => {
-  const req = { params: {} };
+test('should return 200 if there is no issues', async () => {
+  const req = {};
   const res = {
     status: jest.fn().mockReturnThis(),
     json: jest.fn(),
   };
+  const next = jest.fn();
 
-  notesController.getAll(req, res);
+  await notesController.getAll(req, res, next); // importante el await
 
-  expect(res.status).toHaveBeenCalledWith(400);
-  expect(res.json).toHaveBeenCalledWith({ error: 'Missing ID' });
+  expect(res.status).toHaveBeenCalledWith(200);
 });

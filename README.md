@@ -8,6 +8,7 @@ Objetivos:
 
 * Configuración inicial de jest apra pruebas unitarias.
 * tests/validations.test.js -> npm run test tests/validations.test.js
+* tests/notes.controller.test.js -> npm run test tests/notes.controller.test.js
 
 ## SPRINT 4 (API)
 
