@@ -1,6 +1,6 @@
 # chords_api
 
-sprint-5 / 11-04-2025 / jest config
+sprint-5 / 13-04-2025 / jest tests
 
 ## SPRINT 5 (API)
 

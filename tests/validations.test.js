@@ -1,5 +1,15 @@
 const {validateQueries, validateChordParam, validateChordTypeParam, calculateValidChords, isValidChordId, isValidNoteId, isValidChordTypeId, isValidLimit, isValidPage, validNotes, validChordTypes} = require('../src/utils/validations.js');
 
+describe('validateChordParam', () => {
+
+    const validChords = calculateValidChords();
+
+    it('Should return an array with just one element, which is true for valid chord Id values', () => {
+        validChords.forEach()
+    });
+
+});
+
 describe('validateTypeParam', () => {
 
     it('Should return an array with just one element, which is true for valid type Id values', () => {
