@@ -2,8 +2,26 @@ const {validateQueries, validateChordParam, validateChordTypeParam, calculateVal
 
 describe('validateTypeParam', () => {
 
-    it('Should return true for valid type values', () => {
-        
+    it('Should return an array with just one element, which is true for valid type Id values', () => {
+        validChordTypes.forEach(chordType => {
+            const validation = validateChordTypeParam(chordType);
+            expect(validation).toBeInstanceOf(Array);
+            expect(validation.length).toBe(1);
+            expect(validation[0]).toBe(true);
+        });
+    });
+
+    it('Should return an array with two elements, false and an error message, for invalid type Id values', () => {
+
+        const invalidChordTypeIds = ['disminuido', 'Mayor', 'diminished', 'seventh', 'min', 'maj', 'Menor'];
+
+        invalidChordTypeIds.forEach(chordType => {
+            const validation = validateChordTypeParam(chordType);
+            expect(validation).toBeInstanceOf(Array);
+            expect(validation.length).toBe(2);
+            expect(validation[0]).toBe(false);
+            expect(typeof validation[1]).toBe('string');
+        });
     });
 });
 
