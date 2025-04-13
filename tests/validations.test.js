@@ -1,23 +1,73 @@
 const {validateQueries, validateChordParam, validateChordTypeParam, calculateValidChords, isValidChordId, isValidNoteId, isValidChordTypeId, isValidLimit, isValidPage, validNotes, validChordTypes} = require('../src/utils/validations.js');
 
+describe('validateQueries', () => {
+
+    it('Should return an array with just one element, which is true for valid queries', () => {
+
+        const validQueries = ['c', 'major', 'all', 1];
+        const result = validateQueries(...validQueries);
+
+        expect(Array.isArray(result)).toBe(true);
+        expect(result.length).toBe(1);
+        expect(result[0]).toBe(true);
+    });
+
+    it('Should return an array with two elements, false and an error message, for invalid queries', () => {
+
+        const invalidQueries = [
+            ['c#', 'major', 'all', 1], //invalid note
+            ['c', 'mayor', 'all', 1], //invalid type
+            ['c', 'major', 'abc', 1], //invalid limit
+            ['c', 'major', 'all', -1], //invalid page
+        ];
+
+        invalidQueries.forEach(invalidQueries => {
+            const query = validateQueries(...invalidQueries);
+            expect(query).toBeInstanceOf(Array);
+            expect(query.length).toBe(2);
+            expect(query[0]).toBe(false);
+            expect(typeof query[1]).toBe('string');
+        });
+    });
+
+
+});
+
 describe('validateChordParam', () => {
 
     const validChords = calculateValidChords();
 
     it('Should return an array with just one element, which is true for valid chord Id values', () => {
-        validChords.forEach()
+        validChords.forEach(validChord => {
+            const validateItem = validateChordParam(validChord);
+            expect(validateItem).toBeInstanceOf(Array);
+            expect(validateItem.length).toBe(1);
+            expect(validateItem[0]).toBe(true);
+        });
     });
 
+    it('Should return an array with two elements, false and an error message, for invalid chord Id values', () => {
+
+        const invalidChordId = ['C#major', 'Do Mayor', 'G#dim', 'A_flat', 'B_sharp', 'F#minor'];
+
+        invalidChordId.forEach(invalidChord => {
+            const validation = validateChordTypeParam(invalidChord);
+            expect(validation).toBeInstanceOf(Array);
+            expect(validation.length).toBe(2);
+            expect(validation[0]).toBe(false);
+            expect(typeof validation[1]).toBe('string');
+        });
+    });
 });
 
 describe('validateTypeParam', () => {
 
     it('Should return an array with just one element, which is true for valid type Id values', () => {
         validChordTypes.forEach(chordType => {
-            const validation = validateChordTypeParam(chordType);
-            expect(validation).toBeInstanceOf(Array);
-            expect(validation.length).toBe(1);
-            expect(validation[0]).toBe(true);
+            const validateItem = validateChordTypeParam(chordType);
+            expect(validateItem).toBeInstanceOf(Array);
+            expect(validateItem.length).toBe(1);
+            expect(validateItem[0]).toBe(true);
         });
     });
 

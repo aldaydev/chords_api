@@ -1,6 +1,6 @@
 # chords_api
 
-sprint-5 / 13-04-2025 / jest tests
+sprint-5 / 13-04-2025 / validations tests with jest finished
 
 ## SPRINT 5 (API)
 
