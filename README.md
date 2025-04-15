@@ -38,17 +38,20 @@ Es ideal para desarrolladores que están aprendiendo y/o amantes de la música, 
 - [Swagger](https://chords.alday.dev/api-docs) -> Documentación en inglés con swagger para que los desarrolladores que están empezando se puedan familiarizar con este formato.
 - [JSDoc](https://chords.alday.dev/jsdoc) -> Funciones y elementos clave del código documentados en inglés a trabés de JSDoc para que los desarrolladores junior puedan familiarizarse con este tipo de documentaciones.
 
+## Extra - Sprints:
 
-sprint-5 / 15-04-2025 / validations tests with jest finished
+Este trabajo ha sido creado utilizando metodología ágil a través de Sprints. A continuación dejo el "diario de a bordo" de cada uno, por si a alguien le pudiera resultar de utilidad.
 
-## SPRINT 5 (API)
+### SPRINT 5 (API)
 
 Objetivos:
 
 * Configuración inicial de jest apra pruebas unitarias.
 * tests/validations.test.js -> npm run test tests/validations.test.js
+* Revisión global y actualización de "README.md".
+* Despliegue utilizando Render.
 
-## SPRINT 4 (API)
+### SPRINT 4 (API)
 
 Objetivos:
 
@@ -58,7 +61,7 @@ Objetivos:
 * Agregar información a la página iniciall de JSDoc.
 * Repaso y finalización de la documentación (swagger y jsdoc).
 
-## SPRINT 3 (API)
+### SPRINT 3 (API)
 
 Objetivos:
 
@@ -69,7 +72,7 @@ Objetivos:
 * Creación de "pages" (index, about, notFound)
 
 
-## SPRINT 2 (API)
+### SPRINT 2 (API)
 
 Objetivos:
 
@@ -80,7 +83,7 @@ Objetivos:
 * Validación y respuestas de error query y path params
 * Documentación con swagger (Configuración, endpoints actuales)
 
-## SPRINT 1 (API)
+### SPRINT 1 (API)
 
 Objetivos:
 
