@@ -63,14 +63,13 @@ app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocs));
 app.use('/jsdoc', express.static(path.join(__dirname, '../docs/jsdoc')));
 
 //Error middlewares
+app.get('/health', (req, res) => {
+    res.status(200).send('OK');
+});
 app.use(errorMiddleware);
 app.use('/v1', notFoundMiddleware);
 app.use((req, res) => {
     res.status(404).render('pages/404', { url: req.url} );
-});
-
-app.get('/health', (req, res) => {
-    res.status(200).send('OK');
 });
 
 //Port config
