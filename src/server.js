@@ -69,6 +69,10 @@ app.use((req, res) => {
     res.status(404).render('pages/404', { url: req.url} );
 });
 
+app.get('/health', (req, res) => {
+    res.status(200).send('OK');
+});
+
 //Port config
 const PORT = process.env.PORT || 3001;
 
