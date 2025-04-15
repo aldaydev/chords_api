@@ -43,9 +43,8 @@ const swaggerOptions = {
             // ... more tags
         ],
         servers: [
-            {
-                url: "http://127.0.0.1:2202",
-            },
+            { url: "https://chords.alday.dev", description: "Oficial url" },
+            { url: "https://chords-api.onrender.com", description: "Render url" },
         ],
         components: {
             schemas: {
