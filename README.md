@@ -6,20 +6,19 @@ Es ideal para desarrolladores que están aprendiendo y/o amantes de la música, 
 
 ## Tecnologías utilizadas:
 
-![Express](https://img.shields.io/badge/Express-000000?style=for-the-badge&logo=express&logoColor=FFFFFF)
-![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=FFFFFF)
-![Mongoose](https://img.shields.io/badge/Mongoose-880000?style=for-the-badge&logo=mongoose&logoColor=FFFFFF)
-![EJS](https://img.shields.io/badge/EJS-0C0C0C?style=for-the-badge&logo=ejs&logoColor=FFFFFF)
-![Swagger](https://img.shields.io/badge/Swagger-85EA2D?style=for-the-badge&logo=swagger&logoColor=000000)
-![Jest](https://img.shields.io/badge/Jest-C21325?style=for-the-badge&logo=jest&logoColor=FFFFFF)
-![JSDoc](https://img.shields.io/badge/JSDoc-CB3837?style=for-the-badge&logo=npm&logoColor=FFFFFF)
-![Nodemon](https://img.shields.io/badge/Nodemon-76D04B?style=for-the-badge&logo=nodemon&logoColor=000000)
-![Winston](https://img.shields.io/badge/Winston-000000?style=for-the-badge&logo=logstash&logoColor=FFFFFF)
-![Dotenv](https://img.shields.io/badge/Dotenv-8B7490?style=for-the-badge&logo=dotenv&logoColor=FFFFFF)
-![CORS](https://img.shields.io/badge/CORS-F9DC3E?style=for-the-badge&logo=webcomponents.org&logoColor=000000)
-![YAML](https://img.shields.io/badge/YAML-CB171E?style=for-the-badge&logo=yaml&logoColor=FFFFFF)
-![Render](https://img.shields.io/badge/Render-46E3B7?style=for-the-badge&logo=render&logoColor=000000)
-
+![Express](https://img.shields.io/badge/Express-FFFFFF?style=for-the-badge&logo=express&logoColor=000000)
+![MongoDB](https://img.shields.io/badge/MongoDB-FFFFFF?style=for-the-badge&logo=mongodb&logoColor=000000)
+![Mongoose](https://img.shields.io/badge/Mongoose-FFFFFF?style=for-the-badge&logo=mongoose&logoColor=000000)
+![EJS](https://img.shields.io/badge/EJS-FFFFFF?style=for-the-badge&logo=ejs&logoColor=000000)
+![Swagger](https://img.shields.io/badge/Swagger-FFFFFF?style=for-the-badge&logo=swagger&logoColor=000000)
+![Jest](https://img.shields.io/badge/Jest-FFFFFF?style=for-the-badge&logo=jest&logoColor=000000)
+![JSDoc](https://img.shields.io/badge/JSDoc-FFFFFF?style=for-the-badge&logo=npm&logoColor=000000)
+![Nodemon](https://img.shields.io/badge/Nodemon-FFFFFF?style=for-the-badge&logo=nodemon&logoColor=000000)
+![Winston](https://img.shields.io/badge/Winston-FFFFFF?style=for-the-badge&logo=logstash&logoColor=000000)
+![Dotenv](https://img.shields.io/badge/Dotenv-FFFFFF?style=for-the-badge&logo=dotenv&logoColor=000000)
+![CORS](https://img.shields.io/badge/CORS-FFFFFF?style=for-the-badge&logo=webcomponents.org&logoColor=000000)
+![YAML](https://img.shields.io/badge/YAML-FFFFFF?style=for-the-badge&logo=yaml&logoColor=000000)
+![Render](https://img.shields.io/badge/Render-FFFFFF?style=for-the-badge&logo=render&logoColor=000000)
 
 
 ## Características principales:
