@@ -42,7 +42,7 @@ app.use(urlencoded({extended: true}));
 
 app.use(cors({
     origin: `*`,
-    mehtods: ['GET']
+    methods: ['GET']
 }));
 
 //EJS configuration
