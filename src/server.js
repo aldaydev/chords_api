@@ -94,7 +94,7 @@ const runServer = async () => {
 
         //Initializing server
         app.listen(PORT, () => {
-            logger.info(`Server - Running on http://localhost:${PORT}`);
+            logger.info(`Server - Running on port ${PORT}`);
         })
 
     }catch(error){
