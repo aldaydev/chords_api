@@ -1,4 +1,42 @@
-# chords_api
+# chords.alday.dev
+
+Chords API es una API Rest pública en la que puedes obtener información sobre acordes musicales.
+
+Es ideal para desarrolladores que están aprendiendo y/o amantes de la música, ya que es sencilla pero completa.
+
+## Tecnologías utilizadas:
+
+![Express](https://img.shields.io/badge/Express-FFFFFF?style=for-the-badge&logo=express&logoColor=000000)
+![Mongoose](https://img.shields.io/badge/Mongoose-FFFFFF?style=for-the-badge&logo=mongoose&logoColor=000000)
+![EJS](https://img.shields.io/badge/EJS-FFFFFF?style=for-the-badge&logo=ejs&logoColor=000000)
+![Swagger](https://img.shields.io/badge/Swagger-FFFFFF?style=for-the-badge&logo=swagger&logoColor=000000)
+![Jest](https://img.shields.io/badge/Jest-FFFFFF?style=for-the-badge&logo=jest&logoColor=000000)
+![JSDoc](https://img.shields.io/badge/JSDoc-FFFFFF?style=for-the-badge&logo=jsdoc&logoColor=000000)
+![Nodemon](https://img.shields.io/badge/Nodemon-FFFFFF?style=for-the-badge&logo=nodemon&logoColor=000000)
+![Winston](https://img.shields.io/badge/Winston-FFFFFF?style=for-the-badge&logo=winston&logoColor=000000)
+![Dotenv](https://img.shields.io/badge/Dotenv-FFFFFF?style=for-the-badge&logo=dotenv&logoColor=000000)
+![CORS](https://img.shields.io/badge/CORS-FFFFFF?style=for-the-badge&logo=webcomponents.org&logoColor=000000)
+![YAML](https://img.shields.io/badge/YAML-FFFFFF?style=for-the-badge&logo=yaml&logoColor=000000)
+![Render](https://img.shields.io/badge/Render-FFFFFF?style=for-the-badge&logo=render&logoColor=000000)
+
+
+## Características principales:
+
+- Incluye 68 acordes, 15notas, 4 tipos de acorde.
+- Respuestas en formato json, pensadas para ser usadas en inglés o español.
+- Mensajes de error claros y standarizados (inglés).
+- Documentación en Swagger y JSDoc en inglés.
+- Podrás obtener el listado de acordes filtrándolos por nota y tipo (query params);
+- Podrás crear una paginación utilizando "limit" y "page" (query params).
+- Podrás obtener un acorde a través de su id (path param).
+- Podrás obtener un tipo de acorde a través de su id (path param).
+
+## Documentación:
+
+- [Website](https://chords.alday.dev)-> Vista creada a través de  EJS con documentación sencilla en inglés para una visión general.
+- [Swagger](https://chords.alday.dev/api-docs) -> Documentación en inglés con swagger para que los desarrolladores que están empezando se puedan familiarizar con este formato.
+- [JSDoc](https://chords.alday.dev/jsdoc) -> Funciones y elementos clave del código documentados en inglés a trabés de JSDoc para que los desarrolladores junior puedan familiarizarse con este tipo de documentaciones.
+
 
 sprint-5 / 15-04-2025 / validations tests with jest finished
 
