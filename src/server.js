@@ -41,7 +41,9 @@ app.use(json());
 app.use(urlencoded({extended: true}));
 
 app.use(cors({
-    origin: `*`,
+    origin: (origin, callback) => {
+        callback(null, true); //Allow all origins
+    },
     methods: ['GET']
 }));
 
