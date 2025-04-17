@@ -812,3 +812,19 @@ html[data-search-mode] .level-hide {
 a.returnLink{
   margin-bottom: 10px;
 }
+
+@media screen and (max-width: 680px) {
+  
+  .navicon-button{
+    background-color: #FFFFFF;
+    border-radius: 15px;
+    opacity: 1;
+  }
+
+  .indexTitle,
+  h1.page-title{
+    margin-right: 65px !important;
+    font-size: 2.4rem;
+  }
+  
+}
