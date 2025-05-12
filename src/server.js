@@ -74,7 +74,7 @@ app.use((req, res) => {
     res.status(404).render('pages/404', { url: req.url} );
 });
 
-app.use('/images', express.static('public/images'));
+app.use('/img', express.static('public/img'));
 
 //Port config
 const PORT = process.env.PORT || 3001;
