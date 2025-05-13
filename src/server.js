@@ -56,6 +56,7 @@ app.set('views', path.join(__dirname, 'views'));
 
 //Swagger configuration
 app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocs));
+//JSDoc configuration
 app.use('/jsdoc', express.static(path.join(__dirname, '../docs/jsdoc')));
 
 //Routes
