@@ -17,12 +17,12 @@ const app = express();
 //CORS configuration
 const cors = require('cors');
 
+//Import mongoConnection
+const mongoConnection = require('./databases/mongo.connection.js');
+
 //router import
 const apiRoutes = require('./routes/api.routes.js');
 const docRoutes = require('./routes/doc.routes.js');
-
-//Import mongoConnection
-const mongoConnection = require('./databases/mongo.connection.js');
 
 //Import error middlewares
 const errorMiddleware = require('./middlewares/error.middleware.js');
@@ -35,11 +35,14 @@ const swaggerDocs = require('./config/swagger.config.js');
 //Path imports
 const path = require('path');
 
-
 //Global middlewares
 app.use(json());
 app.use(urlencoded({extended: true}));
 
+//Static files
+app.use(express.static('public'));
+
+//CORS Config
 app.use(cors({
     origin: (origin, callback) => {
         callback(null, true); //Allow all origins
@@ -51,34 +54,29 @@ app.use(cors({
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
-//Static files
-app.use(express.static('public'));
+//Swagger configuration
+app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocs));
+app.use('/jsdoc', express.static(path.join(__dirname, '../docs/jsdoc')));
 
 //Routes
 app.use('/v1', apiRoutes);
 app.use('/', docRoutes);
-
-
-//Swagger configuration
-app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocs));
-
-app.use('/jsdoc', express.static(path.join(__dirname, '../docs/jsdoc')));
+app.use('/img', express.static('public/img'));
 
 //Error middlewares
-app.get('/health', (req, res) => {
-    res.status(200).send('OK');
-});
 app.use(errorMiddleware);
 app.use('/v1', notFoundMiddleware);
 app.use((req, res) => {
     res.status(404).render('pages/404', { url: req.url} );
 });
 
-app.use('/img', express.static('public/img'));
+//Health endpoint
+app.get('/health', (req, res) => {
+    res.status(200).send('OK');
+});
 
 //Port config
 const PORT = process.env.PORT || 3001;
-
 
 /**
  * Function to run the server and connect to MongoDB.
